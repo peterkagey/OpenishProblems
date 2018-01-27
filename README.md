@@ -21,4 +21,11 @@
   in such a way that they form a self-supporting structure,
   where removing any coffee stirrer results in the structure collapsing.
   I remember learning about one of these (5 stirrer) weaves when I was in elementary school,
-  and I have long wondered what sorts of other configurations exist.
+  and I have long wondered what sorts of other configurations exist, 
+  but the problem has proven stubborn to systematic study.
+  
+  ![The unique configuration with 4 sticks (up to reflection)](https://imgur.com/MgruEht.png)
+  
+  The unique configuration with 4 sticks (up to reflection).
+  
+  More details about this problem can be found in 005_problem.pdf.
