@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{bbm,enumerate,mathtools}
+\usepackage{tikz}
+
+\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
+\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
+\newenvironment{references}{\begin{trivlist}\item[\textbf{References.}]}{\end{trivlist}}
+\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
+\begin{document}
+
+\title{Problem 13.}
+\date{}
+\author{Peter Kagey}
+\maketitle
+  Ron Graham's (A006255) sequence is the least k for which there exists a
+  strictly increasing sequence \[
+    n = a_1 \leq a_2 \leq \hdots \leq a_T = k \text{ where }
+    a_1 \cdot\hdots\cdot a_T \text{ is square.}
+  \] and where any term appears at most $p - 1$ times.
+  There is a known way to efficiently compute analogous sequences wherein
+  $a_1 \cdot\hdots\cdot a_T$ is a $p$-th power, where $p$ is a prime.
+\begin{question}
+  What is an efficient way to compute analogous sequences wherein
+  $a_1 \cdot\hdots\cdot a_T$ is a $c$-th power, where $c$ is composite?
+\end{question}
+\begin{figure}[!h]
+  \centering
+  \begin{alignat*}{3}
+  a_4(1) &= 1      &&\text{ via } 1                                     &&= 1^4\\
+  a_4(2) &= 2      &&\text{ via } 2^2 \cdot 4                           &&= 2^4\\
+  a_4(3) &= 6      &&\text{ via } 3^2 \cdot 4 \cdot 6^2                 &&= 6^4\\
+  a_4(4) &= 4      &&\text{ via } 4^2                                   &&= 2^4\\
+  a_4(5) &= 10     &&\text{ via } 5^2 \cdot 8^2 \cdot 10^2              &&= 20^4\\
+  a_4(6) &= 9      &&\text{ via } 6^2 \cdot 8^2 \cdot 9                 &&= 12^4\\
+  a_4(7) &= 14     &&\text{ via } 7^2 \cdot 8^2 \cdot 14^2              &&= 28^4\\
+  a_4(8) &\leq 15  &&\text{ via } 8^2 \cdot 9 \cdot 10^2 \cdot 15^2     &&= 60^4\\
+  a_4(9) &= 9      &&\text{ via } 9^2                                   &&= 3^4\\
+  a_4(10) &\leq 18 &&\text{ via } 10^2 \cdot 12^2 \cdot 15^2 \cdot 18^2 &&= 180^4
+  \end{alignat*}
+  \caption{
+    Examples of $a_4(n)$ for $n \in \{1, 2,\hdots,10\}$.
+  }
+\end{figure}
+
+\begin{related}
+  \item For what values $n$ is $a(n) < A006255(n)$?
+  \item How many $c$-th power sequences have $a_T = a_c(n)$?
+  \item Do any such $c$-th power sequences exactly two distinct terms?
+\end{related}
+
+\end{document}
