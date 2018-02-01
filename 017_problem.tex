@@ -1,0 +1,61 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{bbm,enumerate,mathtools}
+\usepackage{tikz}
+
+\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
+\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
+\newenvironment{references}{\begin{trivlist}\item[\textbf{References.}]}{\end{trivlist}}
+\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
+\begin{document}
+
+\title{Problem 17.}
+\date{}
+\author{Peter Kagey}
+\maketitle
+  Start with $n$ piles with a single stone in each pile. If two piles have the
+  same number of stones, then any number of stones can be moved between them.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[sibling distance=5em, every node/.style = {align=center}]]
+    \node {1, 1, 1, 1, 1}
+      child { node {2, 1, 1, 1}
+        child { node {2, 2, 1}
+          child { node {3, 1, 1}
+            child { node {3, 2}}
+          }
+          child { node {4, 1} }
+        }
+      };
+  \end{tikzpicture}
+  \caption{
+    An illustration of all possible moves for $n = 5$.
+  }
+\end{figure}
+
+\begin{question}
+  What is the greatest number of steps that can occur? Alternatively how many
+  ``levels'' are in the tree of possible moves?
+\end{question}
+
+\begin{related}
+  \item Let $s$ be the total number of distinct states.
+    (The example shows that $s(5) = 6$.)
+  \item Let $c$ be the total number of states that \textit{cannot} be acheived.
+    (In the example, $c(5) = 1$ via the state $(5)$.)
+  \item Is $c(p) = 1$ for all primes $p$?
+  \item Is $c(n) = 0$ if and only if $n$ is a power of $2$?
+  \item Let $\ell$ be the least number of steps to a terminal state.
+    (In the example, $\ell(5) = 3$ ending in the state $(4,1)$.)
+  \item Let $g$ be the greatest number of steps to a terminal state.
+    (In the example, $g(5) = 4$ ending in the state $(3,2)$.)
+  \item Let $p$ be the total number of paths.
+    (In the example, $p(5) = 2$.)
+  \item Let $t$ be the number of distinct \textit{terminal} states.
+    (In the example, $t(5) = 2$ with states $(4,1)$ and $(3,2)$.)
+
+\end{related}
+
+\end{document}
