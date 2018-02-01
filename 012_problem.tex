@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{bbm,enumerate,mathtools}
+\usepackage{tikz}
+
+\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
+\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
+\newenvironment{references}{\begin{trivlist}\item[\textbf{References.}]}{\end{trivlist}}
+\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
+\begin{document}
+
+\title{Problem 12.}
+\date{}
+\author{Peter Kagey}
+\maketitle
+  Consider Ron Graham's sequence for $\operatorname{lcm}$, that is, look at sequences such that \[
+    n = a_1 < a_2 < \hdots < a_T = k \text{ and } \operatorname{lcm}(a_1,\hdots,a_T) \text{ is square.}
+  \]
+\begin{question}
+  What is the least k (as a function of n) such that such a sequence exists?
+\end{question}
+\begin{figure}[!h]
+  \centering
+  \begin{alignat*}{2}
+  a(1) &= 1  &&\text{ via } (1)\\
+  a(2) &= 4  &&\text{ via } (2, 4)\\
+  a(3) &= 3  &&\text{ via } (3, 9)\\
+  a(4) &= 4  &&\text{ via } (4)\\
+  a(5) &= 25 &&\text{ via } (5, 25)\\
+  a(6) &= 12 &&\text{ via } (6, 9, 12)\\
+  a(7) &= 49 &&\text{ via } (7, 49)\\
+  a(8) &= 16 &&\text{ via } (8, 16)
+  \end{alignat*}
+  \caption{
+    Examples of $a(n)$ for $n \in \{1, 2,\hdots,8\}$.
+  }
+\end{figure}
+
+\begin{related}
+  \item For what values $n$ is $a(n)$ nonsquare?
+  \item For what values $n$ does the corresponding sequence have three or more terms?
+  \item What is the analogous sequence for perfect cubes, etc?
+\end{related}
+
+\end{document}
