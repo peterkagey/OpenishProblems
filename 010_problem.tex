@@ -1,21 +1,8 @@
 \documentclass{article}
+\include{header}
 
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage{bbm,enumerate,mathtools}
-\usepackage{tikz}
-
-\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
-\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
-\newenvironment{references}{\begin{trivlist}\item[\textbf{References.}]}{\end{trivlist}}
-\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
 \begin{document}
-
-\title{Problem 10.}
-\date{}
-\author{Peter Kagey}
-\maketitle
-  Consider all $k$-colorings of an $n \times n$ grid, where each row and column
+Consider all $k$-colorings of an $n \times n$ grid, where each row and column
   has $\lfloor n/k \rfloor$ or $\lceil n/k \rceil$ cells with each color.
 \begin{figure}[!h]
   \centering
@@ -60,5 +47,4 @@
   \item What if these are counted up to permutation of the coloring?
   \item Can this generalize to the cube? To a triangular tiling?
 \end{related}
-
 \end{document}

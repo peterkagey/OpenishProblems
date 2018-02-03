@@ -1,24 +1,11 @@
 \documentclass{article}
+\include{header}
 
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage{bbm,enumerate,mathtools}
-\usepackage{tikz}
-
-\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
-\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
-\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
 \begin{document}
-
-\title{Problem 3.}
-\date{}
-\author{}
-\maketitle
-
-  Let $G$ be some $n \times m$ grid as in Figure 1, where each cell has two
-  opposite diagonals connected (uniformly at random).
-  A cell is chosen (also uniformly at random), and the segment given by the path of
-  diagonals that goes through the selected cell is is inspected.
+Let $G$ be some $n \times m$ grid as in Figure 1, where each cell has two
+opposite diagonals connected (uniformly at random).
+A cell is chosen (also uniformly at random), and the segment given by the path of
+diagonals that goes through the selected cell is is inspected.
 \begin{figure}[!h]
   \centering
   \begin{tikzpicture}
@@ -54,5 +41,4 @@
   \item How does this change if the grid is toroidal, on a cylinder,
     on a M\"obius strip, etc?
 \end{related}
-
 \end{document}

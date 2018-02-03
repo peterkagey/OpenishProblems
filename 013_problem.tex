@@ -1,27 +1,15 @@
 \documentclass{article}
+\include{header}
 
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage{bbm,enumerate,mathtools}
-\usepackage{tikz}
-
-\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
-\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
-\newenvironment{references}{\begin{trivlist}\item[\textbf{References.}]}{\end{trivlist}}
-\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
 \begin{document}
-
-\title{Problem 13.}
-\date{}
-\author{Peter Kagey}
-\maketitle
   Ron Graham's (A006255) sequence is the least k for which there exists a
   strictly increasing sequence \[
     n = a_1 \leq a_2 \leq \hdots \leq a_T = k \text{ where }
     a_1 \cdot\hdots\cdot a_T \text{ is square.}
-  \] and where any term appears at most $p - 1$ times.
+  \]
   There is a known way to efficiently compute analogous sequences wherein
-  $a_1 \cdot\hdots\cdot a_T$ is a $p$-th power, where $p$ is a prime.
+  $a_1 \cdot\hdots\cdot a_T$ is a $p$-th power, where $p$ is a prime and where
+  any term appears at most $p - 1$ times.
 \begin{question}
   What is an efficient way to compute analogous sequences wherein
   $a_1 \cdot\hdots\cdot a_T$ is a $c$-th power, where $c$ is composite?
@@ -50,5 +38,4 @@
   \item How many $c$-th power sequences have $a_T = a_c(n)$?
   \item Do any such $c$-th power sequences exactly two distinct terms?
 \end{related}
-
 \end{document}

@@ -1,22 +1,9 @@
 \documentclass{article}
+\include{header}
 
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage{bbm,enumerate,mathtools}
-\usepackage{tikz}
-
-\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
-\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
-\newenvironment{references}{\begin{trivlist}\item[\textbf{References.}]}{\end{trivlist}}
-\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
 \begin{document}
-
-\title{Problem 9.}
-\date{}
-\author{Peter Kagey}
-\maketitle
-  Given an $n \times n$ grid, consider all the ways that convex polygons
-  with grid points as vertices can be nested.
+Given an $n \times n$ grid, consider all the ways that convex polygons
+with grid points as vertices can be nested.
 \begin{figure}[!h]
   \centering
   \begin{tikzpicture}[scale=2]
@@ -44,5 +31,4 @@
   \item Does this generalize to polyhedra in the $n \times n \times n$ cube?
   \item Does this generalize to polygons on a triangular grid?
 \end{related}
-
 \end{document}

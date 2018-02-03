@@ -1,21 +1,7 @@
 \documentclass{article}
+\include{header}
 
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb}
-\usepackage{bbm,enumerate,mathtools}
-\usepackage{tikz}
-
-\newenvironment{question}{\begin{trivlist}\item[\textbf{Question.}]}{\end{trivlist}}
-\newenvironment{note}{\begin{trivlist}\item[\textbf{Note.}]}{\end{trivlist}}
-\newenvironment{references}{\begin{trivlist}\item[\textbf{References.}]}{\end{trivlist}}
-\newenvironment{related}{\begin{trivlist}\item[\textbf{Related.}]\end{trivlist}\begin{enumerate}}{\end{enumerate}}
 \begin{document}
-
-\title{Problem 6.}
-\date{}
-\author{Peter Kagey}
-\maketitle
-
   Let \[
     C_n = \{f: [n] \rightarrow \mathbb{N}\ |\ \text{the convex hull around } \{(1, f(1)), \hdots, (n, f(n))\} \text{ forms an } n\text{-gon}\}
   \] and then let $a(n)$ denote the least upper bound over all functions in $C_n$ \[
@@ -71,5 +57,4 @@
 \begin{references} \text{} \\
   A285521: ``Table read by rows: the n-th row gives the lexicographically earliest sequence of length n such that the convex hull of (1, a(1)), ..., (n, a(n)) is an n-gon with minimum height.'' (https://oeis.org/A285521)
 \end{references}
-
 \end{document}
