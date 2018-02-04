@@ -1,0 +1,38 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+Let $a_3(n)$ be the least $k > n$ such that $nk$ or $nk^2$ is a cube, and
+let $A299117$ be the image of $a_3(n)$.
+\begin{figure}[!h]
+  \centering
+  \begin{align*}
+    a_3(1) &= 8\\
+    a_3(2) &= 4\\
+    a_3(3) &= 9\\
+    a_3(4) &= 16\\
+    a_3(5) &= 25\\
+    a_3(6) &= 36\\
+    a_3(7) &= 49\\
+    a_3(8) &= 27\\
+    a_3(9) &= 24
+  \end{align*}
+\end{figure}
+
+\begin{question}
+  Is there another way to characterize what integers are in $A299117$?
+\end{question}
+
+\begin{note}
+  $A299117$ contains every cube, because $a(n^3) = (n + 1)^3$.\\
+  $A299117$ contains the square of every prime, because $a(p) = p^2$.
+\end{note}
+
+\begin{related}
+  \item Does $A299117$ contain every square?
+  \item Does $A299117$ contain any squarefree number?
+  \item What about the generalization: the image of $a_\beta$ where $a_\beta(n)$
+    is the least $k > n$ such that $nk, nk^2, \hdots, nk^{\beta-2}$, or $nk^{\beta-1}$
+    is a $\beta$-th power? Prime $\beta$ is an injection---is this well behaved?
+\end{related}
+\end{document}
