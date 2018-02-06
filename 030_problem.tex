@@ -1,0 +1,74 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  Consider a triangular grid with each gridpoint having a label in
+  $\{1,2,\hdots,n\}$. What is the biggest triangle that can be formed such that
+  no sub-triangle has corners that all have the same label?
+
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}
+    \node at (0, 0) {1};
+    \node at (1, 0) {0};
+    \node at (2, 0) {1};
+    \node at (3, 0) {1};
+    \node at (0 + 0.5, {1 * sqrt(3)/2}) {1};
+    \node at (1 + 0.5, {1 * sqrt(3)/2}) {1};
+    \node at (2 + 0.5, {1 * sqrt(3)/2}) {0};
+    \node at (0 + 1, {2 * sqrt(3)/2}) {0};
+    \node at (1 + 1, {2 * sqrt(3)/2}) {1};
+    \node at (0 + 1.5, {3 * sqrt(3)/2}) {0};
+  \end{tikzpicture} \hspace{1cm} \begin{tikzpicture}
+    \node at (0, 0) {1};
+    \node at (1, 0) {1};
+    \node at (2, 0) {0};
+    \node at (3, 0) {1};
+    \node at (4, 0) {0};
+    \node at (0 + 0.5, {1 * sqrt(3)/2}) {0};
+    \node at (1 + 0.5, {1 * sqrt(3)/2}) {0};
+    \node at (2 + 0.5, {1 * sqrt(3)/2}) {1};
+    \node at (3 + 0.5, {1 * sqrt(3)/2}) {0};
+    \node at (0 + 1, {2 * sqrt(3)/2}) {1};
+    \node at (1 + 1, {2 * sqrt(3)/2}) {1};
+    \node at (2 + 1, {2 * sqrt(3)/2}) {0};
+    \node at (0 + 1.5, {3 * sqrt(3)/2}) {0};
+    \node at (1 + 1.5, {3 * sqrt(3)/2}) {1};
+    \node at (0 + 2, {4 * sqrt(3)/2}) {1};
+
+    % \foreach \t in {1.5} {
+    \def\t {1.3};
+    \draw[red, ultra thick, dashed]
+      ({2 + (1 - \t) * 1.5}, {(1 - \t) * sqrt(3)/2})--
+      ({2 + (1 - \t) * 1 + \t * 1}, {\t * sqrt(3)})--
+      ({2 + (1 - \t) * 0.5 + \t * 2}, {(1 - \t) * sqrt(3)/2})--
+      ({2 + (1 - \t) * 1.5}, {(1 - \t) * sqrt(3)/2});
+
+      \def\t {1.45};
+      \draw[blue, ultra thick, dashed]
+        ({1 + (1 - \t) * 1.5}, {(1 - \t) * sqrt(3)/2})--
+        ({1 + (1 - \t) * 1 + \t * 1}, {\t * sqrt(3)})--
+        ({1 + (1 - \t) * 0.5 + \t * 2}, {(1 - \t) * sqrt(3)/2})--
+        ({1 + (1 - \t) * 1.5}, {(1 - \t) * sqrt(3)/2});
+    \end{tikzpicture}
+    \caption{
+      On the left is an example of a triangle on two labels that has no
+      sub-triangles with equal corners. On the right is a non-example of such a
+      triangle on two labels---it has two sub-triangles with equal corners.
+    }
+\end{figure}
+
+\begin{question}
+  Given $n$ labels, what is the biggest triangle that can be constructed?
+  Call the side length of such a triangle $a(n)$.
+\end{question}
+\begin{related}
+  \item Given a triangle of side length $k$ and labels up to $n$, what number
+    of sub-triangles with equal corners must exist?
+  \item How many such triangles exist?
+  \item What if any orientation of equilateral triangles are not allowed to have equal corners?
+  \item What if this is done with hexagons instead of triangles?
+  \item What if this is done on a square grid?
+  \item What if for $n \geq 3$ no two corners are allowed to be equal?
+\end{related}
+\end{document}
