@@ -44,7 +44,7 @@
 - [x] Problem 26 (9/30)
 - [x] Problem 27 (10/30)
 - [x] Problem 28 (11/30)
-- [ ] Problem 29 (12/30)
+- [x] Problem 29 (12/30)
 - [ ] Problem 30 (13/30)
 - [ ] Problem 31 (14/30)
 - [ ] Problem 32 (15/30)
