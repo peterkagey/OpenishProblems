@@ -29,10 +29,10 @@
   The unique configuration with 4 sticks (up to reflection).
 
   More details about this problem can be found in 005_problem.pdf.
-  
+
 ## Goals
   In February 2018, my goal is to typeset thirty problems (specifically 18–47.)
-  
+
 - [x] Problem 18 (1/30)
 - [x] Problem 19 (2/30)
 - [x] Problem 20 (3/30)
@@ -42,8 +42,8 @@
 - [x] Problem 24 (7/30)
 - [x] Problem 25 (8/30)
 - [x] Problem 26 (9/30)
-- [ ] Problem 27 (10/30)
-- [ ] Problem 28 (11/30)
+- [x] Problem 27 (10/30)
+- [x] Problem 28 (11/30)
 - [ ] Problem 29 (12/30)
 - [ ] Problem 30 (13/30)
 - [ ] Problem 31 (14/30)
