@@ -47,7 +47,7 @@
 - [x] Problem 31 (12/28)
 - [x] Problem 32 (13/28)
 - [x] Problem 33 (14/28)
-- [ ] Problem 34 (15/28)
+- [x] Problem 34 (15/28)
 - [ ] Problem 35 (16/28)
 - [ ] Problem 36 (17/28)
 - [ ] Problem 37 (18/28)
