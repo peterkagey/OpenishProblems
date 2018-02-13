@@ -1,0 +1,92 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  Consider tilings of the $n \times n$ grid up to $D_8$ action where the
+  tiles are diagonals.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale=2]
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \foreach \a/\b/\theta in {
+      0/0/0, 1/1/180,
+      1/1/270, 2/0/90,
+      0/2/270, 1/1/90,
+      1/1/0, 2/2/180} {
+      \draw[ultra thick, draw={rgb:red,0;green,1;blue,2}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
+    }
+    \draw[gray, dashed] (0,1)--(1,2)--(2,1)--(1,0)--cycle;
+  \end{tikzpicture} \hspace{1cm}
+  \begin{tikzpicture}[scale=2]
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \foreach \a/\b/\theta in {
+      0/1/270, 1/0/90,
+      1/1/270, 2/0/90,
+      0/2/270, 1/1/90,
+      1/1/0, 2/2/180} {
+      \draw[ultra thick, draw={rgb:red,1;green,2;blue,0}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
+    }
+    \draw[gray, dashed] (0,1)--(1,2)--(2,1)--(1,0); \draw[gray, dashed] (0,0)--(1,1);
+  \end{tikzpicture} \hspace{1cm}
+  \begin{tikzpicture}[scale=2]
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \foreach \a/\b/\theta in {
+      0/1/270, 1/0/90,
+      1/0/0, 2/1/180,
+      0/2/270, 1/1/90,
+      1/1/0, 2/2/180} {
+      \draw[ultra thick, draw={rgb:red,2;green,0;blue,1}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
+    }
+    \draw[gray, dashed] (0,0)--(1,1)--(2,0); \draw[gray, dashed] (0,1)--(1,2)--(2,1);
+  \end{tikzpicture}\\\vspace{1cm}
+  \begin{tikzpicture}[scale=2]
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \foreach \a/\b/\theta in {
+      0/1/270, 1/0/90,
+      1/1/270, 2/0/90,
+      0/2/270, 1/1/90,
+      1/2/270, 2/1/90} {
+      \draw[ultra thick, draw={rgb:red,0;green,2;blue,1}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
+    }
+    \draw[gray, dashed] (0,0)--(1,1)--(2,2); \draw[gray, dashed] (0,1)--(1,2); \draw[gray, dashed] (1,0)--(2,1);
+  \end{tikzpicture} \hspace{1cm}
+  \begin{tikzpicture}[scale=2]
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \foreach \a/\b/\theta in {
+      0/1/270, 1/0/90,
+      1/0/0, 2/1/180,
+      0/2/270, 1/1/90,
+      1/2/270, 2/1/90} {
+      \draw[ultra thick, draw={rgb:red,1;green,0;blue,2}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
+    }
+    \draw[gray, dashed] (0,1)--(1,2); \draw[gray, dashed] (0,0)--(1,1)--(2,2); \draw[gray, dashed] (1,1)--(2,0);
+  \end{tikzpicture} \hspace{1cm}
+  \begin{tikzpicture}[scale=2]
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \foreach \a/\b/\theta in {
+      0/1/270, 1/0/90,
+      1/0/0, 2/1/180,
+      0/1/0, 1/2/180,
+      1/2/270, 2/1/90} {
+      \draw[ultra thick, draw={rgb:red,2;green,1;blue,0}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
+    }
+    \draw[gray, dashed] (0,0)--(1,1)--(2,2); \draw[gray, dashed] (0,2)--(1,1)--(2,0);
+  \end{tikzpicture}
+  \caption {
+    An example of the $a(2) = 6$ different ways to fill the $2 \times 2$ grid
+    with diagonal tiles (up to dihedral action).
+  }
+\end{figure}
+
+\begin{question}
+  How many such tilings exist?
+\end{question}
+\begin{related}
+  \item What if grids are only counted up to $C_4$ (rotation) action?
+  \item What if this is counted on the torus/cylinder/M\"{o}bius strip?
+  \item What if each tile can have no diagonals or both diagonals?
+  \item What if tiles are black or white?
+  \item Is there an obvious bijection between the results on the $2n \times 2n$
+    grid for black/white versus diagonal tile types?
+\end{related}
+\end{document}
