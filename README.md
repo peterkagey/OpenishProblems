@@ -49,7 +49,7 @@
 - [x] Problem 33 (14/28)
 - [x] Problem 34 (15/28)
 - [x] Problem 35 (16/28)
-- [ ] Problem 36 (17/28)
+- [x] Problem 36 (17/28)
 - [ ] Problem 37 (18/28)
 - [ ] Problem 38 (19/28)
 - [ ] Problem 39 (20/28)
