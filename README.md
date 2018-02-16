@@ -51,7 +51,7 @@
 - [x] Problem 35 (16/28)
 - [x] Problem 36 (17/28)
 - [x] Problem 37 (18/28)
-- [ ] Problem 38 (19/28)
+- [x] Problem 38 (19/28)
 - [ ] Problem 39 (20/28)
 - [ ] Problem 40 (21/28)
 - [ ] Problem 41 (22/28)
