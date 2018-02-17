@@ -53,7 +53,7 @@
 - [x] Problem 37 (18/28)
 - [x] Problem 38 (19/28)
 - [x] Problem 39 (20/28)
-- [ ] Problem 40 (21/28)
+- [x] Problem 40 (21/28)
 - [ ] Problem 41 (22/28)
 - [ ] Problem 42 (23/28)
 - [ ] Problem 43 (24/28)
