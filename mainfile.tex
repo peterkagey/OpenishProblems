@@ -2,15 +2,17 @@
 \include{header}
 
 \usepackage{docmute}
-\begin{document}
-\foreach \x in {1,...,9} {
-  \textbf{\huge Problem \x.}\\~\\
-    \input{00\x_problem.tex}\pagebreak
+
+\newcommand\twodigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
 }
-\foreach \x in {10,...,99} {
-  \IfFileExists{0\x_problem.tex}{
+
+\begin{document}
+\foreach \x [evaluate=\x as \xpadded using {\twodigits{\x}}] in {1,...,99} {
+  \IfFileExists{0\xpadded_problem.tex}{
+    \setcounter{figure}{0}
     \textbf{\huge Problem \x.}\\~\\
-    \input{0\x_problem.tex}\pagebreak
+    \input{0\xpadded_problem.tex}\pagebreak
   }{}
 }
 \end{document}
