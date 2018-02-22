@@ -58,6 +58,6 @@
 - [x] Problem 42 (23/28)
 - [x] Problem 43 (24/28)
 - [x] Problem 44 (25/28)
-- [ ] Problem 45 (26/28)
+- [x] Problem 45 (26/28)
 - [ ] Problem 46 (27/28)
 - [ ] Problem 47 (28/28)
