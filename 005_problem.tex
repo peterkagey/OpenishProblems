@@ -29,6 +29,94 @@
   \caption{The unique example of a 4 stick crossing (up to reflection)}
 \end{figure}
 
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale=0.375]
+    \draw[ultra thick, draw=red, domain=0:2.8] plot ({\x}, {2*\x});
+    \draw[ultra thick, draw=red, domain=3.2:4.5] plot ({\x}, {2*\x});
+
+    \draw[ultra thick, draw=magenta, domain=2:2.8] plot ({\x}, {2*\x - 4});
+    \draw[ultra thick, draw=magenta, domain=3.2:4.8] plot ({\x}, {2*\x - 4});
+    \draw[ultra thick, draw=magenta, domain=5.2:6.5] plot ({\x}, {2*\x - 4});
+
+    \draw[ultra thick, draw=black!30!green, domain=1.5:3.8] plot ({\x}, {-2*\x + 12});
+    \draw[ultra thick, draw=black!30!green, domain=4.2:6] plot ({\x}, {-2*\x + 12});
+
+    \draw[ultra thick, draw=orange, domain=3.5:3.8] plot ({\x}, {-2*\x + 16});
+    \draw[ultra thick, draw=orange, domain=4.2:6.8] plot ({\x}, {-2*\x + 16});
+    \draw[ultra thick, draw=orange, domain=7.2:8] plot ({\x}, {-2*\x + 16});
+
+    \draw[ultra thick, draw=blue, domain=0:0.7] plot ({\x}, {2});
+    \draw[ultra thick, draw=blue, domain=1.3:4.7] plot ({\x}, {2});
+    \draw[ultra thick, draw=blue, domain=5.3:8] plot ({\x}, {2});
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=0.375]
+    \draw[ultra thick, draw=red, domain=0:1.7] plot ({2}, {\x});
+    \draw[ultra thick, draw=red, domain=2.3:6.7] plot ({2}, {\x});
+    \draw[ultra thick, draw=red, domain=7.3:9] plot ({2}, {\x});
+
+    \draw[ultra thick, draw=magenta, domain=0:3.7] plot ({8}, {\x});
+    \draw[ultra thick, draw=magenta, domain=4.3:9] plot ({8}, {\x});
+
+    \draw[ultra thick, draw=black!30!green, domain=0:4.11] plot ({\x}, {0.8*\x + 0.4});
+    \draw[ultra thick, draw=black!30!green, domain=4.51:7.8] plot ({\x}, {0.8*\x + 0.4});
+    \draw[ultra thick, draw=black!30!green, domain=8.2:10] plot ({\x}, {0.8*\x + 0.4});
+
+    \draw[ultra thick, draw=orange, domain=0:1.8] plot ({\x}, {-0.5*\x + 6});
+    \draw[ultra thick, draw=orange, domain=2.2:7.8] plot ({\x}, {-0.5*\x + 6});
+    \draw[ultra thick, draw=orange, domain=8.2:10] plot ({\x}, {-0.5*\x + 6});
+
+    \draw[ultra thick, draw=black!30!blue, domain=0:5.65] plot ({\x}, {-0.5*\x + 8});
+    \draw[ultra thick, draw=black!30!blue, domain=6.05:10] plot ({\x}, {-0.5*\x + 8});
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=0.333]
+    \draw[ultra thick, draw=red, domain=0:0.8] plot ({\x}, {-2*\x + 10});
+    \draw[ultra thick, draw=red, domain=1.2:3.8] plot ({\x}, {-2*\x + 10});
+    \draw[ultra thick, draw=red, domain=4.2:5] plot ({\x}, {-2*\x + 10});
+
+    \draw[ultra thick, draw=magenta, domain=3:6.4] plot ({\x}, {2*\x - 6});
+    \draw[ultra thick, draw=magenta, domain=6.6:8] plot ({\x}, {2*\x - 6});
+
+    \draw[ultra thick, draw=black!30!green, domain=0:1.3] plot ({\x}, {7});
+    \draw[ultra thick, draw=black!30!green, domain=1.7:4.6] plot ({\x}, {7});
+    \draw[ultra thick, draw=black!30!green, domain=5.4:8] plot ({\x}, {7});
+
+    \draw[ultra thick, draw=orange, domain=0:2.6] plot ({\x}, {-0.5*\x + 8.5});
+    \draw[ultra thick, draw=orange, domain=3.4:5] plot ({\x}, {-0.5*\x + 8.5});
+
+    \draw[ultra thick, draw=black!30!blue, domain=3:3.7] plot ({\x}, {0.5*\x + 4.5});
+    \draw[ultra thick, draw=black!30!blue, domain=4.3:6.7] plot ({\x}, {0.5*\x + 4.5});
+    \draw[ultra thick, draw=black!30!blue, domain=7.3:8] plot ({\x}, {0.5*\x + 4.5});
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=0.375]
+    \draw[ultra thick, draw=red, domain=0:1.8] plot ({\x}, {2});
+    \draw[ultra thick, draw=red, domain=2.2:6.7] plot ({\x}, {2});
+    \draw[ultra thick, draw=red, domain=7.3:8] plot ({\x}, {2});
+
+    \draw[ultra thick, draw=magenta, domain=0:2.7] plot ({2}, {\x});
+    \draw[ultra thick, draw=magenta, domain=3.3:8] plot ({2}, {\x});
+
+    \draw[ultra thick, draw=black!30!green, domain=0:1.8] plot ({6}, {\x});
+    \draw[ultra thick, draw=black!30!green, domain=2.2:6.7] plot ({6}, {\x});
+    \draw[ultra thick, draw=black!30!green, domain=7.3:8] plot ({6}, {\x});
+
+    \draw[ultra thick, draw=orange, domain=0:0.8] plot ({\x}, {\x + 1});
+    \draw[ultra thick, draw=orange, domain=1.2:3.8] plot ({\x}, {\x + 1});
+    \draw[ultra thick, draw=orange, domain=4.2:7] plot ({\x}, {\x + 1});
+
+    \draw[ultra thick, draw=black!30!blue, domain=1:1.7] plot ({\x}, {-\x + 9});
+    \draw[ultra thick, draw=black!30!blue, domain=2.3:5.7] plot ({\x}, {-\x + 9});
+    \draw[ultra thick, draw=black!30!blue, domain=6.3:8] plot ({\x}, {-\x + 9});
+
+  \end{tikzpicture}
+  \caption{
+    Four of five (?) known examples of five-stick crossings.
+    Perhaps the fourth example shouldn't count, because shortening the blue
+    stick to avoid the blue-red crossing results in a valid configuration
+    (the remaining known five-stick crossing).
+  }
+\end{figure}
+
 \begin{question}
   How many distinct popsicle stick weaves exist for $n$ sticks?
 \end{question}
