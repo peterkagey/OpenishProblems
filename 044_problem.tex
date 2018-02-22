@@ -1,0 +1,190 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  This one is based on correspondence from Alec Jones: Consider all of the ways of partitioning the complete graph on $n$ vertices
+  into smaller complete graphs.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale = 2]
+    \draw[ultra thick] (-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2})
+      --(1,0)
+      --(0.5,{-sqrt(3)/2})
+      --(-0.5,{-sqrt(3)/2})
+      --cycle;
+
+    \draw[ultra thick] (-1,0)--(0.5,{sqrt(3)/2});
+    \draw[ultra thick] (-1,0)--(1,0);
+    \draw[ultra thick] (-1,0)--(0.5,{-sqrt(3)/2});
+
+    \draw[ultra thick] (-0.5,{sqrt(3)/2})--(1,0);
+    \draw[ultra thick] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[ultra thick] (-0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+
+    \draw[ultra thick] (0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[ultra thick] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+
+    \draw[ultra thick] (1,0)--(-0.5,{-sqrt(3)/2});
+    \node at (0, -1) { $K_6$ };
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}[scale = 2]
+    \draw[gray,thick,dashed] (-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2})
+      --(1,0)
+      --(0.5,{-sqrt(3)/2})
+      --(-0.5,{-sqrt(3)/2})
+      --cycle;
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{sqrt(3)/2});
+    \draw[gray,thick,dashed] (-1,0)--(1,0);
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(1,0);
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (1,0)--(-0.5,{-sqrt(3)/2});
+
+    \draw[red,ultra thick] (-1,0)
+      --(0.5,{sqrt(3)/2})
+      --(0.5,{-sqrt(3)/2})
+      --cycle;
+    \draw[blue,ultra thick] (-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(-0.5,{-sqrt(3)/2})
+      --cycle;
+    \draw[black!30!green,ultra thick] (1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2})
+      --cycle;
+    \draw[black!30!yellow,ultra thick] (1,0)
+      --(-0.5,{-sqrt(3)/2})
+      --(0.5,{-sqrt(3)/2})
+      --cycle;
+    \node at (0, -1) { $4K_3$ };
+    \node at (1.2, 0) {$+$};
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale = 2]
+    \draw[gray,thick,dashed] (-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2})
+      --(1,0)
+      --(0.5,{-sqrt(3)/2})
+      --(-0.5,{-sqrt(3)/2})
+      --cycle;
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{sqrt(3)/2});
+    \draw[gray,thick,dashed] (-1,0)--(1,0);
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(1,0);
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (1,0)--(-0.5,{-sqrt(3)/2});
+
+    \draw[black!30!cyan,ultra thick] (-1,0)--(1,0);
+    \draw[magenta,ultra thick] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[orange,ultra thick] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \node at (0, -1) { $3K_2$ };
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}[scale = 2]
+    \draw[gray,thick,dashed] (-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2})
+      --(1,0)
+      --(0.5,{-sqrt(3)/2})
+      --(-0.5,{-sqrt(3)/2})
+      --cycle;
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{sqrt(3)/2});
+    \draw[gray,thick,dashed] (-1,0)--(1,0);
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(1,0);
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (1,0)--(-0.5,{-sqrt(3)/2});
+
+    \draw[red,ultra thick] (-0.5,{sqrt(3)/2})
+      --(1,0)
+      --(0.5,{sqrt(3)/2})
+      --(-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2});
+    \draw[red,ultra thick](1,0)--(-1,0);
+    \node at (0, -1) { $K_4$ };
+    \node at (1.2, 0) {$+$};
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale = 2]
+    \draw[gray,thick,dashed] (-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2})
+      --(1,0)
+      --(0.5,{-sqrt(3)/2})
+      --(-0.5,{-sqrt(3)/2})
+      --cycle;
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{sqrt(3)/2});
+    \draw[gray,thick,dashed] (-1,0)--(1,0);
+    \draw[gray,thick,dashed] (-1,0)--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(1,0);
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+    \draw[gray,thick,dashed] (1,0)--(-0.5,{-sqrt(3)/2});
+
+    \draw[blue,ultra thick] (-0.5,{-sqrt(3)/2})
+      --(0.5,{-sqrt(3)/2})
+      --(-1,0)
+      --cycle;
+    \node at (0, -1) { $K_3$ };
+    \node at (1.2, 0) {$+$};
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale = 2]
+    \draw[gray,thick,dashed] (-1,0)
+      --(-0.5,{sqrt(3)/2})
+      --(0.5,{sqrt(3)/2})
+      --(1,0)
+      --(0.5,{-sqrt(3)/2})
+      --(-0.5,{-sqrt(3)/2})
+      --cycle;
+      \draw[gray,thick,dashed] (-1,0)--(0.5,{sqrt(3)/2});
+      \draw[gray,thick,dashed] (-1,0)--(1,0);
+      \draw[gray,thick,dashed] (-1,0)--(0.5,{-sqrt(3)/2});
+      \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(1,0);
+      \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+      \draw[gray,thick,dashed] (-0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+      \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+      \draw[gray,thick,dashed] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+      \draw[gray,thick,dashed] (1,0)--(-0.5,{-sqrt(3)/2});
+
+      \draw[black!30!cyan,ultra thick] (0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+      \draw[orange!30!yellow,ultra thick] (1,0)--(0.5,{-sqrt(3)/2});
+      \draw[orange,ultra thick] (-0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+      \draw[black!30!green,ultra thick] (0.5,{sqrt(3)/2})--(-0.5,{-sqrt(3)/2});
+      \draw[magenta,ultra thick] (1,0)--(-0.5,{-sqrt(3)/2});
+      \draw[pink, ultra thick] (-0.5,{sqrt(3)/2})--(0.5,{-sqrt(3)/2});
+      \node at (0, -1) { $6K_2$ };
+  \end{tikzpicture}
+
+  \caption{
+    An example three ways to partition $K_6$ into complete graphs: the trivial
+    partition, a partition into $4$ copies of $K_3$ and $3$ copies of $K_2$, and
+    a partition into $1$ copy of $K_4$, $1$ copy of $K_3$, and $6$ copies of $K_2$.
+  }
+\end{figure}
+
+\begin{question}
+  How many such partitions exist, up to graph isomorphism?
+\end{question}
+\begin{related}
+  \item What if the union of $K_j$ graphs cannot contain a $K_{j-1}$ subgraph?
+  \item What if the partition can only consist of two ``sizes'' of complete
+    graphs, as in the second example?
+  \item How many such partitions exist up to dihedral action?
+\end{related}
+\end{document}
