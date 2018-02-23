@@ -1,0 +1,99 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  A problem inspired by a Project Euler problem: suppose an $n$-robot takes steps that are $1/n$ of a circle, and turns right
+  or left after every step.
+  \begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) + 0}, {sin(\x) + 0});
+    \end{tikzpicture}\\~\\~\\
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=180:270] plot ({cos(\x) + 0}, {sin(\x) + 2});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:180] plot ({cos(\x) + 0}, {sin(\x) + 0});
+    \end{tikzpicture}\\~\\~\\
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=180:270] plot ({cos(\x) + 0}, {sin(\x) + 2});
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) - 2}, {sin(\x) + 2});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:270] plot ({cos(\x) + 0}, {sin(\x) + 0});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:180] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=270:360] plot ({cos(\x) - 2}, {sin(\x) + 0});
+    \end{tikzpicture}\\~\\~\\
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=180:270] plot ({cos(\x) + 0}, {sin(\x) + 2});
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) - 2}, {sin(\x) + 2});
+      \draw[ultra thick, draw={}, domain=180:270] plot ({cos(\x)- 2}, {sin(\x) + 4});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=90:270] plot ({cos(\x) + 0}, {sin(\x) + 2});
+      \draw[ultra thick, draw={}, domain=270:360] plot ({cos(\x) + 0}, {sin(\x) + 4});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=180:270] plot ({cos(\x) + 0}, {sin(\x) + 2});
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) - 2}, {sin(\x) + 2});
+      \draw[ultra thick, draw={}, domain=90:180] plot ({cos(\x)- 2}, {sin(\x) + 2});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:270] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=0:90] plot ({cos(\x) + 0}, {sin(\x) - 2});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:360] plot ({cos(\x) + 0}, {sin(\x) + 0});
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.8]
+      \draw[thick, dashed, ->] (1,0)--(1,1);
+      \draw[ultra thick, draw={}, domain=0:180] plot ({cos(\x) + 0}, {sin(\x) + 0});
+      \draw[ultra thick, draw={}, domain=180:360] plot ({cos(\x) - 2}, {sin(\x) + 0});
+    \end{tikzpicture}
+    \caption{
+      An example of distinct paths of $k$ steps (up to dihedral action) for a $4$-robot.
+      $a(1) = 1$, $a(2) = 2$, $a(3) = 3$, and $a(4) = 6$.
+    }
+  \end{figure}
+
+\begin{question}
+  How many distinct paths exist for an $n$-robot, where the robot never
+  retraces its steps?
+\end{question}
+\begin{related}
+  \item What if the robot is allowed to retrace its steps?
+  \item What is the smallest radius that can contain a $k$-step walk if the robot
+    cannot retrace its steps?
+  \item What if only smooth loop paths are counted?
+    (The robot returns to where it started in the same direction that it
+    started.)
+  \item Can smooth loop paths occur when the number of steps is not a multiple
+    of $n$?
+  \item What if the orientation of the path matters (i.e. \textit{not} counted
+    up to dihedral action)?
+  \item What if this is done on a torus, cylinder, or M\"obius strip?
+  \item What if the robot cannot cross its own path?
+\end{related}
+\begin{references}
+  \item \url{https://projecteuler.net/index.php?section=problems&id=208}
+\end{references}
+
+\end{document}
