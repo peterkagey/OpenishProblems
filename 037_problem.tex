@@ -90,37 +90,25 @@
     }
     \draw[very thick] (0,0)--(2,0);
     \foreach \x in {0,...,2} { \fill (\x,0) circle (0.1cm); }
-  \end{tikzpicture}\hspace{0.5cm}
+  \end{tikzpicture}\vspace{0.5cm}\\
   \begin{tikzpicture}
     \foreach \x/\y in {0/0,1/0,0/1} {
       \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
     }
     \draw[very thick] (0,0)--(2,0);
     \foreach \x in {0,...,2} { \fill (\x,0) circle (0.1cm); }
-  \end{tikzpicture}\vspace{0.5cm}\\
+  \end{tikzpicture}\hspace{0.5cm}
   \begin{tikzpicture}
     \foreach \x/\y in {0/0,1/0,0/1,1/1,0/2} {
       \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
     }
     \draw[very thick] (0,0)--(2,0);
     \foreach \x in {0,...,2} { \fill (\x,0) circle (0.1cm); }
-  \end{tikzpicture}\hspace{0.5cm}
-  \begin{tikzpicture}
-    \foreach \x/\y in {0/0,1/0,0/1,1/1,0/2,-1/1,-1/2} {
-      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
-    }
-    \draw[very thick] (0,0)--(2,0);
-    \foreach \x in {0,...,2} { \fill (\x,0) circle (0.1cm); }
-  \end{tikzpicture}\hspace{0.5cm}
-  \begin{tikzpicture}
-    \foreach \x/\y in {0/0,1/0,0/1,1/1,0/2,-1/1,-1/2,-1/3} {
-      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
-    }
-    \draw[very thick] (0,0)--(2,0);
-    \foreach \x in {0,...,2} { \fill (\x,0) circle (0.1cm); }
   \end{tikzpicture}
   \caption{
-    All seven towers of $2\times 1$ bricks on a length $2$ platform.
+    All five towers of length $2$ bricks on a length $4$ platform.
+    (No row can be a vertical shift of another row, otherwise arbitrarily tall
+    stacks are possible.)
   }
 \end{figure}
 
@@ -160,8 +148,11 @@
     order to stack on top?
   \item What about bricks of length 3?
   \item What about tetrahedrons and cuboids?
+  \item What if the number of bricks is the constraint instead of the size of
+    the platform?
 \end{related}
 \begin{note}
+  The triangle stacking problem appears to be counted by Catalan numbers.
   If cantilevers are not allowed, the brick stacking problem reduces to the
   triangle stacking problem.
 \end{note}
