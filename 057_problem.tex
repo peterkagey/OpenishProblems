@@ -1,0 +1,33 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  Call $s$ an ``initial permutable'' string if for every initial substring of
+  odd length, the first half of the string is a permutation of the second half.
+\begin{figure}[!h]
+  \centering
+  \begin{align*}
+    1\ 0\ 1\ 0\ 1\ 1\ 0 &\rightarrow 1\ 0\ 1\ 0\ \sim 0\ 1\ 1\ 0\\
+    1\ 0\ 1\ 0\ 1 &\rightarrow 1\ 0\ 1 \sim 0\ 1\ 0\\
+    1\ 0\ 1 &\rightarrow 1\ 0 \sim 0\ 1\\
+    1 &\rightarrow 1 \sim 1
+  \end{align*}
+  \caption{
+    ``1010110'' is an example of an initial permutable string. Because each
+    initial odd substring (the string itself, ``10101'', ``101'', and ``1'')
+    has the property that the first half of the string is a rearrangement of
+    second half.
+  }
+\end{figure}
+
+\begin{question}
+  What is the growth of $a_2(n)$, the number of initial permutable strings of
+  length $2n - 1$ over a $2$-letter alphabet?
+\end{question}
+\begin{related}
+  \item Can this be generalized to a $k$-letter alphabet?
+\end{related}
+\begin{references}
+  \item A297789.
+\end{references}
+\end{document}
