@@ -1,0 +1,32 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  Let a palindromic partition be a partition of a string into palindromes.
+  \begin{figure}[!h]
+    \centering
+    (xox)(x)(o) \hspace{0.5cm} (x)(oxxo) \hspace{0.5cm} (x)(o)(x)(x)(o) \hspace{0.5cm} (x)(o)(xx)(o)
+    \caption{
+      An example of four palindromic partitions of the string ``xoxxo''.
+    }
+  \end{figure}
+\begin{question}
+  Given some string, how many palindromic partitions does it have?
+\end{question}
+\begin{related}
+  \item What is the least number of parts $p$ such that an arbitrary string of
+    length $\ell$ over a $k$-letter alphabet can be partitioned into $p$ or
+    fewer parts?
+  \item What is the length of the shortest string that cannot be partitioned
+    into fewer than $p$ parts?
+  \item How many length $\ell$ strings require the ``worst-case'' number of
+    parts?
+  \item Which length $\ell$ strings have the greatest number of distinct
+    partitions? The least?
+\end{related}
+\begin{references}
+  \item \url{https://oeis.org/A298481} the number of ways to partition the
+    binary representation of n into the minimal number of palindromic parts.
+\end{references}
+
+\end{document}
