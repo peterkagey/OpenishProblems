@@ -1,0 +1,66 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  Consider ways to lay matchsticks (of unit length) on the $n \times m$ grid in
+  such a way that no end is ``orphaned''.
+  \begin{figure}[ht!]
+    \centering
+    \begin{tikzpicture}[scale=2]
+      \draw[ultra thick, gray, dashed] (0,0) grid (3,4);
+      \draw[line width=0.25cm, red] (1,2)--(2,2)--(2,3);
+      \draw[line width=0.25cm, red] (0,3)--(1,3)--(1,0)--(2,0)--(2,1)--(0,1)--(0,4)--(3,4)--(3,3)--(2,3)--(2,4);
+    \end{tikzpicture}\hspace{1cm}
+    \caption{
+      An example of a valid configuration on a $3 \times 4$ grid.
+    }
+  \end{figure}
+  \begin{figure}[ht!]
+    \centering
+    \begin{tikzpicture}
+      \draw[thick, gray, dashed] (0,0) grid (2,2);
+      \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
+    \end{tikzpicture}\hspace{0.5cm}
+    \begin{tikzpicture}
+      \draw[thick, gray, dashed] (0,0) grid (2,2);
+      \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
+      \draw[line width=0.1cm, blue!50] (0,1)--(1,1)--(1,2);
+    \end{tikzpicture}\hspace{0.5cm}
+    \begin{tikzpicture}
+      \draw[thick, gray, dashed] (0,0) grid (2,2);
+      \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
+      \draw[line width=0.1cm, blue!50] (0,1)--(2,1);
+    \end{tikzpicture}\hspace{0.5cm}
+    \begin{tikzpicture}
+      \draw[thick, gray, dashed] (0,0) grid (2,2);
+      \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
+      \draw[line width=0.1cm, blue!50] (0,1)--(2,1);
+      \draw[line width=0.1cm, blue!50] (1,0)--(1,2);
+    \end{tikzpicture}\hspace{0.5cm}
+    \begin{tikzpicture}
+      \draw[thick, gray, dashed] (0,0) grid (2,2);
+      \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
+      \draw[line width=0.1cm, blue!50] (0,1)--(2,1);
+      \draw[line width=0.1cm, blue!50] (1,0)--(1,1);
+    \end{tikzpicture}
+    \caption{
+      All(?) examples of valid configurations of $2 \times 2$ grids with
+      border, up to dihedral action.
+    }
+  \end{figure}
+  \begin{question}
+    Let $a_\ell(n)$ be the number of configurations on the $\ell \times n$ grid.
+    What is a general formula for $a_\ell(n)$?
+  \end{question}
+
+  \begin{related}
+    \item What if the matchsticks are of length $k$?
+    \item How does this generalize to a triangular/hexagonal lattice or to
+      multiple dimensions?
+    \item What is the number of these configurations with rotational symmetry?
+      Horizontal/vertical symmetry?
+    \item If such a configuration is chosen uniformly at random, what is the
+      number of expected regions? (e.g. the first example has 4 interior
+      regions.)
+  \end{related}
+\end{document}
