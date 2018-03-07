@@ -1,0 +1,63 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+  Conside equivalence classes of polygonal chains on $n$ segments where
+  \begin{enumerate}[(1)]
+    \item Edges can cross, but no segment can have a vertex on another segment's
+      edge.
+    \item Two chains are equivalent if one can move to the other without an edge
+    crossing over a vertex, or a crossing being otherwise changed.
+  \end{enumerate}
+  \begin{figure}[ht!]
+    \centering
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0,0)--(0,1)--(1,1)--(1,0)--(0,0);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0,0)--(0,1)--(1,0)--(1,1)--(2,0);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0,0)--(0,1)--(2,0)--(2,1)--(1,0);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0,0)--(2,1)--(2,0)--(1,1)--(1,0);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0,0)--(0,1)--(1,1)--(1,0)--(0,1);
+    \end{tikzpicture}\\~\\
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (2,1)--(0,0)--(0,1)--(1,1)--(1,0);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0, 0)--(1,1)--(1,0)--(0,0)--(2,1);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0, 0)--(1,1)--(0,1)--(1,0)--(0,0);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0, 0)--(2,1)--(1,0)--(0,1)--(2,0);
+    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}
+      \draw[line width=0.1cm] (0, 0)--(2,0)--(1,1)--cycle;
+      \draw[line width=0.1cm] (1,1)--(1,0.3);
+    \end{tikzpicture}
+    \caption{
+      Examples of all known classes of polygonal chains of length $4$.
+    }
+  \end{figure}
+  \begin{question}
+    How many classes of polygonal chains exist on $n$ segments?
+  \end{question}
+
+  \begin{related}
+    \item What if all segments are of unit length, so the final example is not
+      allowed?
+    \item What if The fifth and seventh example are considered the same because
+      they are isomorphic as graphs? (Even if vertices are added at each
+      intersection)
+  \end{related}
+  \begin{references}
+    \item Problem 61.
+  \end{references}
+\end{document}
