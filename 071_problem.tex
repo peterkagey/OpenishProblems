@@ -9,23 +9,27 @@
   \centering
   \begin{tikzpicture}
     \def\polyomino{
-      0/3/0/2/3, 1/3/0/2/3, 2/3/0/3/2, 3/3/0/3/2, 4/3/2/0/3,
-      0/2/2/0/3, 1/2/2/3/0, 2/2/2/3/0, 3/2/3/0/2, 4/2/2/0/3,
-      0/1/3/2/0, 1/1/3/2/0, 2/1/7/1/1, 3/1/0/2/3, 4/1/1/7/1,
-      0/0/0/3/2, 1/0/1/7/1, 2/0/3/0/2, 3/0/3/2/0, 4/0/1/1/7
+      0/3/0/2/3, 1/3/0/2/3, 2/3/3/2/0, 3/3/3/2/0, 4/3/2/0/3,
+      0/2/2/0/3, 1/2/0/3/2, 2/2/0/3/2, 3/2/3/0/2, 4/2/2/0/3,
+      0/1/1/1/7, 1/1/1/1/7, 2/1/7/1/1, 3/1/3/0/2, 4/1/1/7/1,
+      0/0/3/2/0, 1/0/1/7/1, 2/0/7/1/1, 3/0/0/2/3, 4/0/1/7/1
     }
-
+    %
+    % [1, 1, 2, 2, 3]
+    % [3, 4, 4, 5, 3]
+    % [6, 6, 7, 5, 8]
+    % [2, 8, 7, 1, 8]
     \foreach \x/\y/\r/\g/\b in \polyomino {
       \draw[thick,fill={rgb:red,\r;green,\g;blue,\b}] (\x - 0.45, \y - 0.45) rectangle (\x + 0.45, \y + 0.45);
     }
   \end{tikzpicture}\\
-  \caption{A $9$-coloring of the $4 \times 5$ grid where no two colors are adjancent
-    more than once. There is no $8$-coloring.}
+  \caption{An $8$-coloring of the $4 \times 5$ grid where no two colors are adjancent
+    more than once. There is no $7$-coloring.}
 \end{figure}
 
 \begin{question}
-  Let $a(n, m)$ be the minimal $r$ such that there exists an $r$-coloring of the
-  $n \times m$ grid. What is $a(n, m)$?
+  Let $r_{n\times m}$ be the smallest integer such that there exists an
+  $r_{n \times m}$-coloring of the $n \times m$ grid. What is $r_{n\times m}$?
 \end{question}
 \begin{related}
   \item What if colors are not allowed to be self-adjacent?
@@ -36,6 +40,18 @@
   \item What if order matters? (red-green is distinct from green-red.)
   \item What if diagonal adjacencies are considered?
 \end{related}
+
+\begin{note}
+  \[
+    \begin{array}{ccccc}
+      r_{1 \times 1} = 1 \\
+      r_{1 \times 2} = 1 & r_{2 \times 2} = 3 \\
+      r_{1 \times 3} = 2 & r_{2 \times 3} = 4 & r_{3 \times 3} = 5 \\
+      r_{1 \times 4} = 2 & r_{2 \times 4} = 5 & r_{3 \times 4} = 6 & r_{4 \times 4} = 7 \\
+      r_{1 \times 5} = 3 & r_{2 \times 5} = 5 & r_{3 \times 5} = 7 & r_{4 \times 5} = 8 & r_{5 \times 5} = 9
+    \end{array}
+  \]
+\end{note}
 
 \begin{references}
   \item Problem 27.
