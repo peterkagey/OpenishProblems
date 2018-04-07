@@ -2,17 +2,21 @@
 \include{header}
 
 \begin{document}
-  Ron Graham's (A006255) sequence is the least k for which there exists a
+  Ron Graham's Sequence (A006255) is the least k for which there exists a
   strictly increasing sequence \[
-    n = a_1 \leq a_2 \leq \hdots \leq a_T = k \text{ where }
-    a_1 \cdot\hdots\cdot a_T \text{ is square.}
+    n = b_1 < b_2 < \hdots < b_t = k \text{ where }
+    b_1 \cdot\hdots\cdot b_t \text{ is square.}
   \]
-  There is a known way to efficiently compute analogous sequences wherein
-  $a_1 \cdot\hdots\cdot a_T$ is a $p$-th power, where $p$ is a prime and where
-  any term appears at most $p - 1$ times.
+  There is a known way to efficiently compute analogous functions $a_p$ where
+  $a_p(n)$ is the least integer such that there exists a sequence
+  \begin{enumerate}[(a)]
+    \item $n = b_1 \leq b_2 \leq \hdots \leq b_t = a_p(n)$,
+    \item any term appears at most $p - 1$ times, and
+    \item $b_1 \cdot b_2 \cdot\hdots\cdot b_t$ is a $p$-th power.
+  \end{enumerate}
 \begin{question}
-  What is an efficient way to compute analogous sequences wherein
-  $a_1 \cdot\hdots\cdot a_T$ is a $c$-th power, where $c$ is composite?
+  An efficient way to compute $a_p$ is known when $p$ is prime.
+  What is an efficient way to compute $a_c$ when $c$ is composite?
 \end{question}
 \begin{figure}[!h]
   \centering
@@ -34,9 +38,15 @@
 \end{figure}
 
 \begin{related}
-  \item For what values $n$ is $a(n) < A006255(n)$?
-  \item How many $c$-th power sequences have $a_T = a_c(n)$?
-  \item Do any such $c$-th power sequences exactly two distinct terms?
+  \item For what values $n$ is $a_4(n) < A006255(n)$?
+  \item Given some integers $k, c$, how many terms have $a_c(n) = k$?
+    (e.g. $a_4(6) = a_4(9) = 9$.)
+  \item Does $a_c$ contain arbitrarily many copies of the same value? \\
+    (i.e. does there exist a sequence such that
+    $a_4(n_1) = a_4(n_2) = \hdots = a_4(n_m)$ for arbitrarily large $m$?)
+  \item How many times does $k$ appear in the image of $a_c$?
+    (e.g. $9$ appears twice, as $a(6)$ and $a(9)$.)
+  \item What integers are in the image of $a_c$?
 \end{related}
 
 \begin{references}
