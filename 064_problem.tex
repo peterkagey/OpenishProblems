@@ -6,13 +6,19 @@
   such a way that no end is ``orphaned''.
   \begin{figure}[ht!]
     \centering
-    \begin{tikzpicture}[scale=2]
-      \draw[ultra thick, gray, dashed] (0,0) grid (3,4);
-      \draw[line width=0.25cm, red] (1,2)--(2,2)--(2,3);
-      \draw[line width=0.25cm, red] (0,3)--(1,3)--(1,0)--(2,0)--(2,1)--(0,1)--(0,4)--(3,4)--(3,3)--(2,3)--(2,4);
-    \end{tikzpicture}\hspace{1cm}
+    \begin{tikzpicture}[scale=1.5]
+      \draw[ultra thick, gray, dashed] (0,0) grid (4,-3);
+      \draw[line width=0.25cm, red] (2,-1)--(2,-2)--(3,-2);
+      \draw[line width=0.25cm, red] (3,-0)--(3,-1)--(0,-1)--(0,-2)--(1,-2)--(1,-0)--(4,-0)--(4,-3)--(3,-3)--(3,-2)--(4,-2);
+    \end{tikzpicture}\hspace{0.5cm}
+    \begin{tikzpicture}[scale=1.5]
+      \draw[ultra thick, gray, dashed] (0,0) grid (4,3);
+      \draw[line width=0.25cm, green!50] (1,2)--(0,2)--(0,1)--(1,1)--(1,2)--(1,3)--(2,3)--(3,3)--(4,3)--(4,2)--(3,2)--(2,2)--(2,3);
+      \draw[line width=0.25cm, green!50] (4,0)--(4,1)--(2,1)--(2,0)--cycle;
+    \end{tikzpicture}
     \caption{
-      An example of a valid configuration on a $3 \times 4$ grid.
+      Two examples of a valid configurations on a $5 \times 4$ grid; the second
+      has an ``island'' in the lower right corner.
     }
   \end{figure}
   \begin{figure}[ht!]
@@ -44,7 +50,7 @@
       \draw[line width=0.1cm, blue!50] (1,0)--(1,1);
     \end{tikzpicture}
     \caption{
-      All(?) examples of valid configurations of $2 \times 2$ grids with
+      All(?) examples of valid configurations of $3 \times 3$ grids with
       border, up to dihedral action.
     }
   \end{figure}
@@ -62,5 +68,15 @@
     \item If such a configuration is chosen uniformly at random, what is the
       number of expected regions? (e.g. the first example has 4 interior
       regions.)
+    \item What if diagonals are allowed?
+    \item What if no gridpoint can have degree 0? Degree 2? 3? 4?
+    \item What if the entire border must be drawn?
+    \item What if the the graph must be connected (i.e. cannot have an ``island''.)
+    \item What if instead of horizontal/vertical lines, all edges have integer
+      slope? What if these edges don't intersect except at vertices?
   \end{related}
+  \begin{references}
+    \item The number of $2 \times n$ grids appears to be given by A093129.
+    \item The number of $3 \times n$ grids is given by A301976.
+  \end{references}
 \end{document}
