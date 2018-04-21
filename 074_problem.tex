@@ -15,14 +15,17 @@
     \end{tikzpicture}\hspace{0.5cm}
     \begin{tikzpicture}[scale=1.5]
       \draw[ultra thick, fill=orange!50] (0,0)--(1.54/2,1.54/2)--(1.54,0)--(1.54,1.54)--(0,1.54)--cycle;
+      \draw[black!70, thick, dashed] (0,1.54)--(1.54/2,1.54/2)--(1.54,1.54);
     \end{tikzpicture}\hspace{0.5cm}
     \begin{tikzpicture}[scale=1.5]
       \draw[ultra thick, fill=blue!50] (0,0)
-        --({1.78/4 + 0.1}, {1.78*sqrt(3)/4 - 0.1*sqrt(3)})
-        --(1.78/2,1.54)
-        --({3*1.78/4 - 0.1}, {1.78*sqrt(3)/4 - 0.1*sqrt(3)})
+        --(0.545, 0.59756)
+        --(0.89,1.54)
+        --(1.235, 0.598)
         --(1.78,0)
         --cycle;
+      \draw[black!70, thick, dashed] (1.037, 1.137)--(0.545, 0.59756)--(0.326,0);
+      \draw[black!70, thick, dashed] (1.45402, 0)--(1.235, 0.598)--(0.743,1.138);
     \end{tikzpicture}\hspace{0.5cm}
     \begin{tikzpicture}[scale=1.5]
       \draw[ultra thick, fill=yellow!50] (0,0)
@@ -31,6 +34,8 @@
         --({2*1.78/3}, 0.3)
         --({1.78/3}, 0.3)
         --cycle;
+      \draw[black!70, thick, dashed] (0.1734, 0.3)--({1.78/3}, 0.3)--(1.37749, {1.37749 * 0.505618});
+      \draw[black!70, thick, dashed] (0.402512, 0.69648261408)--({2*1.78/3}, 0.3)--(1.607, 0.3);
     \end{tikzpicture}\hspace{0.5cm}
     \begin{tikzpicture}[scale=1.5]
       \draw[ultra thick, fill=green!50] (0,0)
@@ -39,9 +44,12 @@
         --({1.78/2}, 0.6)
         --({3*1.78/8}, 0.3)
         --cycle;
+      \draw[black!70, thick, dashed] (0.5, 0.865)--({1.78/2}, 0.6)--(1.2, 1.012);
     \end{tikzpicture}
     \caption{
-      The $a(5) = 5$ concavity classes on the pentagon.
+      The concavity classes from Problem 61. It appears that the second and
+      fifth polygons are museum-equivalent. Are the third and fourth polygons
+      equivalent?
     }
   \end{figure}
   \begin{question}
