@@ -6,23 +6,23 @@
   and $k$ exposed edges.
   \begin{figure}[!h]
     \centering
-    \begin{tikzpicture}
-      \draw[very thick, fill={yellow}, fill opacity=0.5] (0,0)--(1,0)--(1,1)--cycle;
-      \draw[very thick, fill={yellow}, fill opacity=0.5] (1,0)--(1,1)--(2,0)--cycle;
+    \begin{tikzpicture}[scale=2]
+      \draw[very thick, fill={yellow}, fill opacity=0.5] (0,0)--(2,0)--(1,1)--cycle;
+      \draw[very thick] (1,1)--(1,0);
     \end{tikzpicture}\hspace{1cm}
-    \begin{tikzpicture}
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(1,1)--cycle;
-      \draw[very thick, fill={red}, fill opacity=0.5] (1,0)--(1,1)--(2,1)--cycle;
+    \begin{tikzpicture}[scale=2]
+      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(2,1)--(1,1)--cycle;
+      \draw[very thick] (1,1)--(1,0);
     \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(0,1)--cycle;
-      \draw[very thick, fill={red}, fill opacity=0.5] (1,0)--(1,1)--(0,1)--cycle;
+    \begin{tikzpicture}[scale=2]
+      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(1,1)--(0,1)--cycle;
+      \draw[very thick] (0,0)--(1,1);
     \end{tikzpicture}\hspace{1cm}
-    \begin{tikzpicture}
-      \draw[very thick, fill={blue}, fill opacity=0.5] (-1,0)--(0,0)--(0,1)--cycle;
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(1,0)--(0,1)--cycle;
-      \draw[very thick, fill={blue}, fill opacity=0.5] (1,0)--(1,1)--(0,1)--cycle;
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,1)--(1,2)--cycle;
+    \begin{tikzpicture}[scale=2]
+      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,0)--(0,2)--cycle;
+      \draw[very thick] (0,1)--(1,1);
+      \draw[very thick] (0,0)--(1,1);
+      \draw[very thick] (1,0)--(1,1);
     \end{tikzpicture}
     \caption{
       An example in yellow showing that $a_3(2) \geq 1$,
