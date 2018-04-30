@@ -13,6 +13,19 @@ Peter Winkler's Coins-in-a-Row game works as following:
 
 Let $X_1, X_2, \hdots, X_n$ be independent and identically distributed
 according to some probability distribution.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}
+    \foreach \x/\n in {1/2, 2/6, 3/0, 4/3, 5/9, 6/1, 7/2} {
+      \draw (\x, 0) circle (0.4) node {\n};
+    }
+  \end{tikzpicture}
+  \caption{
+    An instance of a seven coin game on a uniform distribution of
+    $\{ 0, 1, \hdots, 9\}$. The first player has a strategy that allows her to
+    win by one point.
+  }
+\end{figure}
 
 \begin{question}
   For some fixed $\omega$, what is

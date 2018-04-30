@@ -11,7 +11,7 @@
 \foreach \x [evaluate=\x as \xpadded using {\twodigits{\x}}] in {1,...,99} {
   \IfFileExists{0\xpadded_problem.tex}{
     \setcounter{figure}{0}
-    \noindent\textbf{\huge Problem \x.}\hspace*{\fill}
+    \noindent\textbf{\huge Problem \x.}
     \input{0\xpadded_problem.tex}\pagebreak
   }{}
 }
