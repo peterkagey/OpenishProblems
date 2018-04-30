@@ -2,10 +2,9 @@
 \include{header}
 
 \begin{document}
-  Consider integer functions $f$ from an $n$-element subset of $\mathbb{N}$
-  such that no $k + 2$ of the points
-  $\{(j_1, f(j_1)),\hdots,(j_n, f(j_n))\}$ fall on a degree $k$ polynomial.
-
+  Say that a \textit{minimally interpolable permutation} $f$ is a permutation of
+  $\{1, 2, \hdots, n\}$ such that no $k + 2$ of the
+  points $\{(1, f(1)),\hdots,(n, f(n))\}$ fall on a degree $k$ polynomial.
 \begin{figure}[!h]
   \centering
   \begin{tikzpicture}[scale=1]
@@ -46,32 +45,29 @@
     \end{axis}
   \end{tikzpicture}
   \caption{
-    An example that shows that $a(4) = 4$.
+    A minimally interpolable permutation of $\{1, 2, 3, 4\}$.
     (Degree 0 polynomials are plotted in red, degree 1 in blue, and degree 2 in green.)
   }
 \end{figure}
 
 \begin{question}
-  What is $a(n)$, the least $N$ such that there exists a function
-  $f\colon \{ 1,2,\hdots,n \} \rightarrow \{ 1,2,\hdots,N \}$
-  with the above property?
+  Do such permutations always exist? If not, what is the least $N$ such that
+  there is  a minimally interpolable function from $[n]$ into $[N]$?
 \end{question}
 
-\begin{note}
-  Trivially, $a(n)$ is bounded above by the function described in problem 23.
-\end{note}
-
 \begin{related}
-  \item What is the least $M$ such that there exists a subset
-  $S \subset \{ 1,2,\hdots,M \}$ and a surjection
-  $g\colon S\rightarrow \{ 1,2,\hdots,n \}$ with the aforementioned property?
-  \item How many such functions exist when $N$ and $M$ are minimized respectively?
+  \item How many minimally interpolable permutations exist?
+  \item Does the number of minimally interpolable permutations increase as a
+    function of $n$?
+  \item Is there a method to explicitly construct a minimally interpolable
+    permuation?
+  \item If such permutations do not always exist, what is the least $M$ such
+    that there exists a subset $S \subset [M]$ and a surjection
+    $g\colon S\rightarrow [N]$ with the aforementioned property?
 \end{related}
-\begin{note}
-  It appears that $N = M = n$.
-\end{note}
 \begin{references}
   \item Problem 23.
   \item \url{https://oeis.org/A301802}
+  \item \url{https://codegolf.stackexchange.com/q/160382/53884}
 \end{references}
 \end{document}
