@@ -2,102 +2,103 @@
 \include{header}
 
 \begin{document}
-  From Alec Jones. Let $a_k(n)$ count the number of $k$-gons with vertices on the $n \times n$
-  grid.
-  \begin{figure}[!h]
-    \centering
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,2)--(0,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(1,2)--(0,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,2)--(0,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(0,2)--(2,1)--cycle;
-    \end{tikzpicture}\\~\\
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(0,1)--(2,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,0)--(2,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,1)--(2,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(1,1)--(2,0)--cycle;
-    \end{tikzpicture}\\~\\~\\
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(2,2)--(2,0)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(2,1)--(2,0)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(1,1)--(1,0)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(2,2)--(2,1)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(1,2)--(2,1)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(1,0)--(2,1)--(1,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(1,1)--(1,0)--cycle;
-    \end{tikzpicture}\\~\\
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(2,1)--(2,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(1,0)--(2,1)--(2,2)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(2,0)--(1,2)--(1,1)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(2,1)--(1,2)--(1,1)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(2,0)--(1,2)--(1,1)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,1)--(0,2)--(2,1)--cycle;
-    \end{tikzpicture}
-    \begin{tikzpicture}
-      \draw[gray, dashed] (0,0) grid (2,2);
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(2,2)--(2,1)--cycle;
-    \end{tikzpicture}
-    \caption{
-      An example showing that $a_3(2) \geq 8$ and $a_4(2) \geq 14$.
-    }
-  \end{figure}
+\rating{4}{3}
+From Alec Jones. Let $a_k(n)$ count the number of $k$-gons with vertices on the $n \times n$
+grid.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,2)--(0,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(1,2)--(0,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,2)--(0,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(0,2)--(2,1)--cycle;
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(0,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,0)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(1,1)--(2,0)--cycle;
+  \end{tikzpicture}\\~\\~\\
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(2,2)--(2,0)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(2,1)--(2,0)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(1,1)--(1,0)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(2,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(1,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(1,0)--(2,1)--(1,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(1,1)--(1,0)--cycle;
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(2,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(1,0)--(2,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(2,0)--(1,2)--(1,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(2,1)--(1,2)--(1,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(2,0)--(1,2)--(1,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,1)--(0,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(2,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \caption{
+    An example showing that $a_3(2) \geq 8$ and $a_4(2) \geq 14$.
+  }
+\end{figure}
 \begin{question}
   What is $a_k(n)$?
 \end{question}

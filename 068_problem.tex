@@ -2,45 +2,46 @@
 \include{header}
 
 \begin{document}
-  Suppose a snail chooses a direction uniformly at random and walks a random
-  distance $d_\text{free}$ according to some distribution. The snail then
-  repeats the process. However, if the snail turns in a direction that faces its
-  trail, it walks a distance $d_\text{trail}$ chosen uniformly at random between
-  0 and the distance to the trail.
-  \begin{figure}[ht!]
-    \centering
-    \begin{tikzpicture}
-      \draw[thick] (-2.86, -0.032)
-        --(-2.86-0.30,-0.032+3.46)
-        --(-2.86-0.30+0.212,-0.032+3.46+1.17)
-        --(-2.86-0.30+0.212-4.92,-0.032+3.46+1.17-1.16)
-        --(-2.86-0.30+0.212-4.92-1.22+2.15,-0.032+3.46+1.17-1.16-0.57-2.45)
-        --(-2.86-0.30+0.212-4.92-1.22+2.15+2.58,-0.032+3.46+1.17-1.16-0.57-2.45-0.61)
-        --(-3.40,-0.20)
-        --(-2.25,-4.67)
-        --(-3.38,-8.372)
-        --(-3.38+0.82,-8.372+2.21)
-        --(-3.38+0.82+4.14,-8.372+2.21+1.17)
-        --({-3.38+0.82+4.14-3.75*1.02},{-8.372+2.21+1.17+3.75*1.26})
-        --(-3.38,-0.03)
-        --({-3.38+0.14*1.09},{-0.03+0.14*0.71});
-    \end{tikzpicture}
-    \caption{
-      An (actually) random walk where the change in $x$ and $y$ were
-      independently chosen from a Gaussian distribution. Is the snail likely to
-      escape from its confine for good?
-    }
-  \end{figure}
-  \begin{question}
-    What is the probability that the walk is unbounded?
-  \end{question}
+\rating{4}{1}
+Suppose a snail chooses a direction uniformly at random and walks a random
+distance $d_\text{free}$ according to some distribution. The snail then
+repeats the process. However, if the snail turns in a direction that faces its
+trail, it walks a distance $d_\text{trail}$ chosen uniformly at random between
+0 and the distance to the trail.
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \draw[thick] (-2.86, -0.032)
+      --(-2.86-0.30,-0.032+3.46)
+      --(-2.86-0.30+0.212,-0.032+3.46+1.17)
+      --(-2.86-0.30+0.212-4.92,-0.032+3.46+1.17-1.16)
+      --(-2.86-0.30+0.212-4.92-1.22+2.15,-0.032+3.46+1.17-1.16-0.57-2.45)
+      --(-2.86-0.30+0.212-4.92-1.22+2.15+2.58,-0.032+3.46+1.17-1.16-0.57-2.45-0.61)
+      --(-3.40,-0.20)
+      --(-2.25,-4.67)
+      --(-3.38,-8.372)
+      --(-3.38+0.82,-8.372+2.21)
+      --(-3.38+0.82+4.14,-8.372+2.21+1.17)
+      --({-3.38+0.82+4.14-3.75*1.02},{-8.372+2.21+1.17+3.75*1.26})
+      --(-3.38,-0.03)
+      --({-3.38+0.14*1.09},{-0.03+0.14*0.71});
+  \end{tikzpicture}
+  \caption{
+    An (actually) random walk where the change in $x$ and $y$ were
+    independently chosen from a Gaussian distribution. Is the snail likely to
+    escape from its confine for good?
+  }
+\end{figure}
+\begin{question}
+  What is the probability that the walk is unbounded?
+\end{question}
 
-  \begin{related}
-    \item If the walk is bounded with probability 1, what is the expected
-      distance of the walk?
-    \item What if the angle is chosen uniformly at random from
-      $\{2\pi/n, 4\pi/2, \hdots 2(n-1)\pi/n\}$? And $d_\text{free}$ is uniform
-      on $[0, 1]$.
-    \item What is the expected number of (avoided) collisions after $k$ steps?
-  \end{related}
+\begin{related}
+  \item If the walk is bounded with probability 1, what is the expected
+    distance of the walk?
+  \item What if the angle is chosen uniformly at random from
+    $\{2\pi/n, 4\pi/2, \hdots 2(n-1)\pi/n\}$? And $d_\text{free}$ is uniform
+    on $[0, 1]$.
+  \item What is the expected number of (avoided) collisions after $k$ steps?
+\end{related}
 \end{document}

@@ -2,34 +2,35 @@
 \include{header}
 
 \begin{document}
-  Given two vector valued functions
-  $u, v\colon \mathbb{R}^n \rightarrow \mathbb{R}^n$, that are linearly
-  independent at every point, let
-  $f\colon \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}$ be
-  defined by \[
-    f(x_0, x_1) = |\alpha| + |\beta| \text{ where }
-    x_1 - x_0 = \alpha \cdot u(x_0) + \beta \cdot v(x_0).
-  \]
-  Next let the length of a curve $\Gamma\colon [0, 1] \rightarrow \mathbb{R}^n$
-  be given by \[
-    \mathcal{L}(\Gamma) = \lim_{N \rightarrow \infty} \sum_{k = 0}^{N - 1} f\left(
-      \Gamma\left(\frac{j}{N}\right), \Gamma\left(\frac{j + 1}{N}\right)
-    \right).
-  \]
-  Let the distance $d: \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}$
-  from $x_0$ to $x_1$ be given by the infimum of the length over all curves from
-  $x_0$ to $x_1$: \[
-    d(x_0, x_1) = \inf\{\,\mathcal{L}(\Gamma): \Gamma(0) = x_0 \text{ and } \Gamma(1) = x_1\,\}.
-  \]
-  \begin{figure}[ht!]
-    \centering
-    \includegraphics[width=100mm]{assets/Problem58_figure.png}
-    \caption{
-      Five examples of shortest curves when
-      $u(x_1, x_2) = (x_1, x_2)/||(x_1, x_2)||$ and
-      $v(x_1, x_2) = (-x_2, x_1)/||(x_1, x_2)||$.
-    }
-  \end{figure}
+\rating{3}{2}
+Given two vector valued functions
+$u, v\colon \mathbb{R}^n \rightarrow \mathbb{R}^n$, that are linearly
+independent at every point, let
+$f\colon \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}$ be
+defined by \[
+  f(x_0, x_1) = |\alpha| + |\beta| \text{ where }
+  x_1 - x_0 = \alpha \cdot u(x_0) + \beta \cdot v(x_0).
+\]
+Next let the length of a curve $\Gamma\colon [0, 1] \rightarrow \mathbb{R}^n$
+be given by \[
+  \mathcal{L}(\Gamma) = \lim_{N \rightarrow \infty} \sum_{k = 0}^{N - 1} f\left(
+    \Gamma\left(\frac{j}{N}\right), \Gamma\left(\frac{j + 1}{N}\right)
+  \right).
+\]
+Let the distance $d: \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}$
+from $x_0$ to $x_1$ be given by the infimum of the length over all curves from
+$x_0$ to $x_1$: \[
+  d(x_0, x_1) = \inf\{\,\mathcal{L}(\Gamma): \Gamma(0) = x_0 \text{ and } \Gamma(1) = x_1\,\}.
+\]
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=100mm]{assets/Problem58_figure.png}
+  \caption{
+    Five examples of shortest curves when
+    $u(x_1, x_2) = (x_1, x_2)/||(x_1, x_2)||$ and
+    $v(x_1, x_2) = (-x_2, x_1)/||(x_1, x_2)||$.
+  }
+\end{figure}
 \begin{question}
   What are the necessary conditions on $u$ and $v$ for this to be a well-defined
   metric space?

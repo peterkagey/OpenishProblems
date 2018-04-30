@@ -2,18 +2,19 @@
 \include{header}
 
 \begin{document}
-  Ron Graham's Sequence (A006255) is the least k for which there exists a
-  strictly increasing sequence \[
-    n = b_1 < b_2 < \hdots < b_t = k \text{ where }
-    b_1 \cdot\hdots\cdot b_t \text{ is square.}
-  \]
-  There is a known way to efficiently compute analogous functions $a_p$ where
-  $a_p(n)$ is the least integer such that there exists a sequence
-  \begin{enumerate}[(a)]
-    \item $n = b_1 \leq b_2 \leq \hdots \leq b_t = a_p(n)$,
-    \item any term appears at most $p - 1$ times, and
-    \item $b_1 \cdot b_2 \cdot\hdots\cdot b_t$ is a $p$-th power.
-  \end{enumerate}
+\rating{3}{3}
+Ron Graham's Sequence (A006255) is the least k for which there exists a
+strictly increasing sequence \[
+  n = b_1 < b_2 < \hdots < b_t = k \text{ where }
+  b_1 \cdot\hdots\cdot b_t \text{ is square.}
+\]
+There is a known way to efficiently compute analogous functions $a_p$ where
+$a_p(n)$ is the least integer such that there exists a sequence
+\begin{enumerate}[(a)]
+  \item $n = b_1 \leq b_2 \leq \hdots \leq b_t = a_p(n)$,
+  \item any term appears at most $p - 1$ times, and
+  \item $b_1 \cdot b_2 \cdot\hdots\cdot b_t$ is a $p$-th power.
+\end{enumerate}
 \begin{question}
   An efficient way to compute $a_p$ is known when $p$ is prime.
   What is an efficient way to compute $a_c$ when $c$ is composite?

@@ -2,49 +2,83 @@
 \include{header}
 
 \begin{document}
-  Consider labeled rooted trees where the sum of the labels of the branches
-  connected to a vertex is less than the parent label, and the ``top'' label is
-  $n$.
-  \begin{figure}[!h]
-    \centering
-    \begin{tikzpicture}
-      \node {5}
+\rating{0}{1}
+Consider labeled rooted trees where the sum of the labels of the branches
+connected to a vertex is less than the parent label, and the ``top'' label is
+$n$.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}
+    \node {5}
+      child { node {1} }
+      child { node {1} }
+      child { node {1} }
+      child { node {1} };
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \node {5}
+      child {
+        node {2}
+        child { node {1} }
+      }
+      child { node {1} }
+      child { node {1} };
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \node {5}
+      child {
+        node {2}
+        child { node {1} }
+      }
+      child {
+        node {2}
+        child { node {1} }
+      };
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \node {5}
+      child {
+        node {3}
+        child { node {1} }
+        child { node {1} }
+      }
+      child { node {1} };
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}
+    \node {5}
+      child {
+        node {3}
+        child {
+          node {2}
+          child { node {1} }
+        }
+      }
+      child { node {1} };
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \node {5}
+      child {
+        node {4}
         child { node {1} }
         child { node {1} }
         child { node {1} }
-        child { node {1} };
-    \end{tikzpicture}\hspace{0.5cm}
-    \begin{tikzpicture}
-      \node {5}
+      };
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \node {5}
+      child {
+        node {4}
         child {
           node {2}
           child { node {1} }
         }
         child { node {1} }
-        child { node {1} };
-    \end{tikzpicture}\hspace{0.5cm}
-    \begin{tikzpicture}
-      \node {5}
-        child {
-          node {2}
-          child { node {1} }
-        }
-        child {
-          node {2}
-          child { node {1} }
-        };
-    \end{tikzpicture}\hspace{0.5cm}
-    \begin{tikzpicture}
-      \node {5}
-        child {
-          node {3}
-          child { node {1} }
-          child { node {1} }
-        }
-        child { node {1} };
-    \end{tikzpicture}\\~\\
-    \begin{tikzpicture}
-      \node {5}
+      };
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \node {5}
+      child {
+        node {4}
         child {
           node {3}
           child {
@@ -52,47 +86,13 @@
             child { node {1} }
           }
         }
-        child { node {1} };
-    \end{tikzpicture}\hspace{0.5cm}
-    \begin{tikzpicture}
-      \node {5}
-        child {
-          node {4}
-          child { node {1} }
-          child { node {1} }
-          child { node {1} }
-        };
-    \end{tikzpicture}\hspace{0.5cm}
-    \begin{tikzpicture}
-      \node {5}
-        child {
-          node {4}
-          child {
-            node {2}
-            child { node {1} }
-          }
-          child { node {1} }
-        };
-    \end{tikzpicture}\hspace{0.5cm}
-    \begin{tikzpicture}
-      \node {5}
-        child {
-          node {4}
-          child {
-            node {3}
-            child {
-              node {2}
-              child { node {1} }
-            }
-          }
-        };
-    \end{tikzpicture}
-    \caption{
-      Eight examples of trees with a greatest label of $5$:
-      $a(5) = a(1)^4 + a(2)a(1)^2 + a(2)^2 + a(3)a(1) + a(4) = 8$
-    }
-  \end{figure}
-
+      };
+  \end{tikzpicture}
+  \caption{
+    Eight examples of trees with a greatest label of $5$:
+    $a(5) = a(1)^4 + a(2)a(1)^2 + a(2)^2 + a(3)a(1) + a(4) = 8$
+  }
+\end{figure}
 \begin{question}
   How many such labels exist?
 \end{question}

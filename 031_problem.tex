@@ -2,26 +2,27 @@
 \include{header}
 
 \begin{document}
-  A country has a strange legislative procedure.
-  For each bill, the body is split up into $k_1$ committees of
-  $\lfloor n/k_1 \rfloor$ or $\lfloor n/k_1 \rfloor$ legislators each,
-  each of which picks a representative. These $k_1$ representatives are split up
-  into $k_2$ sub-committees with
-  $\lfloor k_1/k_2 \rfloor$ or $\lfloor k_1/k_2 \rfloor$ legislators each, which
-  each elect a representative, and so on until $k_T=1$ and the final committee
-  votes on the bill.
+\rating{3}{1}
+A country has a strange legislative procedure.
+For each bill, the body is split up into $k_1$ committees of
+$\lfloor n/k_1 \rfloor$ or $\lfloor n/k_1 \rfloor$ legislators each,
+each of which picks a representative. These $k_1$ representatives are split up
+into $k_2$ sub-committees with
+$\lfloor k_1/k_2 \rfloor$ or $\lfloor k_1/k_2 \rfloor$ legislators each, which
+each elect a representative, and so on until $k_T=1$ and the final committee
+votes on the bill.
 
-  There are a few rules: \begin{enumerate}
-    \item Each committee (and subcommittee and so on) much have at least $\ell$
-      members.
-    \item Ties are settled by a coin toss.
-    \item The president does not get to vote, but she does get to choose the
-      number of committees and who goes in each one.
-    \item There are $\alpha$ supporters who will always vote in the
-    president's interests and $n-\alpha$ who will always vote against.
-  \end{enumerate}
-  Let $a_\ell(n)$ be the minimum number of supporters ($\alpha$) required for
-  the president to be able to pass every bill.
+There are a few rules: \begin{enumerate}
+  \item Each committee (and subcommittee and so on) much have at least $\ell$
+    members.
+  \item Ties are settled by a coin toss.
+  \item The president does not get to vote, but she does get to choose the
+    number of committees and who goes in each one.
+  \item There are $\alpha$ supporters who will always vote in the
+  president's interests and $n-\alpha$ who will always vote against.
+\end{enumerate}
+Let $a_\ell(n)$ be the minimum number of supporters ($\alpha$) required for
+the president to be able to pass every bill.
 \begin{figure}[!h]
   \centering
   \begin{tikzpicture}[scale=0.5]

@@ -2,58 +2,58 @@
 \include{header}
 
 \begin{document}
-  A snail travels along the grid in unit steps---but it hates crossing its
-  trail, so if a step is going to cross is trail, it will only go half way.
-  \begin{figure}[!h]
-    \centering
-    \begin{tikzpicture}[scale=4]
-      \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
-      \draw[very thick, ->] (0,1/4)--(1/2,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (1/2,1/4)--(1/2,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{8}$};
-    \end{tikzpicture}\hspace{1cm}
-    \begin{tikzpicture}[scale=4]
-      \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
-      \draw[very thick, ->] (0,1/4)--(1/2,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (1/2,1/4)--(1/2,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{8}$};
-      \draw[very thick, ->] (1/2,5/8)--(3/4,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
-      \draw[very thick, ->] (3/4,5/8)--(3/4,5/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{5}{16}$};
-    \end{tikzpicture}\\~\\
-    \begin{tikzpicture}[scale=4]
-      \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
-      \draw[very thick, ->] (0,1/4)--(0,1/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{8}$};
-      \draw[very thick, ->] (0,1/8)--(1/2,1/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (1/2,1/8)--(1/2,9/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{7}{16}$};
-    \end{tikzpicture}\hspace{1cm}
-    \begin{tikzpicture}[scale=4]
-      \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
-      \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
-      \draw[very thick, ->] (0,1/4)--(1/2,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
-      \draw[very thick, ->] (1/2,1/4)--(1/2,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{8}$};
-      \draw[very thick, ->] (1/2,5/8)--(1/2,13/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{16}$};
-      \draw[very thick, ->] (1/2,13/16)--(1/4,13/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
-      \draw[very thick, ->] (1/4,13/16)--(1/4,17/32) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{9}{32}$};
-    \end{tikzpicture}
-    \caption{
-      Left-to-right and top-to-bottom: examples of walks that end in step sizes
-      that have numberators of 3, 5, 7, and 9.
-    }
-  \end{figure}
-
+\rating{2}{3}
+A snail travels along the grid in unit steps---but it hates crossing its
+trail, so if a step is going to cross is trail, it will only go half way.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale=4]
+    \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
+    \draw[very thick, ->] (0,1/4)--(1/2,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (1/2,1/4)--(1/2,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{8}$};
+  \end{tikzpicture}\hspace{1cm}
+  \begin{tikzpicture}[scale=4]
+    \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
+    \draw[very thick, ->] (0,1/4)--(1/2,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (1/2,1/4)--(1/2,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{8}$};
+    \draw[very thick, ->] (1/2,5/8)--(3/4,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
+    \draw[very thick, ->] (3/4,5/8)--(3/4,5/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{5}{16}$};
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale=4]
+    \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
+    \draw[very thick, ->] (0,1/4)--(0,1/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{8}$};
+    \draw[very thick, ->] (0,1/8)--(1/2,1/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (1/2,1/8)--(1/2,9/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{7}{16}$};
+  \end{tikzpicture}\hspace{1cm}
+  \begin{tikzpicture}[scale=4]
+    \draw[very thick, ->] (0,0)--(1,0) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,0)--(1,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (1,1)--(0,1) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{1}$};
+    \draw[very thick, ->] (0,1)--(0,1/2) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (0,1/2)--(0,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
+    \draw[very thick, ->] (0,1/4)--(1/2,1/4) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{2}$};
+    \draw[very thick, ->] (1/2,1/4)--(1/2,5/8) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{8}$};
+    \draw[very thick, ->] (1/2,5/8)--(1/2,13/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{3}{16}$};
+    \draw[very thick, ->] (1/2,13/16)--(1/4,13/16) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{1}{4}$};
+    \draw[very thick, ->] (1/4,13/16)--(1/4,17/32) node [midway, fill=white, opacity=0.8, text opacity=1] {$\frac{9}{32}$};
+  \end{tikzpicture}
+  \caption{
+    Left-to-right and top-to-bottom: examples of walks that end in step sizes
+    that have numberators of 3, 5, 7, and 9.
+  }
+\end{figure}
 \begin{question}
   Let $a(n)$ be the minimum number of steps the snail must take before it can
   take a step of size $(2n-1)/2^k$. What is $a(n)$?

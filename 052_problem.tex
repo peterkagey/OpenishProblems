@@ -2,34 +2,35 @@
 \include{header}
 
 \begin{document}
-  A polyform counting problem from Alec Jones: let $a_k(n)$ count the number of polyabolos with $n$ faces
-  and $k$ exposed edges.
-  \begin{figure}[!h]
-    \centering
-    \begin{tikzpicture}[scale=2]
-      \draw[very thick, fill={yellow}, fill opacity=0.5] (0,0)--(2,0)--(1,1)--cycle;
-      \draw[very thick] (1,1)--(1,0);
-    \end{tikzpicture}\hspace{1cm}
-    \begin{tikzpicture}[scale=2]
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(2,1)--(1,1)--cycle;
-      \draw[very thick] (1,1)--(1,0);
-    \end{tikzpicture}
-    \begin{tikzpicture}[scale=2]
-      \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(1,1)--(0,1)--cycle;
-      \draw[very thick] (0,0)--(1,1);
-    \end{tikzpicture}\hspace{1cm}
-    \begin{tikzpicture}[scale=2]
-      \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,0)--(0,2)--cycle;
-      \draw[very thick] (0,1)--(1,1);
-      \draw[very thick] (0,0)--(1,1);
-      \draw[very thick] (1,0)--(1,1);
-    \end{tikzpicture}
-    \caption{
-      An example in yellow showing that $a_3(2) \geq 1$,
-      two examples in red showing that $a_4(2) \geq 2$, and
-      an example in blue showing that $a_3(4) \geq 1$.
-    }
-  \end{figure}
+\rating{4}{1}
+A polyform counting problem from Alec Jones: let $a_k(n)$ count the number of polyabolos with $n$ faces
+and $k$ exposed edges.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale=2]
+    \draw[very thick, fill={yellow}, fill opacity=0.5] (0,0)--(2,0)--(1,1)--cycle;
+    \draw[very thick] (1,1)--(1,0);
+  \end{tikzpicture}\hspace{1cm}
+  \begin{tikzpicture}[scale=2]
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(2,1)--(1,1)--cycle;
+    \draw[very thick] (1,1)--(1,0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(1,1)--(0,1)--cycle;
+    \draw[very thick] (0,0)--(1,1);
+  \end{tikzpicture}\hspace{1cm}
+  \begin{tikzpicture}[scale=2]
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,0)--(0,2)--cycle;
+    \draw[very thick] (0,1)--(1,1);
+    \draw[very thick] (0,0)--(1,1);
+    \draw[very thick] (1,0)--(1,1);
+  \end{tikzpicture}
+  \caption{
+    An example in yellow showing that $a_3(2) \geq 1$,
+    two examples in red showing that $a_4(2) \geq 2$, and
+    an example in blue showing that $a_3(4) \geq 1$.
+  }
+\end{figure}
 \begin{question}
   What is the smallest $k$ such that for some fixed $n$, $a_k(n) > 0$?
 \end{question}
