@@ -2,7 +2,7 @@
 \include{header}
 
 \begin{document}
-\rating{2}{4}
+\rating{3}{4}
 Consider all of the ways to stack $n$ ``blocks'' of different shapes on a
 platform of length $k$.
 \begin{figure}[!h]
@@ -104,10 +104,17 @@ platform of length $k$.
   \item What about bricks of length 3?
   \item What about tetrahedra and cuboids?
   \item What if bricks can be stacked directly on top of each other?
+  \item What if the stack must be connected?
 \end{related}
 \begin{note}
   The triangle stacking problem appears to be counted by Catalan numbers.
   If cantilevers are not allowed, the brick stacking problem reduces to the
-  triangle stacking problem.
+  triangle stacking problem.\\
+  If the triangles must be connected on an arbitrarily long platform, this is
+  counted by A005169.
 \end{note}
+\begin{references}
+  \item \url{https://oeis.org/A168368}
+  \item \url{https://math.stackexchange.com/q/2731692/121988}
+\end{references}
 \end{document}
