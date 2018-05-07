@@ -1,0 +1,72 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{2}
+Starting with a pair of integers $(a, b)$, there exists an algorithm for making
+the two integers equal by repeated applications of the map
+$(x, y) \xmapsto{\alpha} (2x, y+1)$ or $(x, y) \xmapsto{\beta} (x+1, y)$.
+\begin{figure}[ht!]
+  \centering
+  \begin{alignat*}{7}
+    (4,0)
+      & \xmapsto{\beta} (5,0)
+      && \xmapsto{\beta} (6,0)
+      && \xmapsto{\alpha} (12,1)
+      && \xmapsto{\beta} (13,2)
+      && \xmapsto{\beta} (14,4)
+      && \xmapsto{\beta} (15,8)
+      && \xmapsto{\beta} (16,16)\\
+    (5,4)
+      & \xmapsto{\beta} (6,8)
+      && \xmapsto{\beta} (7,16)
+      && \xmapsto{\beta} (8,32)
+      && \xmapsto{\alpha} (16,33)
+      && \xmapsto{\beta} (17,66)
+      && \xmapsto{\alpha} (34,67)
+      && \xmapsto{\alpha} (68,68)\\
+    (8,1)
+      & \xmapsto{\beta} (9,2)
+      && \xmapsto{\beta} (10,4)
+      && \xmapsto{\alpha} (20,5)
+      && \xmapsto{\beta} (21,10)
+      && \xmapsto{\alpha} (42,11)
+      && \xmapsto{\beta} (43,22)
+      && \xmapsto{\beta} (44,44)\\
+    (9,6)
+      & \xmapsto{\beta} (10,12)
+      && \xmapsto{\beta} (11,24)
+      && \xmapsto{\beta} (12,48)
+      && \xmapsto{\alpha} (24,49)
+      && \xmapsto{\beta} (25,98)
+      && \xmapsto{\alpha} (50,99)
+      && \xmapsto{\alpha} (100,100)\\
+    (11,7)
+      & \xmapsto{\beta} (12,14)
+      && \xmapsto{\beta} (13,28)
+      && \xmapsto{\beta} (14,56)
+      && \xmapsto{\alpha} (28,57)
+      && \xmapsto{\beta} (29,114)
+      && \xmapsto{\alpha} (58,115)
+      && \xmapsto{\alpha} (116,116)
+  \end{alignat*}
+  \caption{
+    Five examples of (shortest) seven-step paths to equality, starting from
+    $(4,0)$, $(5,4)$, $(8,1)$, $(9,6)$, and $(11,7)$.
+  }
+\end{figure}
+\begin{question}
+  What is an algorithm for the shortest path to equality?
+\end{question}
+
+\begin{related}
+  \item What are some good upper bounds for the shortest path length?
+  \item Can this be generalized to other maps (e.g. $(x, y) \mapsto (3x, y+2)$)?
+  \item What is the least $k$ such that there is a path from
+    $(a, b)$ to $(k, k)$? Is there a way to characterize all such values for $k$?
+\end{related}
+\begin{references}
+  \item \url{https://oeis.org/A304027}
+  \item \url{https://codegolf.stackexchange.com/q/164085/53884}
+\end{references}
+\end{document}
