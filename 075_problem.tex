@@ -10,12 +10,12 @@ the coin ends up in a position where it is tangent to two other coins.
   \begin{tikzpicture}[
     level distance=3cm,
     sibling distance = 4cm,
-    level 1/.style={level distance=2.5cm},
-    level 2/.style={level distance=3cm},
-    level 4/.style={level distance=3.5cm}
+    level 1/.style={level distance=2.2cm},
+    level 2/.style={level distance=2.8cm},
+    level 4/.style={level distance=3.2cm}
   ]
     \node {
-      \begin{tikzpicture}[scale=0.7]
+      \begin{tikzpicture}[scale=0.6]
         \foreach \x/\y/\n in {0/0/A, 1/0/B, 0/1/C, 1/1/D} {
           \draw[very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
         }
@@ -23,7 +23,7 @@ the coin ends up in a position where it is tangent to two other coins.
     }
     child {
       node {
-        \begin{tikzpicture}[scale=0.7]
+        \begin{tikzpicture}[scale=0.6]
           \foreach \x/\y/\n in {0/0/A, 0/2/B, 0/1/C, 1/1/D} {
             \draw[very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
           }
@@ -32,7 +32,7 @@ the coin ends up in a position where it is tangent to two other coins.
       }
       child {
         node {
-          \begin{tikzpicture}[scale=0.7]
+          \begin{tikzpicture}[scale=0.6]
             \foreach \x/\y/\n in {0/0/A, 0/2/B, 1/0/C, 1/1/D} {
               \draw[very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
             }
@@ -42,7 +42,7 @@ the coin ends up in a position where it is tangent to two other coins.
       }
       child {
         node {
-          \begin{tikzpicture}[scale=0.7]
+          \begin{tikzpicture}[scale=0.6]
             \foreach \x/\y/\n in {0/0/A, 0/2/B, 1/2/C, 1/1/D} {
               \draw[gray, very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
             }
@@ -51,7 +51,7 @@ the coin ends up in a position where it is tangent to two other coins.
         }
         child {
           node {
-            \begin{tikzpicture}[scale=0.7]
+            \begin{tikzpicture}[scale=0.6]
               \foreach \x/\y/\n in {0/0/A, 0/1/B, 1/2/C, 1/1/D} {
                 \draw[very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
               }
@@ -61,7 +61,7 @@ the coin ends up in a position where it is tangent to two other coins.
         }
         child {
           node {
-            \begin{tikzpicture}[scale=0.7]
+            \begin{tikzpicture}[scale=0.6]
               \foreach \x/\y/\n in {0/0/A, 1/0/B, 1/2/C, 1/1/D} {
                 \draw[very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
               }
@@ -71,7 +71,7 @@ the coin ends up in a position where it is tangent to two other coins.
         }
         child {
           node {
-            \begin{tikzpicture}[scale=0.7]
+            \begin{tikzpicture}[scale=0.6]
               \foreach \x/\y/\n in {0/0/A, 0/2/B, 1/2/C, 0/3/D} {
                 \draw[gray, very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
               }
@@ -80,7 +80,7 @@ the coin ends up in a position where it is tangent to two other coins.
           }
           child {
             node {
-              \begin{tikzpicture}[scale=0.7]
+              \begin{tikzpicture}[scale=0.6]
                 \foreach \x/\y/\n in {0/0/A, 0/2/B, 0/1/C, 0/3/D} {
                   \draw[very thick] ({\x + \y/2}, {sqrt(3)/2 * \y}) circle (0.5) node {\n};
                 }
