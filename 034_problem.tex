@@ -7,62 +7,62 @@ Consider all configurations of nonattacking rooks on an $n\times n$ board up
 to dihedral action.
 \begin{figure}[!h]
   \centering
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=0.8]
     % 1
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
     \foreach \x/\y in {1/4,2/3,3/2,4/1} {
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
-    \node at (2, -0.3) {$\sqrt{2}, 2\sqrt{2}, 3\sqrt{2}$};
-  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}
+    \node at (2, -0.4) {$\sqrt{2}, 2\sqrt{2}, 3\sqrt{2}$};
+  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}[scale=0.8]
     % 2
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
     \foreach \x/\y in {1/4,2/3,3/1,4/2} {
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
-    \node at (2, -0.3) {$\sqrt{2}, \sqrt{5}, \sqrt{13}$};
-  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}
+    \node at (2, -0.4) {$\sqrt{2}, \sqrt{5}, \sqrt{13}$};
+  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}[scale=0.8]
     % 3
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
     \foreach \x/\y in {1/4,2/2,3/3,4/1} {
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
-    \node at (2, -0.3) {$\sqrt{2}, \sqrt{5}, 3\sqrt{2}$};
-  \end{tikzpicture}\vspace{3mm}\\\begin{tikzpicture}
+    \node at (2, -0.4) {$\sqrt{2}, \sqrt{5}, 3\sqrt{2}$};
+  \end{tikzpicture}\vspace{3mm}\\\begin{tikzpicture}[scale=0.8]
     % 4
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
     \foreach \x/\y in {1/4,2/2,3/1,4/3} {
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
-    \node at (2, -0.3) {$\sqrt{2}, \sqrt{5}, \sqrt{10}$};
-  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}
+    \node at (2, -0.4) {$\sqrt{2}, \sqrt{5}, \sqrt{10}, \sqrt{13}$};
+  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}[scale=0.8]
     % 5
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
     \foreach \x/\y in {1/4,2/1,3/2,4/3} {
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
-    \node at (2, -0.3) {$\sqrt{2}, 2\sqrt{2}, \sqrt{10}$};
-  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}
+    \node at (2, -0.4) {$\sqrt{2}, 2\sqrt{2}, \sqrt{10}$};
+  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}[scale=0.8]
     % 6
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
     \foreach \x/\y in {1/3,2/1,3/4,4/2} {
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
-    \node at (2, -0.3) {$\sqrt{5}, \sqrt{10}$};
-  \end{tikzpicture}\vspace{3mm}\\\begin{tikzpicture}
+    \node at (2, -0.4) {$\sqrt{5}, \sqrt{10}$};
+  \end{tikzpicture}\vspace{3mm}\\\begin{tikzpicture}[scale=0.8]
     % 7
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
     \foreach \x/\y in {1/3,2/4,3/1,4/2} {
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
-    \node at (2, -0.3) {$\sqrt{2}, 2\sqrt{2}, \sqrt{10}$};
+    \node at (2, -0.4) {$\sqrt{2}, 2\sqrt{2}, \sqrt{10}$};
   \end{tikzpicture}
   \caption{
     Each figure is marked with the distinct distances between pieces.
@@ -78,6 +78,30 @@ to dihedral action.
   \item Are any configurations of nonattacking rooks on the torus that can
     be meaningfully called a ``generalized Costas array''?
 \end{related}
+\begin{note}
+  The number of distinct boards is given by $1,1,2,7,23,115,694,5282,\hdots$\\
+  The maximum number of distances between pieces is $0,1,2,4,8,11,15,20,\hdots$\\
+  % max(8) = 20 via [0,1,6,5,4,7,3,2]
+  %                  x
+  %         x
+  %            x
+  %               x
+  %                     x
+  %                        x
+  %      x
+  %   x
+  The minimum number of distances between pieces is $0,1,2,2,3,5,5,6,\hdots$
+  % Note min(n) <= n - 1 by placing pieces in a line.
+  % min(8) = 6 via:
+  %                  x
+  %         x
+  %                        x
+  %               x
+  %      x
+  %                     x
+  %            x
+  %   x
+\end{note}
 \begin{references}
   \item \url{https://en.wikipedia.org/wiki/Costas_array}
 \end{references}
