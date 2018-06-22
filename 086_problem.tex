@@ -1,0 +1,62 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{2}
+Consider ways to draw diagonals on the cells of $n \times n$ toriodal grid such
+that no two diagonals touch.
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \draw[black!80, line width=4, ->] (0,1)--(0,2.7);
+    \draw[black!80, line width=4, ->] (5,1)--(5,2.7);
+    \draw[black!80, line width=4, ->] (1,5)--(2.5,5);
+    \draw[black!80, line width=4, ->] (1,5)--(2.9,5);
+    \draw[black!80, line width=4, ->] (1,0)--(2.5,0);
+    \draw[black!80, line width=4, ->] (1,0)--(2.9,0);
+
+    \draw[blue!50, line width=3]
+      (0,0)--(1,1) (0,3)--(1,4) (0,4)--(1,5)
+      (1,2)--(2,3) (1,3)--(2,4)
+      (2,1)--(3,2) (2,5)--(3,4)
+      (3,0)--(4,1) (3,1)--(4,2) (3,3)--(4,4)
+      (4,0)--(5,1) (4,3)--(5,2);
+    \draw[black!80, line width=2] (0,0) grid (5,5);
+    \draw[black!80, line width=4] (0,0) rectangle (5,5);
+
+    \draw[red!50, line width=2] (2,2) circle (0.08);
+  \end{tikzpicture}
+  \caption{
+    A maximal configuration of a $5 \times 5$ toroidal grid: $12$ diagonal lines
+    can be drawn. The unused vertex is marked with a circle.
+  }
+\end{figure}
+\begin{question}
+  What is the greatest number of diagonals that can be drawn on a $n \times n$
+  toroidal grid?
+\end{question}
+
+\begin{note}
+  Let $m(n)$ be the maximum number of diagonals on an $n \times n$, grid.\\
+  Then \begin{alignat*}{2}
+  & m(2n) &&= 2n^2 \text{ and}\\
+  2n^2 + n \leq\ & m(2n + 1) &&\leq 2n^2 + 2n.
+\end{alignat*}
+\end{note}
+
+\begin{related}
+  \item How many configurations exist for a given grid size up to group action?
+  \item What if this is done on an $n \times m$ grid?
+  \item What if this is done on a cylinder, Klein bottle, projective space, etc?
+  \item What is the maximum number of diagonals that can go SW to NE?
+  \item Does this generalize to three or more dimensions?
+  \item Can something similar be done on a hexagonal or triangular grid?
+  \item How many configurations exist if touching is allowed, but cycles aren't?
+  \item What if we color edges of the grid rather than diagonals on the faces?
+\end{related}
+
+\begin{references}
+  \item \url{https://oeis.org/A264041}
+  \item \url{https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/slant.html}
+\end{references}
+\end{document}
