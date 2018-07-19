@@ -7,7 +7,7 @@ Ezgi showed me a puzzle where dominoes are placed to form a rectangle such that
 there is no line that separates the dominoes into two rectangles.
 \begin{figure}[ht!]
   \centering
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=1]
     \draw[blue!50, line width=5]
       (0,6) rectangle (1,4)
       (1,6) rectangle (3,5)
@@ -25,9 +25,35 @@ there is no line that separates the dominoes into two rectangles.
       (0,2) rectangle (2,1)
       (3,2) rectangle (5,1);
   \end{tikzpicture}
+  \hspace{0.7cm}
+  \begin{tikzpicture}[scale=0.714]
+    \draw[red!50, line width=5]
+      (0,0) rectangle (3,1)
+      (0,1) rectangle (1,4)
+      (0,4) rectangle (1,7)
+      (1,1) rectangle (2,4)
+      (1,4) rectangle (4,5)
+      (1,5) rectangle (4,6)
+      (1,6) rectangle (4,7)
+      (2,1) rectangle (3,4)
+      (3,0) rectangle (4,3)
+      (3,3) rectangle (6,4)
+      (4,0) rectangle (7,1)
+      (4,1) rectangle (7,2)
+      (4,2) rectangle (7,3)
+      (4,4) rectangle (5,7)
+      (5,4) rectangle (6,7)
+      (6,3) rectangle (7,6)
+      (6,6) rectangle (9,7)
+      (7,0) rectangle (8,3)
+      (7,3) rectangle (8,6)
+      (8,0) rectangle (9,3)
+      (8,3) rectangle (9,6);
+  \end{tikzpicture}
   \caption{
-    The smallest way to place dominoes into a rectangle such that there is no
+    On the right is the smallest way to place dominoes into a rectangle such that there is no
     way to partition the dominoes into two rectangles.
+    Is the left a minimal configuration with $1\times3$ triominoes?
   }
 \end{figure}
 \begin{question}
