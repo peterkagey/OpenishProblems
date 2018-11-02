@@ -2,8 +2,8 @@
 \include{header}
 
 \begin{document}
-\rating{3}{2}
-Consider all configurations of nonattacking rooks on an $n\times n$ board up
+\rating{3}{3}
+Consider all configurations of $n$ nonattacking rooks on an $n\times n$ board up
 to dihedral action.
 \begin{figure}[!h]
   \centering
@@ -31,7 +31,7 @@ to dihedral action.
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
     \node at (2, -0.4) {$\sqrt{2}, \sqrt{5}, 3\sqrt{2}$};
-  \end{tikzpicture}\vspace{3mm}\\\begin{tikzpicture}[scale=0.8]
+  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}[scale=0.8]
     % 4
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
@@ -39,7 +39,7 @@ to dihedral action.
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
     \node at (2, -0.4) {$\sqrt{2}, \sqrt{5}, \sqrt{10}, \sqrt{13}$};
-  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}[scale=0.8]
+  \end{tikzpicture}\vspace{3mm}\\\begin{tikzpicture}[scale=0.8]
     % 5
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
@@ -55,7 +55,7 @@ to dihedral action.
       \fill (\x - 0.5, \y - 0.5) circle (0.1cm);
     }
     \node at (2, -0.4) {$\sqrt{5}, \sqrt{10}$};
-  \end{tikzpicture}\vspace{3mm}\\\begin{tikzpicture}[scale=0.8]
+  \end{tikzpicture}\hspace{1cm}\begin{tikzpicture}[scale=0.8]
     % 7
     \draw[gray, dashed] (0,0) grid (4,4);
     \draw[ultra thick] (0,0) rectangle (4,4);
@@ -73,36 +73,23 @@ to dihedral action.
   What is the minimum number of distinct distances on such a figure?
 \end{question}
 \begin{related}
-  \item What if rooks are allowed to be in attacking positions?
-  \item How many configurations of nonattacking rooks on the torus?
+  \item What is the minimum number of distinct directions on such a figure?
+    (Directions up to dihedral action?)
+  \item What if this is done with $n$ queens instead of rooks?
+  \item What if this is done with $0 \leq k \leq n^2$ pieces, any of which are allowed
+    to be in attacking positions?
+  \item What if distance is measured by the taxicab metric? $d_3$? $d_\infty$?
+  Number of knight-moves away? Number of king moves away?
+  \item How many configurations of nonattacking rooks on the torus, rectangle,
+  triangluar grid, and other geometries?
   \item Are any configurations of nonattacking rooks on the torus that can
     be meaningfully called a ``generalized Costas array''?
 \end{related}
-\begin{note}
-  The number of distinct boards is given by $1,1,2,7,23,115,694,5282,\hdots$\\
-  The maximum number of distances between pieces is $0,1,2,4,8,11,15,20,\hdots$\\
-  % max(8) = 20 via [0,1,6,5,4,7,3,2]
-  %                  x
-  %         x
-  %            x
-  %               x
-  %                     x
-  %                        x
-  %      x
-  %   x
-  The minimum number of distances between pieces is $0,1,2,2,3,5,5,6,\hdots$
-  % Note min(n) <= n - 1 by placing pieces in a line.
-  % min(8) = 6 via:
-  %                  x
-  %         x
-  %                        x
-  %               x
-  %      x
-  %                     x
-  %            x
-  %   x
-\end{note}
 \begin{references}
   \item \url{https://en.wikipedia.org/wiki/Costas_array}
+  \item The maximum and minimum number of distinct distances is given by
+  A320448 and A319476 respectively.
+  \item The number of extremal boards is given by
+  A320573 and A320575 (A320574 and A320576, up to symmetry).
 \end{references}
 \end{document}
