@@ -1,0 +1,37 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{1}{2}
+Let $U_n$ be the set of sequences of positive integers of length $n$ such that
+no substring occurs twice.
+\begin{figure}[!h]
+  \centering
+  \begin{align*}
+    (1, 1, 2, 2, 1, 3, 1) &\in U_7\\
+    (1, 2, 1, 2, 3) &\not\in U_5 \text{ because } (1, 2) \text{ occurs twice.}\\
+    (1, 1, 1) &\not\in U_3 \text{ because } (1, 1) \text{ occurs twice.}
+  \end{align*}
+  \caption{
+    An example and two non-examples of sequences with no repeated substrings.
+  }
+\end{figure}
+
+\begin{question}
+  What is the number of sequences in $U_n$ where the sum of terms is minimized?
+\end{question}
+
+\begin{related}
+  \item What is the minimum least common multiple of a sequence in $U_n$?
+    How many such minimal sequences?
+  \item What is the minimum product of a sequence in $U_n$?
+    How many such minimal sequences?
+  \item What if substrings are considered forward and backward?
+  \item What if only substrings of length greater $k$ are considered?
+  \item What if any term can appear at most $\ell$ times?
+\end{related}
+
+\begin{references}
+  \item \url{https://oeis.org/A259280}
+\end{references}
+\end{document}

@@ -1,0 +1,99 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{4}
+Consider folding a strip of $n$ equilateral triangles down to 1 triangle in as
+few moves as possible.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0, 1/0, 2/0, 3/0, 4/0} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \foreach \x/\y in {-0.5/1, 0.5/1, 1.5/1, 2.5/1, 3.5/1, 4.5/1} {
+      \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \draw[ultra thick, red, dashed] (2.25, {sqrt(3)/2 * 1.5})--(3.25,{sqrt(3)/2 * -1/2});
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0, 1/0, 2/0, 1.5/-1, 1/-2} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \foreach \x/\y in {-0.5/1, 0.5/1, 1.5/1, 2/0, 1.5/-1} {
+      \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \draw[ultra thick, red, dashed] (2, 0)--(2.75,{sqrt(3)/2 * -3/2});
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0, 1/0, 2/0, 2.5/-1} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \foreach \x/\y in {-0.5/1, 0.5/1, 1.5/1, 2/0, 3/0} {
+      \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \draw[ultra thick, red, dashed] ({2.5 - 1/4}, {-sqrt(3)/2 - sqrt(3)/4})--({3 + 1/4}, {sqrt(3)/4});
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0, 1/0, 2/0} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \foreach \x/\y in {-0.5/1, 0.5/1, 1.5/1, 2/0} {
+      \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \draw[ultra thick, red, dashed] ({2 - 1/4}, {-sqrt(3)/4})--(2.75,{sqrt(3)/2 + sqrt(3)/4});
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0, 1/0} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \foreach \x/\y in {-0.5/1, 0.5/1, 1.5/1} {
+      \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \draw[ultra thick, red, dashed] ({1-1/4}, {-sqrt(3)/4})--(1.75,{sqrt(3)/2 + sqrt(3)/4});
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0, 0.5/1} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \foreach \x/\y in {-0.5/1, 0.5/1} {
+      \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \draw[ultra thick, red, dashed] (1.25, {-sqrt(3)/4})--(0.25,{sqrt(3)/2 + sqrt(3)/4});
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \foreach \x/\y in {-0.5/1} {
+      \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+    \draw[ultra thick, red, dashed] (-1/4, {-sqrt(3)/4})--(3/4,{3/4*sqrt(3)});
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}[scale = 0.8]
+    % right side up
+    \foreach \x/\y in {0/0} {
+      \draw ({\x + 0}, {sqrt(3)/2 * \y + 0})--({\x + 1/2}, {sqrt(3)/2 * \y + sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
+    }
+  \end{tikzpicture}
+  \caption{
+    An example demonstrating that $a(11) \leq 7$.
+  }
+\end{figure}
+\begin{question}
+  How many folds are required to fold a strip of $n$ triangles down to one?
+\end{question}
+\begin{related}
+  \item What if you can choose the starting configuration of the triangles?
+    (e.g for $n=10$, you can start from the second example)
+  \item What if you can fold along an entire line? (Not just a single cell.)
+\end{related}
+
+\end{document}

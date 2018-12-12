@@ -1,0 +1,120 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{4}
+Consider all of the ways to stack $n$ ``blocks'' of different shapes on a
+platform of length $k$.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}
+    \draw[very thick] (0,0)--(5,0);
+    \foreach \x/\y in {0/0, 1/0, 2/0, 3/0, 4/0} {
+      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
+    }
+    \foreach \x in {0,...,5} { \fill (\x,0) circle (0.1cm); }
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \draw[very thick] (0,0)--(5,0);
+    \foreach \x/\y in {0/0, 1/0, 2/0, 3/0, 0/1} {
+      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
+    }
+    \foreach \x in {0,...,5} { \fill (\x,0) circle (0.1cm); }
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}
+    \draw[very thick] (0,0)--(5,0);
+    \foreach \x/\y in {0/0, 1/0, 2/0, 3/0, 1/1} {
+      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
+    }
+    \foreach \x in {0,...,5} { \fill (\x,0) circle (0.1cm); }
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \draw[very thick] (0,0)--(5,0);
+    \foreach \x/\y in {0/0, 1/0, 2/0, 0/1, 1/1} {
+      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
+    }
+    \foreach \x in {0,...,5} { \fill (\x,0) circle (0.1cm); }
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}
+    \draw[very thick] (0,0)--(5,0);
+    \foreach \x/\y in {0/0, 1/0, 3/0, 4/0, 0/1} {
+      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
+    }
+    \foreach \x in {0,...,5} { \fill (\x,0) circle (0.1cm); }
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \draw[very thick] (0,0)--(5,0);
+    \foreach \x/\y in {0/0, 1/0, 2/0, 4/0, 0/1} {
+      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
+    }
+    \foreach \x in {0,...,5} { \fill (\x,0) circle (0.1cm); }
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}
+    \draw[very thick] (0,0)--(5,0);
+    \foreach \x/\y in {0/0, 1/0, 0/1, 1/1, 0/2} {
+      \draw[fill=red!50] (\x + \y/2, \y/2) rectangle (\x + 1 + \y/2, {(\y + 1)/2});
+    }
+    \foreach \x in {0,...,5} { \fill (\x,0) circle (0.1cm); }
+  \end{tikzpicture}
+  \caption{
+    Seven examples of five length $2$ bricks on a length $5$ platform.
+  }
+\end{figure}
+
+\begin{question}
+  How many different stacks exist for these shapes?
+\end{question}
+\begin{related}
+  \item What if we use triangular blocks?
+  \begin{enumerate}
+    \item What if \begin{tikzpicture}[scale=0.8]
+      \foreach \x/\y in {0/0} {
+        \draw[fill=blue!50] (\x + \y/2, {\y*sqrt(3)/2})--(\x + \y/2 + 1/2, {(\y + 1)*sqrt(3)/2})--(\x + \y/2 + 1, {\y*sqrt(3)/2})--cycle;
+      }
+      \draw[very thick] (0,0)--(3,0);
+      \foreach \x in {0,...,3} { \fill (\x,0) circle (0.1cm); }
+    \end{tikzpicture} and \begin{tikzpicture}[scale=0.8]
+      \foreach \x/\y in {1/0} {
+        \draw[fill=blue!50] (\x + \y/2, {\y*sqrt(3)/2})--(\x + \y/2 + 1/2, {(\y + 1)*sqrt(3)/2})--(\x + \y/2 + 1, {\y*sqrt(3)/2})--cycle;
+      }
+      \draw[very thick] (0,0)--(3,0);
+      \foreach \x in {0,...,3} { \fill (\x,0) circle (0.1cm); }
+    \end{tikzpicture} are considered to be distinct?
+    \item What if \begin{tikzpicture}[scale=0.8]
+        \foreach \x/\y in {0/0,1/0} {
+          \draw[fill=blue!50] (\x + \y/2, {\y*sqrt(3)/2})--(\x + \y/2 + 1/2, {(\y + 1)*sqrt(3)/2})--(\x + \y/2 + 1, {\y*sqrt(3)/2})--cycle;
+        }
+        \draw[very thick] (0,0)--(3,0);
+        \foreach \x in {0,...,3} { \fill (\x,0) circle (0.1cm); }
+      \end{tikzpicture} and \begin{tikzpicture}[scale=0.8]
+        \foreach \x/\y in {0/0,2/0} {
+          \draw[fill=blue!50] (\x + \y/2, {\y*sqrt(3)/2})--(\x + \y/2 + 1/2, {(\y + 1)*sqrt(3)/2})--(\x + \y/2 + 1, {\y*sqrt(3)/2})--cycle;
+        }
+        \draw[very thick] (0,0)--(3,0);
+        \foreach \x in {0,...,3} { \fill (\x,0) circle (0.1cm); }
+      \end{tikzpicture} are considered to be the same (because one turns into the
+        other by ``sliding''.)
+      \item What if ``upside-down'' triangles can be placed in the gaps?
+      \item What if ``upside-down'' triangles \textit{must} be placed in the gaps in
+        order to stack on top?
+  \end{enumerate}
+  \item What about bricks of length 3?
+  \item What about tetrahedra and cuboids?
+  \item What if bricks can be stacked directly on top of each other?
+  \item What if the stack must be connected?
+  \item What if reflections are considered to be the same?
+\end{related}
+\begin{note}
+  The triangle stacking problem appears to be counted by Catalan numbers.
+  If cantilevers are not allowed, the brick stacking problem reduces to the
+  triangle stacking problem.
+\end{note}
+\begin{references}
+  \item \url{https://oeis.org/A005169} (Connected triangles on arbitrarily long platform)
+  \item \url{https://oeis.org/A168368}
+  \item \url{https://math.stackexchange.com/q/2731692/121988}
+\end{references}
+\end{document}

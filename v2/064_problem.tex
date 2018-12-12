@@ -1,0 +1,83 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{3}
+Consider the art gallery problem on all ``museum''-equivalence classes of polygons.
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}[scale=1.5]
+    \draw[ultra thick, fill=red!50] (1,0)
+      --(0,0)
+      --({-cos(72)}, {sin(72)})
+      --({-cos(72)+cos(36)}, {sin(72)+sin(36)})
+      --({1+cos(72)}, {sin(72)})
+      --cycle;
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}[scale=1.5]
+    \draw[ultra thick, fill=orange!50] (0,0)--(1.54/2,1.54/2)--(1.54,0)--(1.54,1.54)--(0,1.54)--cycle;
+    \draw[black!70, thick, dashed] (0,1.54)--(1.54/2,1.54/2)--(1.54,1.54);
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}[scale=1.5]
+    \draw[ultra thick, fill=blue!50] (0,0)
+      --(0.545, 0.59756)
+      --(0.89,1.54)
+      --(1.235, 0.598)
+      --(1.78,0)
+      --cycle;
+    \draw[black!70, thick, dashed] (1.037, 1.137)--(0.545, 0.59756)--(0.326,0);
+    \draw[black!70, thick, dashed] (1.45402, 0)--(1.235, 0.598)--(0.743,1.138);
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}[scale=1.5]
+    \draw[ultra thick, fill=yellow!50] (0,0)
+      --(1.78/2,1.54)
+      --(1.78,0)
+      --({2*1.78/3}, 0.3)
+      --({1.78/3}, 0.3)
+      --cycle;
+    \draw[black!70, thick, dashed] (0.1734, 0.3)--({1.78/3}, 0.3)--(1.37749, {1.37749 * 0.505618});
+    \draw[black!70, thick, dashed] (0.402512, 0.69648261408)--({2*1.78/3}, 0.3)--(1.607, 0.3);
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}[scale=1.5]
+    \draw[ultra thick, fill=green!50] (0,0)
+      --(1.78/2,1.54)
+      --(1.78,0)
+      --({1.78/2}, 0.6)
+      --({3*1.78/8}, 0.3)
+      --cycle;
+    \draw[black!70, thick, dashed] (0.5, 0.865)--({1.78/2}, 0.6)--(1.2, 1.012);
+  \end{tikzpicture}
+  \caption{
+    The concavity classes from Problem 61. It appears that the second and
+    fifth polygons are museum-equivalent. Are the third and fourth polygons
+    equivalent?
+  }
+\end{figure}
+\begin{question}
+  If each polygon is a museum, how many guards are required to patrol the museum?
+\end{question}
+
+\begin{related}
+  \item What if guards are stationed at a corner in the polygon?
+  \item What if guards are allowed to patrol along a wall?
+  \item What if the polygons are on a torus or cylinder?
+  \item What if the polygons are orthogonal (i.e. each wall meets at a right angle)?
+  \item What if the guards must patrol the outside of the polygon?
+  \item How many equivalence classes of museums exist? For example, the
+  following museums are distinct, because the first requires two guards, and
+  the second requires only one.\\~\\
+  \begin{tikzpicture}
+    \draw[ultra thick, fill=cyan!50] (0,0)--(1.54/2, 1.54/2)--(1.54,0)--(3/2*1.54,1.54/2)--(2*1.54,0)--(2*1.54,1)--(0,1)--cycle;
+    \fill (1.54/2, 1) circle (0.1);
+    \fill (3/2*1.54, 1) circle (0.1);
+  \end{tikzpicture}\hspace{0.5cm}
+  \begin{tikzpicture}
+    \draw[ultra thick, fill=magenta!50] (0,0)--(1.54/2, 1.54/2)--(1.54,0)--(3/2*1.54,1.54/2)--(2*1.54,0)--(2*1.54,2)--(0,2)--cycle;
+    \fill (1.54, 2) circle (0.1);
+  \end{tikzpicture}
+\end{related}
+\begin{references}
+  \item Problem 61.
+  \item \url{https://en.wikipedia.org/wiki/Art_gallery_problem}
+\end{references}
+\end{document}

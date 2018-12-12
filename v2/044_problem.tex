@@ -1,0 +1,118 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{4}{3}
+From Alec Jones. Let $a_k(n)$ count the number of $k$-gons with vertices on the $n \times n$
+grid.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,2)--(0,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(1,2)--(0,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,2)--(0,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(0,2)--(2,1)--cycle;
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(0,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,0)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,1)--(1,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(1,1)--(2,0)--cycle;
+  \end{tikzpicture}\\~\\~\\
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(2,2)--(2,0)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(2,1)--(2,0)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(1,1)--(1,0)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(2,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(1,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(1,0)--(2,1)--(1,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,2)--(1,1)--(1,0)--cycle;
+  \end{tikzpicture}\\~\\
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,0)--(2,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(1,0)--(2,1)--(2,2)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(2,0)--(1,2)--(1,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(2,1)--(1,2)--(1,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,1)--(2,0)--(1,2)--(1,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,1)--(0,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[gray, dashed] (0,0) grid (2,2);
+    \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(0,1)--(2,2)--(2,1)--cycle;
+  \end{tikzpicture}
+  \caption{
+    An example showing that $a_3(2) \geq 8$ and $a_4(2) \geq 14$.
+  }
+\end{figure}
+\begin{question}
+  What is $a_k(n)$?
+\end{question}
+\begin{related}
+  \item For a fixed $n$, what is the value of $k$ such that $a_k(n)$ is
+    maximized?
+  \item Here two polygons are considered equivalent if they are congruent. What
+  if two polygons are considered equivalent if they are similar?
+  If they are the same under dihedral action?
+  If they are the same over linear transformation? (e.g. stretching/skewing)
+  \item What if concave polygons are excluded?
+  \item What if this is done on an $n \times m$ grid?
+  \item What if we don't deduplicate based on congruence?
+  \item What if this is done on a hypercube or a triangular grid?
+\end{related}
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{4}
+Consider the fuction A300002(n) which is the lexicographically earliest
+sequence of positive integers such that no $k + 2$ points are on a polynomial
+of degree $k$. (i.e. no two points are equal, no three points are colinear, no
+four points are on a parabola, etc.)
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale=1.5]
+    \begin{axis}[
+      xmin=0, xmax=7,
+      ymin=0, ymax=7,
+      domain=0:7,
+      grid=both,
+      grid style={line width=0.5pt, draw=gray!30, dashed},
+      ytick={1,...,7},
+      xtick={1,...,7},
+      smooth
+    ]
+      \addplot[red!30, thick] (x,1);
+
+      \addplot[red!30, thick] (x,2);
+      \addplot[blue!30, thick] (x,x);
+
+      \addplot[red!30, thick] (x,4);
+      \addplot[blue!30, thick] (x,2*x-2);
+      \addplot[blue!30, thick] (x,1.5*x-0.5);
+      \addplot[green!50, thick] (x,{(x^2 - x)/2 + 1});
+
+      \addplot[red!30, thick] (x,3);
+      \addplot[blue!30, thick] (x,{(2/3)*x + (1/3)});
+      \addplot[blue!30, thick] (x,0.5*x + 1);
+      \addplot[blue!30, thick] (x,-x + 7);
+      \addplot[green!50, thick] (x,{-x^2/6 + (3*x)/2 - 1/3});
+      \addplot[green!50, thick] (x,{-(5*x^2)/6 + (29*x)/6 - 3});
+      \addplot[green!50, thick] (x,{-(3*x^2)/2 + (19*x)/2 - 11});
+      \addplot[gray, thick] (x,{-(2*x^3)/3 + (9*x^2)/2 - (47*x)/6 + 5});
+
+      \addplot[mark=*] coordinates {(1,1)};
+      \addplot[mark=*] coordinates {(2,2)};
+      \addplot[mark=*] coordinates {(3,4)};
+      \addplot[mark=*] coordinates {(4,3)};
+      \addplot[mark=*, red] coordinates {(5,6)};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{
+    The first four points together with all interpolated polynomials.
+    The red point marks the lowest integer coordinate $(5, k)$ that does not
+    lie on an interpolated polynomial. (Degree 0 polynomials are plotted in red,
+    degree 1 in blue, degree 2 in green and degree 3 in gray.)
+  }
+\end{figure}
+
+\begin{question}
+  Do all positive integers occur in this sequence?
+\end{question}
+
+\begin{related}
+  \item What is the asymptotic growth of this sequence?
+  \item Does \textit{any} permutation of the natural numbers have the property
+  that no $k + 2$ points are on a polynomial of degree $k$?
+\end{related}
+
+\begin{references}
+  \item \url{https://oeis.org/A300002}
+\end{references}
+\end{document}

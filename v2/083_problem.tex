@@ -1,0 +1,50 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{2}
+
+Consider a system of linear recurrences $a_1, a_2, \hdots, a_t$ where \[
+  a_i(n) = b_{i,1}a_1(n - 1) + b_{i,2}a_2(n - 1) + \hdots + b_{i,t}a_t(n - 1).
+\]
+
+\begin{figure}[ht!]
+  \centering
+  \begin{alignat*}{3}
+    a_1(1) &= 0 \hspace{1cm} && a_1(n) &&= a_1(n - 1) + a_2(n - 1) + a_4(n - 1) + 2a_5(n - 1) + a_7(n - 1) \\
+    a_2(1) &= 0 \hspace{1cm} && a_2(n) &&= a_4(n - 1) + a_5(n - 1) + a_6(n - 1) \\
+    a_3(1) &= 0 \hspace{1cm} && a_3(n) &&= a_2(n - 1) + a_3(n - 1) + a_5(n - 1) \\
+    a_4(1) &= 0 \hspace{1cm} && a_4(n) &&= a_2(n - 1) + a_3(n - 1) + a_5(n - 1) \\
+    a_5(1) &= 0 \hspace{1cm} && a_5(n) &&= a_1(n - 1) + a_2(n - 1) + a_4(n - 1) + a_5(n - 1) \\
+    a_6(1) &= 0 \hspace{1cm} && a_6(n) &&= a_4(n - 1) + a_5(n - 1) + a_6(n - 1) \\
+    a_7(1) &= 1 \hspace{1cm} && a_7(n) &&= a_5(n - 1) + a_7(n - 1)
+  \end{alignat*}
+  \caption{
+    In this system of equations, the function $f(n) = a_5(n) + a_7(n)$
+    (which counts no-leaf subgraphs of the $2 \times n$ grid.)
+    satisfies the recursion $f(n) = 5f(n-1) - 5f(n-2)$ for $n > 2$.
+  }
+\end{figure}
+\begin{question}
+  Can any linear combination of these recurrences
+  be turned into a single linear recurrence? If not, how far can it be
+  ``simplified''?
+\end{question}
+
+\begin{related}
+  \item What are the number of terms in such a linear recurrence?
+  (i.e. how ``deep'' does it go? In the example, it has a depth of 2.)
+  \item What if the initial recurrences have depth greater than 1?
+  For example:
+  \begin{alignat*}{3}
+    a_i(n) = \,\,
+    & b_{i,1,1}a_1(n - 1) &&+ b_{i,1,2}a_1(n - 2) &&+ \hdots + b_{i,1,k_1}a_1(n - k_1)\ + \\
+    & b_{i,2,1}a_2(n - 1) &&+ b_{i,2,2}a_2(n - 2) &&+ \hdots + b_{i,2,k_2}a_2(n - k_2)\ + \hdots \\
+    & b_{i,t,1}a_t(n - 1) &&+ b_{i,t,2}a_t(n - 2) &&+ \hdots + b_{i,t,k_t}a_t(n - k_t)
+  \end{alignat*}
+\end{related}
+
+\begin{references}
+  \item A special case of Problem 64 is counted in the example.
+\end{references}
+\end{document}

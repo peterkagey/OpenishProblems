@@ -1,0 +1,60 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{1}{1}
+Suppose you have a strip of toilet paper with $n$ pieces, and you fold the
+paper evenly into $d$ parts (divide by $d$) or fold the last $k$ pieces in
+(subtract by $k$), until the length of the strip is less than $k$ pieces.
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}
+    \draw (1,0) grid (14,1);
+    \foreach \x in {1,...,13} {
+      \node at (\x + 0.5,0.5) {\x};
+    }
+    \draw[red, very thick] (11, 0) -- (11, 1);
+
+    \draw (1,-2) grid (11,-1);
+    \foreach \x in {1,...,10} {
+      \node at (\x + 0.5,-1.5) {\x};
+    }
+    \draw[blue, very thick] (6, -2) -- (6, -1);
+
+    \draw (1,-4) grid (6,-3);
+    \foreach \x in {1,...,5} {
+      \node at (\x + 0.5,-3.5) {\x};
+    }
+    \draw[red, very thick] (3, -4) -- (3, -3);
+
+    \draw (1,-6) grid (3,-5);
+    \foreach \x in {1,...,2} {
+      \node at (\x + 0.5,-5.5) {\x};
+    }
+    \draw[blue, very thick] (2, -6) -- (2, -5);
+
+    \draw (1,-8) grid (2,-7);
+    \foreach \x in {1,...,1} {
+      \node at (\x + 0.5,-7.5) {\x};
+    }
+  \end{tikzpicture}
+  \caption{
+    A folding of paper where $n = 13$, $d = 2$, and $k = 3$, showing that
+    $a_{2,3}(13) \leq 4$.
+    Where the red marks a subtraction by $k$ and the blue marks a division by $d$.
+  }
+\end{figure}
+
+\begin{question}
+  Is there an efficient way to compute $a_{d,k}(n)$?
+\end{question}
+
+\begin{related}
+  \item What if you must keep folding until you cannot fold any longer?
+  \item What is the minimum number of terminal pieces? What is the minimum number of steps to this number?
+\end{related}
+
+\begin{references}
+  \item \url{https://oeis.org/A014701}
+\end{references}
+\end{document}

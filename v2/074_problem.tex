@@ -1,0 +1,67 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{2}
+In the ``nine dots puzzle'' or ``thinking outside the box puzzle'', a player is
+asked to connect dots arranged in a $3 \times 3$ grid using four lines.
+This can be generalized to connecting the dots of a $n \times n$ grid with
+$2n - 2$ lines.
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \foreach \x in {1,2,3} {
+      \foreach \y in {1,2,3} {
+        \fill (\x, \y) circle (0.2);
+      }
+    }
+    \draw[red!50, line width=3] (1,1)--(3,3)--(0,3)--(3,0)--(3,2);
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}
+    \foreach \x in {1,...,4} {
+      \foreach \y in {1,...,4} {
+        \fill (\x, \y) circle (0.2);
+      }
+    }
+    \draw[blue!50, line width=3] (1,1)--(1,5)--(5,1)--(2,1)--(2,4)--(5,4)--(3,2);
+  \end{tikzpicture}
+  \hspace{1cm}
+  \begin{tikzpicture}
+    \foreach \x in {1,...,4} {
+      \foreach \y in {1,...,4} { \fill (\x, \y) circle (0.2); }
+    }
+    \draw[blue!50, line width=3] (1,1)--(1,4)--(5,4)--(2,1)--(2,4)--(5,1)--(3,1);
+  \end{tikzpicture}
+  \hspace{1cm}
+  \begin{tikzpicture}
+    \foreach \x in {1,...,4} {
+      \foreach \y in {1,...,4} { \fill (\x, \y) circle (0.2); }
+    }
+    \draw[blue!50, line width=3] (1,1)--(1,4)--(5,4)--(2,1)--(5,1)--(2,4)--(2,2);
+  \end{tikzpicture}
+  \caption{
+    The unique (?) way of completing the $3 \times 3$ grid,
+    and three distinct ways of completing the $4 \times 4$ grid.
+  }
+\end{figure}
+\begin{question}
+  How many distinct solutions exist on the $n \times n$ grid?
+\end{question}
+
+\begin{related}
+  \item What if you want to minimize the area ``outside'' of the grid?
+  \item What if you must start and end from the same point?
+  \item What if you want to minimize the path length?
+  \item Do any of these have lines that aren't horizontal, vertical, or $45^\circ$ diagonal?
+  \item What if this is done on other figures? (Triangles, Diamonds, Octagons, Stars, etc.)
+  \item Can this be generalized into higher dimensions with lines? Planes?
+  \item What if the ``pencil'' can be lifted $k \geq 1$ times?
+  \item What if this is done on a torus or cylinder?
+\end{related}
+\begin{references}
+  \item \url{https://math.stackexchange.com/q/21851/121988}
+  \item \url{https://en.wikipedia.org/wiki/Thinking_outside_the_box#Nine_dots_puzzle}
+  \item \url{https://en.wikipedia.org/wiki/Figurate_number}
+\end{references}
+\end{document}

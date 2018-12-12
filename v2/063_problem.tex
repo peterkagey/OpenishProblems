@@ -1,0 +1,111 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{3}
+Consider all of the shapes that can be made with a rubber band and a rubber
+hand.
+
+\begin{figure}[!h]
+  \centering
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=89:271] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-91:91] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+  \end{tikzpicture}
+  \hspace{0.5cm}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-91:91] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+  \end{tikzpicture}
+  \hspace{0.5cm}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=59:301] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+  \end{tikzpicture}
+  \hspace{0.5cm}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+  \end{tikzpicture}
+  \hspace{0.5cm}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=59:301] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+  \end{tikzpicture}
+  \hspace{0.5cm}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+  \end{tikzpicture}
+  \hspace{0.5cm}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) circle (1);
+    \draw (4,0) circle (1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+  \end{tikzpicture}
+  \caption{
+    There are (at least) 9 ways to weave a rubber band between two fingers up to
+    reflection/rotation.
+  }
+\end{figure}
+
+\begin{question}
+  How many figures can be made with $n$ fingers and a rubber band?
+\end{question}
+\begin{related}
+  \item Is there an analog in higher dimensions?
+  \item What if all fingers must be aligned?
+  \item What if all fingers must be on the corners of an $n$-gon?
+\end{related}
+\end{document}

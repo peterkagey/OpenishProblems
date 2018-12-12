@@ -1,0 +1,58 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{3}
+How many functions $f_{n, k}\colon P([k]) - \emptyset \rightarrow \{ 0, 1, 2, \hdots, n \}$
+exist between nonempty subsets of $[k]$ and nonnegative integers less than or
+equal to $n$ such that there exists a sequence of finite sets
+$(A_1, A_2, \hdots, A_k)$ satisfying \[
+  f(S) = \#\bigcap_{i \in S} A_i
+\] for all $S \in P([k]) - \emptyset$?
+\begin{figure}[ht!]
+  \centering
+    \begin{tabular}{|c||c|c|c|c|c|c|c|}
+      \hline
+         & $\#A$ & $\#B$ & $\#C$ & $\#(A \cap B)$ & $\#(A \cap C)$ & $\#(B \cap C)$ & $\#(A \cap B \cap C)$\\ \hline
+      1  & $0$   & $0$   & $0$   & $0$            & $0$            & $0$            &  $0$\\
+      2  & $0$   & $0$   & $1$   & $0$            & $0$            & $0$            &  $0$\\
+      3  & $0$   & $1$   & $0$   & $0$            & $0$            & $0$            &  $0$\\
+      4  & $1$   & $0$   & $0$   & $0$            & $0$            & $0$            &  $0$\\
+      5  & $0$   & $1$   & $1$   & $0$            & $0$            & $0$            &  $0$\\
+      6  & $0$   & $1$   & $1$   & $0$            & $0$            & $1$            &  $0$\\
+      7  & $1$   & $0$   & $1$   & $0$            & $0$            & $0$            &  $0$\\
+      8  & $1$   & $0$   & $1$   & $0$            & $1$            & $0$            &  $0$\\
+      9  & $1$   & $0$   & $1$   & $0$            & $0$            & $0$            &  $0$\\
+      10 & $1$   & $1$   & $0$   & $1$            & $0$            & $0$            &  $0$\\
+      11 & $1$   & $1$   & $1$   & $0$            & $0$            & $0$            &  $0$\\
+      12 & $1$   & $1$   & $1$   & $1$            & $0$            & $0$            &  $0$\\
+      13 & $1$   & $1$   & $1$   & $0$            & $1$            & $0$            &  $0$\\
+      14 & $1$   & $1$   & $1$   & $0$            & $0$            & $1$            &  $0$\\
+      15 & $1$   & $1$   & $1$   & $1$            & $1$            & $1$            &  $1$\\
+      \hline
+    \end{tabular}
+  \caption{
+    For $n=1$, $k=3$, there are fifteen such functions.
+  }
+\end{figure}
+\begin{question}
+  How many such functions exist? Equivalently, how many ways to fill in a
+  $k$-``base set'' Venn diagram with integers such that no base set has more
+  than $n$ elements?
+\end{question}
+
+\begin{related}
+  \item What if $\#A_i = \#A_j$ for all $i,j < n$?
+  \item What if $A_i \not\subset A_j$ for all $i \neq j$?
+  \item What if this is done with unordered sets? (e.g. the second, third, and
+  fourth functions in the example are all considered equivalent.)
+  \item What if the correpsonding diagrams need to be realizable as grid
+  rectangles with areas corresponding to the values in the table?
+  \item What if this is done with set union instead of set intersection?
+\end{related}
+
+\begin{references}
+  \item OEIS Sequence A000330 handles the case where $k = 2$.
+  \item OEIS Sequence A319777 handles the case where $k = 3$.
+\end{references}
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass{article}
+\include{header}
+
+
+\begin{document}
+\rating{3}{3}
+Consider placing any number of queens (of the same color) on an $n \times n$
+chessboard in such a way as to maximize the number of legal moves available.
+\begin{figure}[!h]
+  \centering
+  \chessboard[maxfield=c3,setwhite={Qa3,Qa2,Qb1,Qc3},showmover=false]
+  \chessboard[maxfield=d4,setwhite={Qa1,Qa3,Qa4,Qb1,Qc4,Qd1,Qd2,Qd4},showmover=false]
+  \chessboard[maxfield=e5,setwhite={Qa2,Qa4,Qb1,Qb5,Qc1,Qc3,Qc5,Qd1,Qd5,Qe2,Qe4},showmover=false]
+
+  \caption{
+    Examples of $a_q(3) = 17, a_q(4) = 40, a_q(5) = 76$.
+  }
+\end{figure}
+
+\begin{question}
+  Is Alec Jones's conjecture true: $a_q(n) = 8(n-2)^2$ for $n \geq 6$, by
+  placing the queens around the perimeter?
+\end{question}
+\begin{related}
+  \item What about the analogous function for rooks ($a_r$) or bishops ($a_b$)?
+  \item What if the chessboard is a torus? Cylinder? M\"obius strip?
+  \item What if the chessbaord is $n \times m$?
+  \item Is $a_b(n) = \lfloor a_q(n)/2 \rfloor$? for all $n$?
+  \item What if queens can attack?
+\end{related}
+
+\begin{references}
+  \item A278211: \url{http://oeis.org/A278211}
+  \item A278212: \url{http://oeis.org/A278212}
+  \item A275815: \url{http://oeis.org/A275815}
+\end{references}
+\end{document}
