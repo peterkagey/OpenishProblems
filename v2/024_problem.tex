@@ -2,7 +2,7 @@
 \include{header}
 
 \begin{document}
-\rating{4}{2}
+\rating{3}{3}
 Consider partitions of the $n \times m$ grid in which every piece has
 $180^\circ$ rotational symmetry.
 \begin{figure}[!h]
@@ -12,7 +12,8 @@ $180^\circ$ rotational symmetry.
     \fill[fill={rgb:white,1;yellow,1}]             (0, 0) rectangle (5, 6);
     \fill[fill={rgb:white,4;red,2;yellow,2}]       (0, 0) rectangle (2, 3);
     \fill[fill={rgb:white,5;red,3;green,1;blue,1}] (0, 3) rectangle (1, 5);
-    \fill[fill={rgb:white,5;red,2;green,3}]        (0, 5) rectangle (2, 6); \fill[fill={rgb:white,5;red,2;green,3}] (1, 4) rectangle (3, 5);
+    \fill[fill={rgb:white,5;red,2;green,3}]        (0, 5) rectangle (2, 6)
+                                                   (1, 4) rectangle (3, 5);
     \fill[fill={rgb:white,5;red,2;blue,3}]         (4, 0) rectangle (5, 1);
     \fill[fill={rgb:white,3;red,1;blue,1}]         (4, 0) rectangle (5, 2);
     \fill[fill={rgb:white,5;green,2;blue,3}]       (3, 1) rectangle (4, 2);
@@ -48,6 +49,18 @@ $180^\circ$ rotational symmetry.
   \item How many partitions of a torus? Cylinder? M\"obius strip?
   \item How many partitions of a triangular or hexagonal lattice?
   \item How many partitions of an $n \times m \times p$ cuboid?
+  \item How many placements of centers results in a unique solution? Multiple
+    solutions? No solutions?
+  \item What if there is the additional restriction that putting together any
+    proper subset of adjacent parts must not exhibit symmetry?
+    (e.g two adjacent unit squares cannot be colored differently.)
+  \item What partitions have parts with the greatest average number of sides?
+    (e.g. in the example the average part has
+    $(5(4) + 8 + 16)/7 = 44/7 \approx 6.29$ sides.)
+  \item What partitions have the smallest ratio of rectangular parts?
+    (e.g. in the example, $2$ out of $7$ parts are non-rectangular.)
+  \item What partitions have the greatest number of non-rectangular parts, total?
+    (e.g. in the example, two of the parts are non-rectangular.)
 \end{related}
 \begin{references}
   \item \url{https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/galaxies.html}
