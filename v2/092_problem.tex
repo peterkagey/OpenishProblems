@@ -1,0 +1,79 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{3}
+  Consider walks on an $n \times m$ grid, where the walk can only self-intersect
+  at a perpendicular step.
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,0) grid (4,5);
+    \draw[ultra thick] (0.5,0.5)--(0.5,1.5)--(3.5,1.5)--(3.5,2.5)--(2.5,2.5)--(2.5,0.5)--(1.5,0.5)--(1.5,4.5)--(3.5,4.5)--(3.5,3.5)--(0.5,3.5)--(0.5,2.5);
+  \end{tikzpicture}
+  \caption{An example of a walk on a $5 \times 5$ grid.}
+\end{figure}
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}[scale = 0.75]
+    \draw (0,0) grid (3,3);
+    \draw[ultra thick, blue] (0,0) rectangle (3,3);
+    \draw[ultra thick, red] (0.5,0.5)--(0.5,2.5)--(1.5,2.5)--(1.5,0.5)--(2.5,0.5)--(2.5,2.5);
+  \end{tikzpicture}
+  ~
+  \begin{tikzpicture}[scale = 0.75]
+    \draw (0,0) grid (3,3);
+    \draw[ultra thick, blue] (0,0) rectangle (3,3);
+    \draw[ultra thick, red] (0.5,0.5)--(0.5,2.5)--(2.5,2.5)--(2.5,1.5)--(1.5,1.5)--(1.5,0.5)--(2.5,0.5);
+  \end{tikzpicture}
+  ~
+  \begin{tikzpicture}[scale = 0.75]
+    \draw (0,0) grid (3,3);
+    \draw[ultra thick, blue] (0,0) rectangle (3,3);
+    \draw[ultra thick, red] (0.5,0.5)--(0.5,2.5)--(2.5,2.5)--(2.5,0.5)--(1.5,0.5)--(1.5,1.5);
+  \end{tikzpicture}
+  ~
+  \begin{tikzpicture}[scale = 0.75]
+    \draw (0,0) grid (3,3);
+    \draw[ultra thick, blue] (0,0) rectangle (3,3);
+    \draw[ultra thick, red] (0.5,0.5)--(0.5,1.5)--(2.5,1.5)--(2.5,0.5)--(1.5,0.5)--(1.5,2.5)--(0.5,2.5);
+  \end{tikzpicture}
+  ~
+  \begin{tikzpicture}[scale = 0.75]
+    \draw (0,0) grid (3,3);
+    \draw[ultra thick, blue] (0,0) rectangle (3,3);
+    \draw[ultra thick, red] (0.5,0.5)--(0.5,1.5)--(2.5,1.5)--(2.5,0.5)--(1.5,0.5)--(1.5,2.5)--(2.5,2.5);
+  \end{tikzpicture}
+  ~
+  \begin{tikzpicture}[scale = 0.75]
+    \draw (0,0) grid (3,3);
+    \draw[ultra thick, blue] (0,0) rectangle (3,3);
+    \draw[ultra thick, red] (0.5,0.5)--(0.5,1.5)--(1.5,1.5)--(1.5,2.5)--(2.5,2.5)--(2.5,0.5)--(1.5,0.5);
+  \end{tikzpicture}
+  \caption{
+    Six (all?) ``as-long-as-possible'' paths starting in the lower left corner,
+    up to dihedral action on the $3 \times 3$ grid.
+  }
+\end{figure}
+
+\begin{question}
+  How many $n \times n$ boards exist with a unique solution?
+\end{question}
+
+\begin{related}
+  \item What if paths must be ``as long as possible'', in the sense that they
+    can't be extended at either end?
+  \item What if this is done on a torus, triangular grid, cube, etc?
+  \item What if paths much touch every square at least once?
+  \item How many up to dihedral action? How many with dihedral symmetry?
+  \item What if paths must start at, say, the upper right corner?
+  \item What if the path must have at least one self-intersection?
+  \item What if paths are allowed to be loops (i.e., end on same square as they
+    began on?) What if they must be loops?
+  \item What is the greatest number of king steps?
+    Fewest on an ``as-long-as-possible'' path? Rook steps?
+  \item What if diagonal moves are allowed? Only diagonal moves?
+\end{related}
+
+\end{document}
