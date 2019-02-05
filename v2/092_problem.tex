@@ -8,8 +8,8 @@
 \begin{figure}[ht!]
   \centering
   \begin{tikzpicture}
-    \draw (0,0) grid (4,5);
-    \draw[ultra thick] (0.5,0.5)--(0.5,1.5)--(3.5,1.5)--(3.5,2.5)--(2.5,2.5)--(2.5,0.5)--(1.5,0.5)--(1.5,4.5)--(3.5,4.5)--(3.5,3.5)--(0.5,3.5)--(0.5,2.5);
+    \draw (0,0) grid (5,4);
+    \draw[ultra thick] (0.5,0.5)--(1.5,0.5)--(1.5,3.5)--(2.5,3.5)--(2.5,2.5)--(0.5,2.5)--(0.5,1.5)--(4.5,1.5)--(4.5,3.5)--(3.5,3.5)--(3.5,0.5)--(2.5,0.5);
   \end{tikzpicture}
   \caption{An example of a walk on a $5 \times 5$ grid.}
 \end{figure}
@@ -74,6 +74,13 @@
   \item What is the greatest number of king steps?
     Fewest on an ``as-long-as-possible'' path? Rook steps?
   \item What if diagonal moves are allowed? Only diagonal moves?
+  \item What if multiple paths can be drawn on the same grid, only intersecting perpendicularly?
 \end{related}
+
+\begin{references}
+  \item Problem 31.
+  \item Problem 42.
+  \item Problem 56.
+\end{references}
 
 \end{document}
