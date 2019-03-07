@@ -2,7 +2,7 @@
 \include{header}
 
 \begin{document}
-\rating{4}{3}
+\rating{2}{3}
 Consider ways to lay matchsticks (of unit length) on the $n \times m$ grid in
 such a way as to form a maze.
 \begin{figure}[ht!]
@@ -40,7 +40,12 @@ such a way as to form a maze.
   \item What if this is done on a hexagonal or triangular grid? On a torus?
   \item Is there a meaningful way to assign ``difficulty'' to a maze?
 \end{related}
+\begin{note}
+  This appears to be the number of spanning trees on the $n \times m$ grid graph
+  such that the start and end are leaves.
+\end{note}
 \begin{references}
   \item Problem 56.
+  \item \url{https://oeis.org/A116469}
 \end{references}
 \end{document}
