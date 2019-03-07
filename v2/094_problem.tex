@@ -1,0 +1,56 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{3}
+  Consider convex polygons with integer vertices and minimal area.
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}[scale=0.8]
+    \draw[dashed, thick] (-0.5,-0.5) grid (2.5,5.5);
+    \draw[line width=3, red] (0,0)--(0,1)--(1,2)--(2,2)--(2,1)--(1,0)--cycle;
+  \end{tikzpicture}
+  ~~~
+  \begin{tikzpicture}[scale=0.8]
+    \draw[dashed, thick] (-0.5,-0.5) grid (3.5,5.5);
+    \draw[line width=3, red] (0,1)--(0,2)--(1,3)--(2,3)--(3,1)--(2,0)--(1,0)--cycle;
+  \end{tikzpicture}
+  ~~~
+  \begin{tikzpicture}[scale=0.8]
+    \draw[dashed, thick] (-0.5,-0.5) grid (3.5,5.5);
+    \draw[line width=3, red] (0,1)--(0,2)--(1,3)--(2,3)--(3,2)--(3,1)--(2,0)--(1,0)--cycle;
+  \end{tikzpicture}
+  ~~~
+  \begin{tikzpicture}[scale=0.8]
+    \draw[dashed, thick] (-0.5,-0.5) grid (4.5,5.5);
+    \draw[line width=3, red] (0,1)--(0,2)--(1,4)--(2,5)--(3,5)--(4,4)--(4,3)--(3,1)--(2,0)--(1,0)--cycle;
+  \end{tikzpicture}
+  \caption{
+    Candidates for minimal area $6, 7, 8$ and $10$-gons.
+  }
+\end{figure}
+
+\begin{question}
+  What is the minimal area of a convex lattice $n$-gon.
+\end{question}
+
+\begin{related}
+  \item What if the sum of side lengths is minimized instead? Measured via the
+  taxicab metric?
+  \item What if the polygons are minimized with respect to the height/width of
+  the smallest grid? Or the number of complete cells they contain? (e.g. the
+  examples contain 0, 4, 5, and 10 cells respectively) The number of partial
+  cells they contain? (e.g. 4, 9, 9, 18) respectively?
+  \item What if the polygons can be concave?
+  \item What if the concave polygons cannot have any acute angles?
+  \item What if the concave polygons can be decomposed into polyabolos?
+  \item What if the polygons must have $180^\circ$ or horizontal symmetry?
+\end{related}
+
+\begin{references}
+  \item \url{https://en.wikipedia.org/wiki/Polyabolo}
+  \item Problem 5, Problem 7, and Problem 88.
+\end{references}
+
+\end{document}
