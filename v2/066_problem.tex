@@ -8,11 +8,16 @@ The number of ways to draw a triangle on a triangular grid is given by \[
 \] where $t(m)$ is the $m$-th triangular number.
 \\~\\
 The number of ways to draw a square on a square grid is given by \[
-  \sum_{k=1}^{n-1} k\cdot (n-k)^2 = n^2\left(\frac{n^2 - 1}{12}\right)
+  \sum_{k=1}^{n-1} k\cdot (n-k)^2
+  = \frac 16 \binom{n^2}{2}
+  = n^2\left(\frac{n^2 - 1}{12}\right)
 \] the 4-dimensional pyramidal number.
 \\~\\
 The number of ways to draw a hexagon on a hexagonal grid is given by \[
-  \sum_{k=1}^{n-1} k\cdot h(n-k) = \sum_{k=1}^{n-1} k^3 = t(n-1)^2
+  \sum_{k=1}^{n-1} k\cdot h(n-k)
+  = n\binom {n+2}3
+  = \frac{n^2(n+1)(n+2)}{6}.
+  % = \sum_{k=1}^{n-1} k^3 = t(n-1)^2
 \] where $h(m)$ is the $m$-th hexagonal number.
 \begin{figure}[ht!]
   \centering
@@ -22,10 +27,10 @@ The number of ways to draw a hexagon on a hexagonal grid is given by \[
       \foreach \y in {1,...,\x} {
         \fill[gray!40] ({\x - \y/2}, {sqrt(3)/2 * \y}) circle (0.1);
       }
-      \draw[ultra thick, blue!50] (2, {sqrt(3)})--(4.5, {5/2*sqrt(3)})--(5.5, {sqrt(3)/2})--cycle;
-      \draw[ultra thick, red!50] (3, {sqrt(3)})--(4, {4/2*sqrt(3)})--(2, {4/2*sqrt(3)})--cycle;
-      \draw[ultra thick, orange!50] (4.5, {sqrt(3)/2})--(4.5, {3/2*sqrt(3)})--(6, {sqrt(3)})--cycle;
     }
+    \draw[ultra thick, blue!50] (2, {sqrt(3)})--(4.5, {5/2*sqrt(3)})--(5.5, {sqrt(3)/2})--cycle;
+    \draw[ultra thick, red!50] (3, {sqrt(3)})--(4, {4/2*sqrt(3)})--(2, {4/2*sqrt(3)})--cycle;
+    \draw[ultra thick, orange!50] (4.5, {sqrt(3)/2})--(4.5, {3/2*sqrt(3)})--(6, {sqrt(3)})--cycle;
   \end{tikzpicture}
   % Hexagon
   \begin{tikzpicture}[scale=0.8]
@@ -34,8 +39,9 @@ The number of ways to draw a hexagon on a hexagonal grid is given by \[
         \fill[gray!40] ({\x - \y/2 + \k}, {sqrt(3)/2 * \y}) circle (0.1);
       }
       \draw[ultra thick, blue!50] (2.5, {sqrt(3)/2 * 1})--(1, {sqrt(3)/2 * 2})--(1, {sqrt(3)/2 * 4})--(2.5, {sqrt(3)/2 * 5})--(4, {sqrt(3)/2 * 4})--(4, {sqrt(3)/2 * 2})--cycle;
-      \draw[ultra thick, red!50] (0.5, {sqrt(3)/2 * 1})--(0, {sqrt(3)/2 * 2})--(0.5, {sqrt(3)/2 * 3})--(1.5, {sqrt(3)/2 * 3})--(2, {sqrt(3)/2 * 2})--(1.5, {sqrt(3)/2 * 1})--cycle;
-      \draw[ultra thick, orange!50] (1.5, {sqrt(3)/2 * 7})--(3.5, {sqrt(3)/2 * 7})--(4.5, {sqrt(3)/2 * 5})--(3.5, {sqrt(3)/2 * 3})--(1.5, {sqrt(3)/2 * 3})--(0.5, {sqrt(3)/2 * 5})--cycle;
+      \draw[ultra thick, red!50] (0.5, {sqrt(3)/2 * 3})--(0, {sqrt(3)/2 * 4})--(0.5, {sqrt(3)/2 * 5})--(1.5, {sqrt(3)/2 * 5})--(2, {sqrt(3)/2 * 4})--(1.5, {sqrt(3)/2 * 3})--cycle;
+      % \draw[ultra thick, orange!50] (1.5, {sqrt(3)/2 * 7})--(3.5, {sqrt(3)/2 * 7})--(4.5, {sqrt(3)/2 * 5})--(3.5, {sqrt(3)/2 * 3})--(1.5, {sqrt(3)/2 * 3})--(0.5, {sqrt(3)/2 * 5})--cycle;
+      \draw[ultra thick, orange!50] (1.5, {sqrt(3)/2 * 7})--(4, {sqrt(3)/2 * 6})--(4.5, {sqrt(3)/2 * 3})--(2.5, {sqrt(3)/2 * 1})--(0, {sqrt(3)/2 * 2})--(-0.5, {sqrt(3)/2 * 5})--cycle;
     }
   \end{tikzpicture}
   \hspace{0.7cm}
@@ -45,11 +51,10 @@ The number of ways to draw a hexagon on a hexagonal grid is given by \[
       \foreach \y in {1,...,7} {
         \fill[gray!40] (\x, \y) circle (0.1);
       }
-
-      \draw[ultra thick, blue!50] (6,1)--(7,5)--(3,6)--(2,2)--cycle;
-      \draw[ultra thick, red!50] (4,5)--(6,5)--(6,7)--(4,7)--cycle;
-      \draw[ultra thick, orange!50] (2,3)--(4,5)--(6,3)--(4,1)--cycle;
     }
+    \draw[ultra thick, blue!50] (6,1)--(7,5)--(3,6)--(2,2)--cycle;
+    \draw[ultra thick, red!50] (1,1)--(3,1)--(3,3)--(1,3)--cycle;
+    \draw[ultra thick, orange!50] (3,4)--(5,6)--(7,4)--(5,2)--cycle;
   \end{tikzpicture}
   \caption{
     All connected configurations of $4$ coins. Six out of the seven possible
