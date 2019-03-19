@@ -1,0 +1,55 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{1}
+  Consider a $n \times m$ grid of ones and zeroes, which represent the heights of the
+  cells. It rains, and the grid fills up with the rain moving horizontally and
+  vertically.
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,0) grid (6,5);
+    \foreach \x/\y/\n in {
+      0/0/0, 0/1/1, 0/2/1, 0/3/0, 0/4/1,
+      1/0/1, 1/1/0, 1/2/0, 1/3/1, 1/4/0,
+      2/0/1, 2/1/0, 2/2/0, 2/3/1, 2/4/0,
+      3/0/1, 3/1/0, 3/2/1, 3/3/0, 3/4/1,
+      4/0/1, 4/1/1, 4/2/1, 4/3/0, 4/4/1,
+      5/0/1, 5/1/1, 5/2/0, 5/3/1, 5/4/1
+    } {
+      \node at (0.5 + \x, \y + 0.5) {\n};
+      \fill[blue, fill opacity=0.01]
+        (1,1) rectangle (4,2)
+        (1,2) rectangle (3,3)
+        (3,3) rectangle (5,4)
+      ;
+    }
+  \end{tikzpicture}
+  \caption{
+    An example of five non-parallel centered squares in the size 6 square, and
+    an example of three non-parallel non-centered squares that do not share any
+    lattice points.
+  }
+\end{figure}
+
+\begin{question}
+  What is the expected area of a lake? Of the sum of all lakes?
+\end{question}
+
+\begin{related}
+  \item What is the expected number of lakes? Of islands? Of lakes on islands?
+  \item What if water can flow diagonally too?
+  \item What if the heights can take on arbitrary values?
+  \item What if there is a border around the grid of height $k$?
+  \item What if the cell is height $0$ with probability $p$ and height $1$ with probability $(1-p)$?
+  \item How does this generalize to triangular/hexagonal grids? More dimensions?
+  \item How does this generalize to a cylinder?
+\end{related}
+
+\begin{references}
+  \item Problem 86.
+  \item \url{https://codegolf.stackexchange.com/q/2638/53884}
+\end{references}
+
+\end{document}
