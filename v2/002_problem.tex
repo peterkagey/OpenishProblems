@@ -5,41 +5,38 @@
 \rating{3}{3}
 Let $G$ be some $n \times m$ grid as in Figure 1, where each cell has two
 opposite diagonals connected (uniformly at random).
-A cell is chosen (also uniformly at random), and the segment given by the path of
-diagonals that goes through the selected cell is is inspected.
+Choose a cell (also uniformly at random), and consider the component that goes through this cell.
 \begin{figure}[!h]
   \centering
-  \begin{tikzpicture}
-    \draw[thin,gray,dashed] (0,0) grid (4,5);
-
-    \draw[ultra thick] (0,5) -- (1,4);
-    \draw[ultra thick] (0,3) -- (1,4); \draw[ultra thick] (1,4) -- (2,3);
-    \draw[ultra thick] (0,3) -- (1,2); \draw[ultra thick] (1,2) -- (2,3); \draw[ultra thick] (2,3) -- (3,2);
-
-    \draw (1,5) -- (2,4); \draw (2,4) -- (3,5); \draw (3,4) -- (4,5);
-                                                \draw (2,4) -- (3,3); \draw (3,4) -- (4,3);
-                                                                      \draw (3,3) -- (4,2);
-    \draw (0,2) -- (1,1); \draw (1,1) -- (2,2); \draw (2,2) -- (3,1); \draw (3,1) -- (4,2);
-    \draw (0,0) -- (1,1); \draw (1,0) -- (2,1); \draw (2,0) -- (3,1); \draw (3,1) -- (4,0);
-
-    \draw[red] (2,2) -- (2,3);
-    \draw[red] (2,3) -- (3,3);
-    \draw[red] (3,2) -- (3,3);
-    \draw[red] (2,2) -- (3,2);
+  \begin{tikzpicture}[scale=1]
+    \draw[gray, dashed] (0,0) grid (10,6);
+    \fill[red!25] (5,1) rectangle (6,2);
+    \foreach \a/\b/\s/\t in {
+      0/5/1/1, 1/5/0/1, 2/5/1/1, 3/5/0/1, 4/5/0/1, 5/5/1/1, 6/5/1/1, 7/5/0/1, 8/5/0/1, 9/5/0/1,
+      0/4/1/1, 1/4/1/1, 2/4/1/1, 3/4/1/1, 4/4/0/1, 5/4/0/1, 6/4/1/1, 7/4/1/1, 8/4/0/1, 9/4/1/1,
+      0/3/0/1, 1/3/1/1, 2/3/1/1, 3/3/1/3, 4/3/1/1, 5/3/0/1, 6/3/0/1, 7/3/1/1, 8/3/1/1, 9/3/1/1,
+      0/2/0/1, 1/2/1/1, 2/2/1/3, 3/2/0/3, 4/2/1/3, 5/2/0/3, 6/2/0/1, 7/2/0/1, 8/2/1/1, 9/2/1/1,
+      0/1/0/3, 1/1/1/3, 2/1/1/1, 3/1/0/1, 4/1/1/1, 5/1/1/3, 6/1/1/1, 7/1/0/1, 8/1/1/1, 9/1/1/1,
+      0/0/1/3, 1/0/0/3, 2/0/0/1, 3/0/0/3, 4/0/1/3, 5/0/1/1, 6/0/0/1, 7/0/0/1, 8/0/0/1, 9/0/1/1
+    } {
+      \draw[line cap=round, line width=\t, draw={rgb:red,0.5;green,2;blue,\t}]
+        (\a, \b + 1 - \s)--(\a + 1, \b + \s )
+      ;
+    }
+    \draw[line width=3] (0,0) rectangle (10,6);
   \end{tikzpicture}
   \caption{
-    An example of a $4 \times 5$ grid, where a segment of size $6$ has been selected.
+    An example of a $6 \times 10$ grid, where a component of size $12$ has been selected.
   }
 \end{figure}
 
 \begin{question}
-  What is the expected length of the selected segment?
+  What is the expected size of the selected component?
 \end{question}
 
 \begin{related}
-  \item What is the expected number of segments in an $n \times m$ grid?
-  \item How long is the longest segment expected to be?
-  \item How does this change if the grid is toroidal, on a cylinder,
-    on a M\"obius strip, etc?
+  \item What is the expected number of components in an $n \times m$ grid?
+  \item How long is the longest component expected to be?
+  \item How does this change if the grid on a torus/cylinder/M\"obius strip/etc?
 \end{related}
 \end{document}
