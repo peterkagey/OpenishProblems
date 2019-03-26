@@ -1,0 +1,66 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{4}{3}
+  Suppose you choose two points on a line segment uniformly at random, defining
+  three smaller line segments. The probability that these three line segments
+  satisfy the triangle inequality is $\frac 14$.
+  \\
+  Similarly, if you choose five points on a line segment, it is conjectured that
+  they can form a tetrahedron with probability $\frac 1{79}$.
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \draw[line width=5, red!50] (0,0)--(3.5,0);
+    \draw[line width=5, orange!50] (3.5,0)--(6,0);
+    \draw[line width=5, yellow!50] (6,0)--(9,0);
+    \draw[line width=5, blue!50] (12,0)--(13.5,0);
+    \draw[line width=5, purple!50] (13.5,0)--(16,0);
+    \draw[line width=5, green!50] (9,0)--(12,0);
+    \draw[thick]
+      (0,-0.1)--(0,0.1)
+      (3.5,-0.1)--(3.5,0.1)
+      (6,-0.1)--(6,0.1)
+      (9,-0.1)--(9,0.1)
+      (12,-0.1)--(12,0.1)
+      (13.5,-0.1)--(13.5,0.1)
+      (16,-0.1)--(16,0.1)
+    ;
+  \end{tikzpicture}
+  \\~\\
+  \begin{tikzpicture}
+    \draw[line width=5, line cap=round, red!50] (0,0)--(5,0);
+    \draw[line width=5, line cap=round, orange!50] (0,0)--(2,3);
+    \draw[line width=5, line cap=round, yellow!50] (5,0)--(2,3);
+    \draw[line width=5, line cap=round, blue!50] (1,-1)--(0,0);
+    \draw[line width=5, line cap=round, purple!50] (1,-1)--(5,0);
+    \draw[line width=5, line cap=round, green!50] (1,-1)--(2,3);
+  \end{tikzpicture}
+  \caption{
+    An example of a partition of a line segment and the resulting tetrahedron.
+  }
+\end{figure}
+
+\begin{question}
+  If the line segment is split into $\frac{k(k+1)}{2}$ pieces using this
+  prescription, do the resulting segments form a $k$-simplex with rational
+  probability?
+\end{question}
+
+\begin{related}
+  \item What if the segments form prescribed sides of the $k$-simplex? What if
+    any configuration is valid?
+  \item What if there are more than $\frac{k(k+1)}{2}$ pieces, what is the
+    probability that there exists some subset of $\frac{k(k+1)}{2}$ of them that
+    forms a $k$-simplex?
+  \item What is the expected hyper-volume of such a tetrahedron?
+\end{related}
+
+\begin{references}
+  \item Problem 73.
+  \item Problem 78 also deals with a generalization of a Stack Exchange question.
+  \item \url{https://mathoverflow.net/q/142983/104733}
+\end{references}
+
+\end{document}
