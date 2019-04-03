@@ -9,46 +9,50 @@ such a way that no end is ``orphaned''.
   \centering
   \begin{tikzpicture}[scale=1.5]
     \draw[ultra thick, gray, dashed] (0,0) grid (4,-3);
-    \draw[line width=0.25cm, red] (2,-1)--(2,-2)--(3,-2);
-    \draw[line width=0.25cm, red] (3,-0)--(3,-1)--(0,-1)--(0,-2)--(1,-2)--(1,-0)--(4,-0)--(4,-3)--(3,-3)--(3,-2)--(4,-2);
+    \draw[line width=0.25cm, cyan!80] (2,-1)--(2,-2)--(3,-2);
+    \draw[line width=0.25cm, cyan!80] (3,-0)--(3,-1)--(0,-1)--(0,-2)--(1,-2)--(1,-0)--(4,-0)--(4,-3)--(3,-3)--(3,-2)--(4,-2);
   \end{tikzpicture}\hspace{0.5cm}
   \begin{tikzpicture}[scale=1.5]
     \draw[ultra thick, gray, dashed] (0,0) grid (4,3);
-    \draw[line width=0.25cm, green!50] (1,2)--(0,2)--(0,1)--(1,1)--(1,2)--(1,3)--(2,3)--(3,3)--(4,3)--(4,2)--(3,2)--(2,2)--(2,3);
-    \draw[line width=0.25cm, green!50] (4,0)--(4,1)--(2,1)--(2,0)--cycle;
+    \draw[line width=0.25cm, magenta!80] (1,2)--(0,2)--(0,1)--(1,1)--(1,2)--(1,3)--(2,3)--(3,3)--(4,3)--(4,2)--(3,2)--(2,2)--(2,3);
+    \draw[line width=0.25cm, magenta!80] (4,0)--(4,1)--(2,1)--(2,0)--cycle;
   \end{tikzpicture}
   \caption{
     Two examples of a valid configurations on a $5 \times 4$ grid; the second
-    has an ``island'' in the lower right corner.
+    is not connected.
   }
 \end{figure}
 \begin{figure}[ht!]
   \centering
   \begin{tikzpicture}
     \draw[thick, gray, dashed] (0,0) grid (2,2);
-    \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
+    \draw[line width=0.1cm, orange!80] (0,0) rectangle (2, 2);
   \end{tikzpicture}\hspace{0.5cm}
   \begin{tikzpicture}
     \draw[thick, gray, dashed] (0,0) grid (2,2);
-    \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
-    \draw[line width=0.1cm, blue!50] (0,1)--(1,1)--(1,2);
+    \draw[line width=0.1cm, orange!80]
+      (0,0) rectangle (2, 2)
+      (0,1)--(1,1)--(1,2);
   \end{tikzpicture}\hspace{0.5cm}
   \begin{tikzpicture}
     \draw[thick, gray, dashed] (0,0) grid (2,2);
-    \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
-    \draw[line width=0.1cm, blue!50] (0,1)--(2,1);
+    \draw[line width=0.1cm, orange!80]
+      (0,0) rectangle (2, 2)
+      (0,1)--(2,1);
   \end{tikzpicture}\hspace{0.5cm}
   \begin{tikzpicture}
     \draw[thick, gray, dashed] (0,0) grid (2,2);
-    \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
-    \draw[line width=0.1cm, blue!50] (0,1)--(2,1);
-    \draw[line width=0.1cm, blue!50] (1,0)--(1,2);
+    \draw[line width=0.1cm, orange!80]
+      (0,0) rectangle (2, 2)
+      (0,1)--(2,1)
+      (1,0)--(1,2);
   \end{tikzpicture}\hspace{0.5cm}
   \begin{tikzpicture}
     \draw[thick, gray, dashed] (0,0) grid (2,2);
-    \draw[line width=0.1cm, blue!50] (0,0) rectangle (2, 2);
-    \draw[line width=0.1cm, blue!50] (0,1)--(2,1);
-    \draw[line width=0.1cm, blue!50] (1,0)--(1,1);
+    \draw[line width=0.1cm, orange!80]
+      (0,0) rectangle (2, 2)
+      (0,1)--(2,1)
+      (1,0)--(1,1);
   \end{tikzpicture}
   \caption{
     All(?) examples of valid configurations of $3 \times 3$ grids with
@@ -61,9 +65,9 @@ such a way that no end is ``orphaned''.
 \end{question}
 
 \begin{related}
-  \item What if the matchsticks are of length $k$?
+  \item What if the matchsticks are of length $k$? Of $\{k_1,k_2, \hdots, k_\ell\}$?
   \item How does this generalize to a triangular/hexagonal lattice or to
-    multiple dimensions?
+    multiple dimensions? On the king graph? On the multipartite graph $K_{m,m,\hdots,m}$?
   \item What is the number of these configurations with rotational symmetry?
     Horizontal/vertical symmetry?
   \item If such a configuration is chosen uniformly at random, what is the
@@ -71,14 +75,15 @@ such a way that no end is ``orphaned''.
     regions.)
   \item What if no gridpoint can have degree 0? Degree 2? 3? 4?
   \item What if the entire border must be drawn?
-  \item What if the the graph must be connected (i.e. cannot have an ``island''.)
+  \item What if the subgraph must be connected?
   \item What if instead of horizontal/vertical lines, diagonals are allowed?
     All edges have integer slope?
     Edges don't intersect except at vertices?
   \item How many $k$-ominoes fit in a ``tube'' of height $m$? Snuggly?
 \end{related}
 \begin{references}
-  \item The number of $2 \times n$ grids appears to be given by A093129.
-  \item The number of $3 \times n$ grids is given by A301976.
+  \item A093129 ($2 \times n$), A301976 ($3 \times n$), A320097 ($4 \times n$),
+    A320099 ($5 \times n$), A303930 ($2 \times n$ up to symmetry).
+  \item \url{http://mathworld.wolfram.com/KingGraph.html}
 \end{references}
 \end{document}
