@@ -9,8 +9,8 @@ with tiles of different patterns.
   \centering
   \begin{multicols}{2}\begin{enumerate}[(a)]
     % 1
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \fill[gray!50] (1.5,0) rectangle (2.5,1);
 
       \def\count{1}
@@ -20,20 +20,19 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt,mirror}] ({1.5*\count + 1.1},-0.1)--({1.5*\count + 1.1},1.1);
     \end{tikzpicture}
     % 2
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \draw[thick] (0,0.5)--(1,0.5);
       \draw[thick] (2,0)--(2,1);
 
-      \def\count{1}
-      \foreach \x in {0,...,\count} {\draw[gray, thick] (1.5*\x, 0) rectangle (1.5*\x + 1, 1);}
-      \foreach \x in {1,...,\count} {\node at (1.5*\x - 0.4,0) {\Large,};}
+      \foreach \x in {0,...,1} {\draw[gray, thick] (1.5*\x, 0) rectangle (1.5*\x + 1, 1);}
+      \foreach \x in {1,...,1} {\node at (1.5*\x - 0.4,0) {\Large,};}
       \draw [thick,decorate,decoration={brace,amplitude=3pt}] (-0.1,-0.1)--(-0.1,1.1);
-      \draw [thick,decorate,decoration={brace,amplitude=3pt,mirror}] ({1.5*\count + 1.1},-0.1)--({1.5*\count + 1.1},1.1);
+      \draw [thick,decorate,decoration={brace,amplitude=3pt,mirror}] ({1.5 + 1.1},-0.1)--({1.5 + 1.1},1.1);
     \end{tikzpicture}
     % 3
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \draw [thick,decorate,decoration={brace,amplitude=3pt}] (-0.1,-0.1)--(-0.1,1.1);
       \draw[thick] (0,0.5)--(0.5,0.5)--(0.5,0);
       \draw[thick] (1.5,0.5)--(2,0.5)--(2,1);
@@ -48,8 +47,8 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt,mirror}] ({1.5*\count + 1.1},-0.1)--({1.5*\count + 1.1},1.1);
     \end{tikzpicture}
     % 4
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \node at (0.5, 0.5) {in}; \node at (2, 0.5) {out};
 
       \def\count{1}
@@ -59,8 +58,8 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt,mirror}] ({1.5*\count + 1.1},-0.1)--({1.5*\count + 1.1},1.1);
     \end{tikzpicture}
     % 5
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \foreach \a/\b/\theta in {0/0/0, 1/1/180, 1.5/1/270, 2.5/0/90} {
         \draw[thick, draw={}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
       }
@@ -75,8 +74,8 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt,mirror}] ({1.5*\count + 1.1},-0.1)--({1.5*\count + 1.1},1.1);
     \end{tikzpicture}
     % 6
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \draw[thick] (0.5,0)--(0.5,{sqrt(3)/2});
       \draw[thick] (1.5,0)--(2.25,{sqrt(3)/4});
       \draw[thick] (4,0)--(3.25,{sqrt(3)/4});
@@ -88,8 +87,8 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt}] (-0.1,-0.1)--(-0.1,1.1);
     \end{tikzpicture}
     % 7
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \draw[thick] (0,0)--(0.5,{sqrt(3)/6})--(1,0);
       \draw[thick] (2,{sqrt(3)/2})--(2,{sqrt(3)/6})--(2.5,0);
       \draw[thick] (3,0)--(3.5,{sqrt(3)/6})--(3.5,{sqrt(3)/2});
@@ -102,8 +101,8 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt}] (-0.1,-0.1)--(-0.1,1.1);
     \end{tikzpicture}
     % 8
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \draw[thick] (0.25,{sqrt(3)/4})--(0.5,{sqrt(3)/6})--(0.5,0);
       \draw[thick] (2.25,{sqrt(3)/4})--(2,{sqrt(3)/6})--(2,0);
       \draw[thick] (3.75,{sqrt(3)/4})--(3.5,{sqrt(3)/6})--(3.25,{sqrt(3)/4});
@@ -116,8 +115,8 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt}] (-0.1,-0.1)--(-0.1,1.1);
     \end{tikzpicture}
     % 9
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \draw[thick, draw={}, domain=210:330] plot ({0.25*cos(\x) + sqrt(3)/4}, {0.25*sin(\x) + 1});
       \draw[thick, draw={}, domain=30:150] plot ({0.25*cos(\x) + sqrt(3)/4}, {0.25*sin(\x) + 0});
       \draw[thick] (0,0.5)--({sqrt(3)/2},0.5);
@@ -145,8 +144,8 @@ with tiles of different patterns.
       \draw [thick,decorate,decoration={brace,amplitude=3pt,mirror}] ({1.5*\count + 0.1 + sqrt(3)/2},-0.1)--({1.5*\count + 0.1 + sqrt(3)/2},1.1);
     \end{tikzpicture}
     % 10
-    \item \leavevmode\vadjust{\vspace{-\baselineskip}}\newline
-    \begin{tikzpicture}[scale=0.7]
+    \item
+    \begin{tikzpicture}[scale=0.7, baseline=6]
       \fill[gray!50] (0,0)--(0,1)--(1,0)--cycle;
       \fill[gray!50] (2.5,1)--(1.5,1)--(2.5,0)--cycle;
       \fill[gray!50] (3,0)--(4,1)--(4,0)--cycle;
