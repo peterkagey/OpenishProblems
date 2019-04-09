@@ -3,53 +3,71 @@
 \usetikzlibrary{patterns}
 
 \begin{document}
-\rating{3}{1}
-Steven Miller poses a riddle:\\
-\hphantom{1cm}
-\begin{tabular}{|p{0.9\textwidth}}
-A square has a quarter in each corner. You are blindfolded and must get all quarters to be heads up or all to be tails up. You will be told when you have done this. You may flip however many you want, then ask if you are done (this constitutes a turn). The square is then rotated/spun an undisclosed number of times. You then get another turn and so on…
-
-Is there a strategy that is guaranteed to work in a finite number of moves, and if so, what is that smallest number of moves you need to be 100\% you'll be able to have all heads up or all tails up?
-\end{tabular}
+\rating{3}{2}
+  Suppose you have two finite groups $G$ and $H$, a $G$-set $X$, and a target
+  function $t\colon X\rightarrow H$.
+  \\
+  You want to construct some finite sequence of maps
+  $\{f_i\colon X \rightarrow H\}_{i=1}^N$ such that for any
+  function $s_0\colon X \rightarrow H$ and any sequence $\{g_i \in G\}_{i=1}^{N-1}$
+  the following sequence contains $t$ \[
+    \{
+      s_0(x),
+      \underbrace{f_1(x) \cdot s_0(x)}_{s_1},
+      \underbrace{f_2(x) \cdot g_1 * s_1(x)}_{s_2},
+      \hdots,
+      \underbrace{f_{N}(x) \cdot g_{N-1} * s_{N-1}(x)}_{s_N}\}
+  \] where $f_i(x) \cdot s(x) = f_i(x)s(x)$ under ordinary group multiplication,
+  and $g_i * s(x) = s(g_i^{-1}x)$.
 
 \begin{figure}[ht!]
   \centering
   \begin{tikzpicture}
-    \draw[gray, ultra thick] (-0.1,-0.1) rectangle (2.1,2.1);
-    \draw[ultra thick] (0.45, 0.45) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (1.55, 0.45) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (0.45, 1.55) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (1.55, 1.55) circle (0.5) node {\Huge T};
-    \node at (1, -0.5) {\Large A};
+    \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
+    \draw[very thick, fill=red!20]
+      (0.45, 0.45) circle (0.4) node {\huge T}
+      (1.55, 0.45) circle (0.4) node {\huge T}
+      (0.45, 1.55) circle (0.4) node {\huge T}
+      (1.55, 1.55) circle (0.4) node {\huge T};
+    \node at (1, -0.2) {\Large A};
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}
-    \draw[gray, ultra thick] (-0.1,-0.1) rectangle (2.1,2.1);
-    \draw[ultra thick] (0.45, 0.45) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (1.55, 0.45) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (0.45, 1.55) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (1.55, 1.55) circle (0.5) node {\Huge H};
-    \node at (1, -0.5) {\Large B};
+    \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
+    \draw[very thick, fill=red!20]
+      (0.45, 0.45) circle (0.4) node {\huge T}
+      (1.55, 0.45) circle (0.4) node {\huge T}
+      (0.45, 1.55) circle (0.4) node {\huge T};
+    \draw[very thick, fill=blue!20]
+      (1.55, 1.55) circle (0.4) node {\huge H};
+
+    \node at (1, -0.2) {\Large B};
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}
-    \draw[gray, ultra thick] (-0.1,-0.1) rectangle (2.1,2.1);
-    \draw[ultra thick] (0.45, 0.45) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (1.55, 0.45) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (0.45, 1.55) circle (0.5) node {\Huge H};
-    \draw[ultra thick] (1.55, 1.55) circle (0.5) node {\Huge H};
-    \node at (1, -0.5) {\Large C};
+    \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
+    \draw[very thick, fill=red!20]
+      (0.45, 0.45) circle (0.4) node {\huge T}
+      (1.55, 0.45) circle (0.4) node {\huge T};
+    \draw[very thick, fill=blue!20]
+      (0.45, 1.55) circle (0.4) node {\huge H}
+      (1.55, 1.55) circle (0.4) node {\huge H};
+
+    \node at (1, -0.2) {\Large C};
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}
-    \draw[gray, ultra thick] (-0.1,-0.1) rectangle (2.1,2.1);
-    \draw[ultra thick] (0.45, 0.45) circle (0.5) node {\Huge T};
-    \draw[ultra thick] (1.55, 0.45) circle (0.5) node {\Huge H};
-    \draw[ultra thick] (0.45, 1.55) circle (0.5) node {\Huge H};
-    \draw[ultra thick] (1.55, 1.55) circle (0.5) node {\Huge T};
-    \node at (1, -0.5) {\Large D};
+    \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
+    \draw[very thick, fill=red!20]
+      (0.45, 0.45) circle (0.4) node {\huge T}
+      (1.55, 1.55) circle (0.4) node {\huge T};
+    \draw[very thick, fill=blue!20]
+      (1.55, 0.45) circle (0.4) node {\huge H}
+      (0.45, 1.55) circle (0.4) node {\huge H};
+
+    \node at (1, -0.2) {\Large D};
   \end{tikzpicture}
-  \\~\\
+  \\
   \begin{tikzpicture}[
     > = stealth, % arrow head style
     auto,
@@ -92,25 +110,37 @@ Is there a strategy that is guaranteed to work in a finite number of moves, and 
     \draw[looseness=1,out=270,in=270,->] (g) edge node {1} (d);
   \end{tikzpicture}
   \caption{
-    A equilateral triangle made of $3$-trapezoids.
+    Let $X$ be the vertices of the square $G = C_4$ the cyclic group which acts
+    on the $X$ by rotation, $H = \mathbb Z_2$, and $t(x) \equiv 0$.
+    Then interspersing the above sequence of $N=7$ moves with $f(x) = 1$ will
+    always result in the sequence reaching the target function, where $1, 2,$
+    and $3$ are the moves that flip one coin, two opposite coins, and
+    two adjacent coins respectively.
   }
 \end{figure}
 \begin{question}
-  If the three moves are $(1)$ flipping a corner, $(2)$ flipping two opposite
-  corners, or $(3)$ flipping over two adjacent corners, then the graph
-  shows that all heads or all tails can be guaranteed in a minimum of seven moves.
+  What conditions on $G, H, X$ and $t$ guarantee such a finite sequence of maps?
 \end{question}
 
 \begin{related}
-  \item Can this be generalized to an arbitrary $n$-gon?
+  \item Can this be generalized to an arbitrary $2^n$-gon?
+  \item Given $G, H, X$ and $t$, what is the minimum $N$?
+  \item If the sequence $\{g_i \in G\}_{i=1}^\infty$ is chosen uniformly at
+  random, what is the expected length of $\{f_i\}$ before $t$ is reached?
+  \item What if there is a set of target functions, any one of which is valid.
+  (e.g. all sets satisfying the condition that the number of heads is congruent
+  to $2 \pmod 3$.)
   \item Can this be generalized to multiple dimensions (e.g. a tetrahedron)?
-  \item What if the coins need to end up all heads?
-  \item What if the coins have $k$ sides that are changed randomly?
-    Changed sequentially?
-  \item What if the operator scrambles (but does not flip) the coins after each
-    move?
-  \item What if the operator tells you how many coins are up after a given move?
+  \item What if something about $s_i$ is told to you after the $i$th move for each
+    $i$ (and the strategy can depend on this information)?
 \end{related}
+
+\begin{note}
+  In the case of the polygon is a sequence of moves for $n=1$, $n=2$, $n=4$, and $n=8$, but no other
+  $n < 12$. Also in the example and in the case for $n=8$, the first and last move is to flip every other coin.
+  Lastly, the number of flips for these cases (to get either all heads or all tails)
+  is $0, 1, 7, 127$.
+\end{note}
 
 \begin{references}
   \item \url{http://mathriddles.williams.edu/?p=77}
