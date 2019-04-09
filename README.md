@@ -123,7 +123,7 @@
     * [A301853](https://oeis.org/A301853)
   * Problem 70 (V2)
     * [A304026](https://oeis.org/A304026)
-    * https://oeis.org/A304027
+    * [A304027](https://oeis.org/A304027)
     * [A316232](https://oeis.org/A316232)
   * Problem 83 (V2)
     * [A319777](https://oeis.org/A319777)
