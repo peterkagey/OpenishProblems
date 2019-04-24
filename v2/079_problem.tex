@@ -123,7 +123,6 @@
 \end{question}
 
 \begin{related}
-  \item Can this be generalized to an arbitrary $2^n$-gon?
   \item Given $G, H, X$ and $t$, what is the minimum $N$?
   \item If the sequence $\{g_i \in G\}_{i=1}^\infty$ is chosen uniformly at
   random, what is the expected length of $\{f_i\}$ before $t$ is reached?
@@ -136,10 +135,10 @@
 \end{related}
 
 \begin{note}
-  In the case of the polygon is a sequence of moves for $n=1$, $n=2$, $n=4$, and $n=8$, but no other
-  $n < 12$. Also in the example and in the case for $n=8$, the first and last move is to flip every other coin.
-  Lastly, the number of flips for these cases (to get either all heads or all tails)
-  is $0, 1, 7, 127$.
+  This can be generalized to an arbitrary $2^n$-gon, but no other $m$-gon.
+  The idea is that (1) you can't solve any $m$-gon with $m$ odd, and (2) you
+  can solve a $m$-gon if and only if you can solve a $d$-gon for every proper
+  divisor $d \mid m$.
 \end{note}
 
 \begin{references}
