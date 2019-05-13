@@ -7,7 +7,14 @@
    \ifnum#1<10 0#1\else #1\fi
 }
 
+\pagestyle{fancy}
+\lhead{PK's Problem Collection}
+\rhead{Peter Kagey}
+
 \begin{document}
+\thispagestyle{empty}
+
+\include{introduction}
 \foreach \x [evaluate=\x as \xpadded using {\twodigits{\x}}] in {1,...,99} {
   \IfFileExists{0\xpadded_problem.tex}{
     \setcounter{figure}{0}
