@@ -8,12 +8,12 @@
 }
 
 \pagestyle{fancy}
-\lhead{PK's Problem Collection}
-\rhead{Peter Kagey}
+\lhead{Open problem collection} \rhead{Peter Kagey}
+
+\title{Open problem collection}
+\author{Peter Kagey}
 
 \begin{document}
-\thispagestyle{empty}
-
 \include{introduction}
 \foreach \x [evaluate=\x as \xpadded using {\twodigits{\x}}] in {1,...,99} {
   \IfFileExists{0\xpadded_problem.tex}{
