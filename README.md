@@ -33,6 +33,7 @@
 
 ## Goals
   In February 2018, I met my goal to typeset problems 18–47.
+  In July 2019, I added problem 100 (version 2).
 
 ## OEIS Sequences
   <!-- * Problem 1 (V2)  -->
