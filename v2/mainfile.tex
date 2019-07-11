@@ -4,7 +4,11 @@
 \usepackage{docmute}
 
 \newcommand\twodigits[1]{%
-   \ifnum#1<10 0#1\else #1\fi
+  \ifnum#1<10 0#1\else #1\fi
+}
+
+\newcommand\threedigits[1]{%
+  \ifnum#1>99 #1\else 0\twodigits{#1}\fi
 }
 
 \pagestyle{fancy}
@@ -15,11 +19,11 @@
 
 \begin{document}
 \include{introduction}
-\foreach \x [evaluate=\x as \xpadded using {\twodigits{\x}}] in {1,...,99} {
-  \IfFileExists{0\xpadded_problem.tex}{
+\foreach \x [evaluate=\x as \xpadded using {\threedigits{\x}}] in {1,...,110} {
+  \IfFileExists{\xpadded_problem.tex}{
     \setcounter{figure}{0}
     \noindent\textbf{\huge Problem \x.}
-    \input{0\xpadded_problem.tex}\pagebreak
+    \input{\xpadded_problem.tex}\pagebreak
   }{}
 }
 \end{document}
