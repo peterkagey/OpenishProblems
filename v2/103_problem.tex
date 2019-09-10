@@ -1,0 +1,55 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{1}
+The Snake Cube is \begin{quote}
+  a mechanical puzzle, a chain of $27$ or $64$ cubelets, connected by an elastic
+  band running through them. The cubelets can rotate freely. The aim of the
+  puzzle is to arrange the chain in such a way that they will form
+  $3 \times 3 \times 3$ or $4 \times 4 \times 4$ cube.
+\end{quote}
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}[rotate=135,scale=0.7]
+    \foreach \x/\y/\c in {
+      11/13/green,12/13/yellow,13/13/green,
+      11/12/yellow,
+      9/11/green,10/11/yellow,11/11/green,
+      9/10/yellow,
+      8/9/yellow, 9/9/green,
+      7/8/yellow, 8/8/green,
+      7/7/green,
+      5/6/yellow, 6/6/green, 7/6/yellow,
+      4/5/yellow, 5/5/green,
+      4/4/green,
+      3/3/green, 4/3/yellow,
+      3/2/yellow,
+      2/1/yellow, 3/1/green,
+      0/0/green, 1/0/yellow, 2/0/green}
+    {
+      \fill[\c!50, draw={black}] (\x, \y) rectangle (\x + 1, \y + 1);
+    }
+  \end{tikzpicture}
+  \caption{The most common instance of the Snake Cube.}
+\end{figure}
+
+\begin{question}
+  How many chains exists for an $n \times n \times n$ cube?
+\end{question}
+
+\begin{related}
+  \item How about for an $n \times m \times p$ rectangular prism?
+  \item Can the ``hardest'' puzzles be quantified? Perhaps those with the
+  greatest or fewest number of solutions?
+  \item Can this be generalized to higher dimensions?
+  \item Can this be generalized to other polytopes?
+\end{related}
+
+\begin{references}
+  \item Problem 48.
+  \item Problem 101.
+  \item \url{https://en.wikipedia.org/wiki/Snake_cube}
+\end{references}
+\end{document}
