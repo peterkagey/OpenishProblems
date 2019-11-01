@@ -7,32 +7,34 @@ Define an $n$-triangle to be a triangle with integer coordinates and perimeter
 in $[n, n+1)$.
 \begin{figure}[!h]
   \centering
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=1.2]
     \draw[gray, dashed] (0,0) grid (2,2);
     \draw[very thick, fill={yellow}, fill opacity=0.5] (0,0)--(1,0)--(1,1)--cycle;
-    \node[anchor=west, minimum width = 3.6cm] at (2.3, 1) { $1 + 1 + \sqrt{2} \in [3, 4)$};
+    \node at (1, -0.3) {$1 + 1 + \sqrt{2} \in [3, 4)$};
   \end{tikzpicture}
   \\~\\
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=1.2]
     \draw[gray, dashed] (0,0) grid (2,2);
     \draw[very thick, fill={red}, fill opacity=0.5] (0,0)--(1,1)--(2,0)--cycle;
-    \node[anchor=west, minimum width = 3.6cm] at (2.3, 1) { $2 + \sqrt{2} + \sqrt{2} \in [4, 5)$};
-  \end{tikzpicture}\\~\\
-  \begin{tikzpicture}
+    \node at (1, -0.3) {$2 + \sqrt{2} + \sqrt{2} \in [4, 5)$};
+  \end{tikzpicture}
+  ~~~
+  \begin{tikzpicture}[scale=1.2]
     \draw[gray, dashed] (0,0) grid (2,2);
     \draw[very thick, fill={red}, fill opacity=0.5] (1,0)--(2,0)--(0,1)--cycle;
-    \node[anchor=west, minimum width = 3.6cm] at (2.3, 1) { $1 + \sqrt{2} + \sqrt{5} \in [4, 5)$};
+    \node at (1, -0.3) {$1 + \sqrt{2} + \sqrt{5} \in [4, 5)$};
   \end{tikzpicture}
   \\~\\
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=1.2]
     \draw[gray, dashed] (0,0) grid (2,2);
     \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,0)--(0,1)--cycle;
-    \node[anchor=west, minimum width = 3.6cm] at (2.3, 1) { $1 + 2 + \sqrt{5} \in [5, 6)$};
-  \end{tikzpicture}\\~\\
-  \begin{tikzpicture}
+    \node at (1, -0.3) {$1 + 2 + \sqrt{5} \in [5, 6)$};
+  \end{tikzpicture}
+  ~~~
+  \begin{tikzpicture}[scale=1.2]
     \draw[gray, dashed] (0,0) grid (2,2);
     \draw[very thick, fill={blue}, fill opacity=0.5] (0,0)--(2,1)--(1,2)--cycle;
-    \node[anchor=west, minimum width = 3.6cm] at (2.3, 1) { $\sqrt{2} + \sqrt{5} + \sqrt{5} \in [5, 6)$};
+    \node at (1, -0.3) {$\sqrt{2} + \sqrt{5} + \sqrt{5} \in [5, 6)$};
   \end{tikzpicture}
   \caption{
     An example in yellow showing that $a(3) = 1$, and example in red showing
