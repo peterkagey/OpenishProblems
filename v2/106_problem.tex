@@ -1,0 +1,58 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{2}{2}
+Consider a frog hopping on a circular collection of $n$ lily pads. The frog hops to
+any lily pad, and then hops with increasing steps. At the $k$-th step, the frog
+looks $k$ steps in the clockwise direction and $k$ steps in the counterclockwise
+direction and hops to whatever lily pad she has visited less. If there is a tie,
+she hops in the clockwise direction.
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    % create the node
+    \node[minimum size=5cm,regular polygon,regular polygon sides=5] (a) {};
+
+    % draw a black dot in each vertex
+    \foreach \x in {1,2,...,5} \draw[fill=green!20] (a.corner \x) circle[radius=16pt];
+    \draw[red, ultra thick, ->]
+      (a.corner 1) to[bend left] node[circle, black, right] {$r_1$} (a.corner 5)
+      (a.corner 5) to[bend left] node[circle, black, right] {$r_2$} (a.corner 3)
+      (a.corner 3) to[bend left] node[circle, black, right] {$r_3$} (a.corner 5)
+      (a.corner 4) to[in=270, out=359, min distance=20mm] node[circle, black, right] {$r_5$} (a.corner 4)
+      (a.corner 4) to[bend left] node[circle, black, below] {$r_6$} (a.corner 3)
+      (a.corner 3) to[bend left] node[circle, black, below right] {$r_7$} (a.corner 1)
+      (a.corner 1) to[bend left] node[circle, black, above left] {$r_8$} (a.corner 3)
+    ;
+    \draw[blue, ultra thick, ->]
+      (a.corner 5) to[bend left] node[circle, black, right] {$\ell_4$} (a.corner 4)
+      (a.corner 3) to[bend left] node[circle, black, right] {$\ell_9$} (a.corner 2)
+    ;
+  \end{tikzpicture}
+  \caption{For $n = 5$, all lily pads will have been reached after nine hops.}
+\end{figure}
+
+\begin{question}
+  How many hops does it take to reach all lily pads?
+\end{question}
+
+\begin{related}
+  \item What if ties are broken by hopping in the same direction instead of
+  hopping clockwise?
+  \item What if instead of hopping with steps $1, 2, 3, \dots$, a different
+  sequence is used?
+  \item How many positions are reached exactly once?
+  \item If the hops are in a random direction, what's the expected time to reach
+  every lily pad? What's the expected value of the most-reached lily pad?
+  \item If you get to choose clockwise or counterclockwise each hop, how many
+  ways are there to reach every lily pad in exactly $n$ hops?
+\end{related}
+
+\begin{references}
+  \item \url{https://math.stackexchange.com/q/3418970/121988}
+  \item \url{https://oeis.org/A282442}
+  \item \url{https://oeis.org/A329230}
+\end{references}
+\end{document}
