@@ -8,73 +8,91 @@ tiles are diagonals.
 \begin{figure}[!h]
   \centering
   \begin{tikzpicture}[scale=2]
-    \foreach \a/\b/\theta in {
-      0/0/0, 1/1/180,
-      1/1/270, 2/0/90,
-      0/2/270, 1/1/90,
-      1/1/0, 2/2/180} {
-      \draw[ultra thick, draw={rgb:red,0;green,1;blue,2}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
-    }
+    \draw[ultra thick, draw={rgb:red,0;green,1;blue,2}] 
+      (0.5,0) arc (0:90:0.5)    % (0,0)
+      (0.5,1) arc (180:270:0.5) % (0,0)
+      (2,0.5) arc (90:180:0.5)  % (1,0)
+      (1,0.5) arc (270:360:0.5) % (1,0)
+      (1,1.5) arc (90:180:0.5)  % (0,1)
+      (0,1.5) arc (270:360:0.5) % (0,1)
+      (1.5,1) arc (0:90:0.5)    % (1,1)
+      (1.5,2) arc (180:270:0.5) % (1,1)
+    ;
     \draw[gray, dashed] (0,1)--(1,2)--(2,1)--(1,0)--cycle;
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (1,0)--(1,2) (0,1)--(2,1);
   \end{tikzpicture} \hspace{1cm}
   \begin{tikzpicture}[scale=2]
-    \foreach \a/\b/\theta in {
-      0/1/270, 1/0/90,
-      1/1/270, 2/0/90,
-      0/2/270, 1/1/90,
-      1/1/0, 2/2/180} {
-      \draw[ultra thick, draw={rgb:red,1;green,2;blue,0}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
-    }
+    \draw[ultra thick, draw={rgb:red,1;green,2;blue,0}] 
+      (1,0.5) arc (90:180:0.5)  % (0,0)
+      (0,0.5) arc (270:360:0.5) % (0,0)
+      (2,0.5) arc (90:180:0.5)  % (1,0)
+      (1,0.5) arc (270:360:0.5) % (1,0)
+      (1,1.5) arc (90:180:0.5)  % (0,1)
+      (0,1.5) arc (270:360:0.5) % (0,1)
+      (1.5,1) arc (0:90:0.5)    % (1,1)
+      (1.5,2) arc (180:270:0.5) % (1,1)
+    ;
     \draw[gray, dashed] (0,1)--(1,2)--(2,1)--(1,0); \draw[gray, dashed] (0,0)--(1,1);
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (1,0)--(1,2) (0,1)--(2,1);
   \end{tikzpicture} \hspace{1cm}
   \begin{tikzpicture}[scale=2]
-    \foreach \a/\b/\theta in {
-      0/1/270, 1/0/90,
-      1/0/0, 2/1/180,
-      0/2/270, 1/1/90,
-      1/1/0, 2/2/180} {
-      \draw[ultra thick, draw={rgb:red,2;green,0;blue,1}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
-    }
+    \draw[ultra thick, draw={rgb:red,2;green,0;blue,1}] 
+      (1,0.5) arc (90:180:0.5)  % (0,0)
+      (0,0.5) arc (270:360:0.5) % (0,0)
+      (1,1.5) arc (90:180:0.5)  % (0,1)
+      (0,1.5) arc (270:360:0.5) % (0,1)
+      (1.5,0) arc (0:90:0.5)    % (1,0)
+      (1.5,1) arc (180:270:0.5) % (1,0)      
+      (1.5,1) arc (0:90:0.5)    % (1,1)
+      (1.5,2) arc (180:270:0.5) % (1,1)
+    ;
     \draw[gray, dashed] (0,0)--(1,1)--(2,0); \draw[gray, dashed] (0,1)--(1,2)--(2,1);
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (1,0)--(1,2) (0,1)--(2,1);
   \end{tikzpicture}\\\vspace{1cm}
   \begin{tikzpicture}[scale=2]
-    \foreach \a/\b/\theta in {
-      0/1/270, 1/0/90,
-      1/1/270, 2/0/90,
-      0/2/270, 1/1/90,
-      1/2/270, 2/1/90} {
-      \draw[ultra thick, draw={rgb:red,0;green,2;blue,1}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
-    }
+    \draw[ultra thick, draw={rgb:red,0;green,2;blue,1}]
+      (2,1.5) arc (90:180:0.5)  % (0,0)
+      (1,1.5) arc (270:360:0.5) % (0,0)
+      (2,0.5) arc (90:180:0.5)  % (1,0)
+      (1,0.5) arc (270:360:0.5) % (1,0)
+      (1,1.5) arc (90:180:0.5)  % (0,1)
+      (0,1.5) arc (270:360:0.5) % (0,1)
+      (1,0.5) arc (90:180:0.5)  % (1,1)
+      (0,0.5) arc (270:360:0.5) % (1,1)  
+    ;
     \draw[gray, dashed] (0,0)--(1,1)--(2,2); \draw[gray, dashed] (0,1)--(1,2); \draw[gray, dashed] (1,0)--(2,1);
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (1,0)--(1,2) (0,1)--(2,1);
   \end{tikzpicture} \hspace{1cm}
   \begin{tikzpicture}[scale=2]
-    \foreach \a/\b/\theta in {
-      0/1/270, 1/0/90,
-      1/0/0, 2/1/180,
-      0/2/270, 1/1/90,
-      1/2/270, 2/1/90} {
-      \draw[ultra thick, draw={rgb:red,1;green,0;blue,2}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
-    }
+    \draw[ultra thick, draw={rgb:red,1;green,0;blue,2}]
+      (2,1.5) arc (90:180:0.5)  % (0,0)
+      (1,1.5) arc (270:360:0.5) % (0,0)
+      (1.5,0) arc (0:90:0.5)    % (1,0)
+      (1.5,1) arc (180:270:0.5) % (1,0)
+      (1,1.5) arc (90:180:0.5)  % (0,1)
+      (0,1.5) arc (270:360:0.5) % (0,1)
+      (1,0.5) arc (90:180:0.5)  % (1,1)
+      (0,0.5) arc (270:360:0.5) % (1,1)
+    ;
     \draw[gray, dashed] (0,1)--(1,2); \draw[gray, dashed] (0,0)--(1,1)--(2,2); \draw[gray, dashed] (1,1)--(2,0);
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (1,0)--(1,2) (0,1)--(2,1);
   \end{tikzpicture} \hspace{1cm}
   \begin{tikzpicture}[scale=2]
-    \foreach \a/\b/\theta in {
-      0/1/270, 1/0/90,
-      1/0/0, 2/1/180,
-      0/1/0, 1/2/180,
-      1/2/270, 2/1/90} {
-      \draw[ultra thick, draw={rgb:red,2;green,1;blue,0}, domain=\theta:\theta+90] plot ({0.5*cos(\x) + \a}, {0.5*sin(\x) + \b});
-    }
+    \draw[ultra thick, draw={rgb:red,2;green,1;blue,0}]
+      (1,0.5) arc (90:180:0.5)  % (0,0)
+      (0,0.5) arc (270:360:0.5) % (0,0)
+      (0.5,1) arc (0:90:0.5)    % (0,1)
+      (0.5,2) arc (180:270:0.5) % (0,1)
+      (2,1.5) arc (90:180:0.5)  % (1,1)
+      (1,1.5) arc (270:360:0.5) % (1,1)
+      (1.5,0) arc (0:90:0.5)    % (1,0)
+      (1.5,1) arc (180:270:0.5) % (1,0)
+    ;
     \draw[gray, dashed] (0,0)--(1,1)--(2,2); \draw[gray, dashed] (0,2)--(1,1)--(2,0);
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (1,0)--(1,2) (0,1)--(2,1);

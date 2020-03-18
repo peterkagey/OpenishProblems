@@ -11,88 +11,112 @@ hand.
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=89:271] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-91:91] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (0,1) arc (89:271:1)
+      (0,1)--(4,1)
+      (4,-1) arc (270:450:1)
+      (0,-1)--(4,-1)
+    ;
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-91:91] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (0,1) arc (90:450:1)
+      (0,1)--(4,1)
+      (0,-1)--(4,-1)
+      (4,-1) arc (270:450:1)
+    ;
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (0,1) arc (90:450:1)
+      (0,1)--(4,1)
+      (0,-1)--(4,-1)
+      (5,0) arc (0:361:1)
+    ;
   \end{tikzpicture}
   \\~\\
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=59:301] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (-1,0) arc (180:59:1)
+      (-1,0) arc (180:301:1)
+      (5,0) arc (0:121:1)
+      (5,0) arc (1:-121:1)
+      (0.5,{-1.5/sqrt(3)})--(3.5, {1.5/sqrt(3)})
+      (0.5,{1.5/sqrt(3)})--(3.5, {-1.5/sqrt(3)})
+    ;
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (0,1) arc (90:450:1)
+      (5,0) arc (0:121:1)
+      (5,0) arc (1:-121:1)
+      (0.5,{-1.5/sqrt(3)})--(3.5, {1.5/sqrt(3)})
+      (0.5,{1.5/sqrt(3)})--(3.5, {-1.5/sqrt(3)})
+    ;
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (0,1) arc (90:450:1)
+      (5,0) arc (0:361:1)
+      (0.5,{-1.5/sqrt(3)})--(3.5, {1.5/sqrt(3)})
+      (0.5,{1.5/sqrt(3)})--(3.5, {-1.5/sqrt(3)})
+    ;
   \end{tikzpicture}
   \\~\\
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=59:301] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (-1,0) arc (180:59:1)
+      (-1,0) arc (180:301:1)
+      (0,1)--(4,1)
+      (0,-1)--(4,-1)
+      (5,0) arc (0:121:1)
+      (5,0) arc (1:-121:1)
+      (0.5,{-1.5/sqrt(3)})--(3.5, {1.5/sqrt(3)})
+      (0.5,{1.5/sqrt(3)})--(3.5, {-1.5/sqrt(3)})
+    ;
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-121:121] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (0,1) arc (90:450:1)
+      (0,1)--(4,1)
+      (0,-1)--(4,-1)
+      (5,0) arc (0:121:1)
+      (5,0) arc (1:-121:1)
+      (0.5,{-1.5/sqrt(3)})--(3.5, {1.5/sqrt(3)})
+      (0.5,{1.5/sqrt(3)})--(3.5, {-1.5/sqrt(3)})
+    ;
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}[scale=0.7]
     \draw (0,0) circle (1);
     \draw (4,0) circle (1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 0}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,1) -- (4,1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1:361] plot ({1*cos(\x) + 4}, {1*sin(\x) + 0});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] (0,-1) -- (4,-1);
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {tan(30)*\x});
-    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}, domain=-1.5:1.5] plot ({\x + 2}, {-tan(30)*\x});
+    \draw[line width=0.15cm, draw={rgb:green,1;blue,2}] 
+      (0,1) arc (90:450:1)
+      (0,1)--(4,1)
+      (5,0) arc (0:361:1)
+      (0,-1)--(4,-1)
+      (0.5,{-1.5/sqrt(3)})--(3.5, {1.5/sqrt(3)})
+      (0.5,{1.5/sqrt(3)})--(3.5, {-1.5/sqrt(3)})
+    ;
   \end{tikzpicture}
   \caption{
     There are (at least) 9 ways to weave a rubber band between two fingers up to
