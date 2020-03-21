@@ -61,29 +61,25 @@ Count these up to symmetries of the cube.
 \begin{note}
   The following table gives the number of $k$-polyfacets on an $n$-cube:
   \begin{verbatim}
-  n\k| 0  1  2                          ...                         2n-1 2n|
-  ---+---------------------------------------------------------------------+
-   2 | 1, 1, 1,                                                       1, 1 |
-   3 | 1, 1, 1, 2,                                                 2, 1, 1 |
-   4 | 1, 1, 1, 2, 3,                                           2, 2, 1, 1 |
-   5 | 1, 1, 1, 2, 3, 3,                                     3, 2, 2, 1, 1 |
-   6 | 1, 1, 1, 2, 3, 3, 4,                               3, 3, 2, 2, 1, 1 |
-   7 | 1, 1, 1, 2, 3, 3, 4, 4,                         4, 3, 3, 2, 2, 1, 1 |
-   8 | 1, 1, 1, 2, 3, 3, 4, 4, 5,                   4, 4, 3, 3, 2, 2, 1, 1 |
-   9 | 1, 1, 1, 2, 3, 3, 4, 4, 5, 5,             5, 4, 4, 3, 3, 2, 2, 1, 1 |
-  10 | 1, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6,       5, 5, 4, 4, 3, 3, 2, 2, 1, 1 |
-  11 | 1, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1 |
-  ---+---------------------------------------------------------------------+
+  n\k| 0  1  2                          ...                   2n-1 2n|
+  ---+---------------------------------------------------------------+
+   2 | 1, 1, 1,                                                 1, 1 |
+   3 | 1, 1, 1, 2,                                           2, 1, 1 |
+   4 | 1, 1, 1, 2, 3,                                     2, 2, 1, 1 |
+   5 | 1, 1, 1, 2, 3, 3,                               3, 2, 2, 1, 1 |
+   6 | 1, 1, 1, 2, 3, 3, 4,                         3, 3, 2, 2, 1, 1 |
+   7 | 1, 1, 1, 2, 3, 3, 4, 4,                   4, 3, 3, 2, 2, 1, 1 |
+   8 | 1, 1, 1, 2, 3, 3, 4, 4, 5,             4, 4, 3, 3, 2, 2, 1, 1 |
+   9 | 1, 1, 1, 2, 3, 3, 4, 4, 5, 5,       5, 4, 4, 3, 3, 2, 2, 1, 1 |
+  10 | 1, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1 |
   \end{verbatim}
   Notice that $T(n,k) = T(n,n-k)$ for all $k \not\in \{2, n-2\}$. In this case,
   $T(n,2) = 1$ and $T(n,n-2) = 2$.
 \end{note}
 
 \begin{related}
-  \item How many $d$-dimensional $k$-poly-$d$-faces live on the $n$-cube?
-  \item How many $d$-dimensional $k$-poly-$d$-faces live on the $n$-simplex?
-  \item How many $d$-dimensional $k$-poly-$d$-faces live on the $n$-orthoplex?
-  \item How many $k$-polyfacets live on the $n$-demicube?
+  \item What if (not necessarily connected) $2$-colorings are considered instead of polyforms? $k$-colorings?
+  \item How many $d$-dimensional $k$-poly-$d$-faces live on the $n$-cube? $n$-simplex? $n$-orthoplex? $n$-demicube?
   \item How many fixed polyforms? One-sided polyforms?
   \item If we chop up the hypercube into an $\ell \times \cdots \times \ell$ ``Rubik's'' hypercube, how many polyfacets live on this subdivision?
   \item Let $T(n,k)$ denote the $k$-polyfacets on an $n$-cube.
@@ -92,5 +88,6 @@ Count these up to symmetries of the cube.
 \begin{references}
   \item Problems 72, 101.
   \item \url{https://codegolf.stackexchange.com/q/201054/53884}
+  \item OEIS Sequences A333333, A333362, and A333418.
 \end{references}
 \end{document}
