@@ -3,43 +3,37 @@
 \usetikzlibrary{patterns}
 
 \begin{document}
-\rating{3}{2}
-  Suppose you have two finite groups $G$ and $H$, a $G$-set $X$, and a target
-  function $t\colon X\rightarrow H$.
-  \\
-  You want to construct some finite sequence of maps
-  $\{f_i\colon X \rightarrow H\}_{i=1}^N$ such that for any
-  function $s_0\colon X \rightarrow H$ and any sequence $\{g_i \in G\}_{i=1}^{N-1}$
-  the following sequence contains $t$ \[
-    \{
-      s_0(x),
-      \underbrace{f_1(x) \cdot s_0(x)}_{s_1},
-      \underbrace{f_2(x) \cdot g_1 * s_1(x)}_{s_2},
-      \hdots,
-      \underbrace{f_{N}(x) \cdot g_{N-1} * s_{N-1}(x)}_{s_N}\}
-  \] where $f_i(x) \cdot s(x) = f_i(x)s(x)$ under ordinary group multiplication,
-  and $g_i * s(x) = s(g_i^{-1}x)$.
-
+\rating{3}{3}
+  Suppose you have two finite groups $G$ and $H$, and a $H$-set $\Omega$. 
+  Denote the base of the wreath prooduct of $G$ by $H$ as \[
+    K = \prod_{\omega \in \Omega} g_\omega.
+  \] 
+  We're interested in determining when it is possible to construct a finite 
+  sequence, $\{k_i \in K\}_{i=1}^N$, such that for any choice of 
+  $\alpha \in G \wr_\Omega H$ and any sequence $\{h_i \in H\}_{i=1}^N$, 
+  there exists $n \leq N$ satisfying \[
+    \alpha \cdot (k_1, h_1) \cdot (k_2, h_2) \cdots (k_n, h_n) = (e_K, h)
+  \] for some $h \in H$.
 \begin{figure}[ht!]
   \centering
   \begin{tikzpicture}
     \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
     \draw[very thick, fill=red!20]
-      (0.45, 0.45) circle (0.4) node {\huge T}
-      (1.55, 0.45) circle (0.4) node {\huge T}
-      (0.45, 1.55) circle (0.4) node {\huge T}
-      (1.55, 1.55) circle (0.4) node {\huge T};
+      (0.45, 0.45) circle (0.4) node {\huge 0}
+      (1.55, 0.45) circle (0.4) node {\huge 0}
+      (0.45, 1.55) circle (0.4) node {\huge 0}
+      (1.55, 1.55) circle (0.4) node {\huge 0};
     \node at (1, -0.2) {\Large A};
   \end{tikzpicture}
   \hspace{0.5cm}
   \begin{tikzpicture}
     \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
     \draw[very thick, fill=red!20]
-      (0.45, 0.45) circle (0.4) node {\huge T}
-      (1.55, 0.45) circle (0.4) node {\huge T}
-      (0.45, 1.55) circle (0.4) node {\huge T};
+      (0.45, 0.45) circle (0.4) node {\huge 0}
+      (1.55, 0.45) circle (0.4) node {\huge 0}
+      (0.45, 1.55) circle (0.4) node {\huge 0};
     \draw[very thick, fill=blue!20]
-      (1.55, 1.55) circle (0.4) node {\huge H};
+      (1.55, 1.55) circle (0.4) node {\huge 1};
 
     \node at (1, -0.2) {\Large B};
   \end{tikzpicture}
@@ -47,11 +41,11 @@
   \begin{tikzpicture}
     \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
     \draw[very thick, fill=red!20]
-      (0.45, 0.45) circle (0.4) node {\huge T}
-      (1.55, 0.45) circle (0.4) node {\huge T};
+      (0.45, 0.45) circle (0.4) node {\huge 0}
+      (1.55, 0.45) circle (0.4) node {\huge 0};
     \draw[very thick, fill=blue!20]
-      (0.45, 1.55) circle (0.4) node {\huge H}
-      (1.55, 1.55) circle (0.4) node {\huge H};
+      (0.45, 1.55) circle (0.4) node {\huge 1}
+      (1.55, 1.55) circle (0.4) node {\huge 1};
 
     \node at (1, -0.2) {\Large C};
   \end{tikzpicture}
@@ -59,11 +53,11 @@
   \begin{tikzpicture}
     \draw[gray, line width=4] (0.45,0.45) rectangle (1.55,1.55);
     \draw[very thick, fill=red!20]
-      (0.45, 0.45) circle (0.4) node {\huge T}
-      (1.55, 1.55) circle (0.4) node {\huge T};
+      (0.45, 0.45) circle (0.4) node {\huge 0}
+      (1.55, 1.55) circle (0.4) node {\huge 0};
     \draw[very thick, fill=blue!20]
-      (1.55, 0.45) circle (0.4) node {\huge H}
-      (0.45, 1.55) circle (0.4) node {\huge H};
+      (1.55, 0.45) circle (0.4) node {\huge 1}
+      (0.45, 1.55) circle (0.4) node {\huge 1};
 
     \node at (1, -0.2) {\Large D};
   \end{tikzpicture}
@@ -83,59 +77,68 @@
     \node (g) [right of=f] {$(A)D$};
     \node (h) [right of=g] {$(A)$};
 
-    \draw[looseness=8,out=60,in=120,->] (a) edge node {1,3} (a);
-    \draw[->] (a) edge node {2} (b);
-    \draw[->] (b) edge node {3} (c);
-    \draw[->] (c) edge node {2} (d);
-    \draw[->] (d) edge node {1} (e);
-    \draw[->] (e) edge node {2} (f);
-    \draw[->] (f) edge node {3} (g);
-    \draw[->] (g) edge node {2} (h);
+    \draw[looseness=8,out=45,in=135,->] (a) edge node {$k_1,k_3$} (a);
+    \draw[->] (a) edge node {$k_2$} (b);
+    \draw[->] (b) edge node {$k_3$} (c);
+    \draw[->] (c) edge node {$k_2$} (d);
+    \draw[->] (d) edge node {$k_1$} (e);
+    \draw[->] (e) edge node {$k_2$} (f);
+    \draw[->] (f) edge node {$k_3$} (g);
+    \draw[->] (g) edge node {$k_2$} (h);
 
-    \draw[looseness=8,out=60,in=120,->] (b) edge node {2} (b);
-    \draw[looseness=1,out=210,in=330,->] (b) edge node {1} (a);
+    \draw[looseness=8,out=60,in=120,->] (b) edge node {$k_2$} (b);
+    \draw[looseness=1,out=210,in=330,->] (b) edge node {$k_1$} (a);
 
-    \draw[looseness=1,out=240,in=300,->] (c) edge node {1} (a);
-    \draw[looseness=1,out=210,in=330,->] (c) edge node {3} (b);
+    \draw[looseness=1,out=240,in=300,->] (c) edge node {$k_1$} (a);
+    \draw[looseness=1,out=210,in=330,->] (c) edge node {$k_3$} (b);
 
-    \draw[looseness=8,out=60,in=120,->] (d) edge node {2,3} (d);
+    \draw[looseness=8,out=45,in=135,->] (d) edge node {$k_2,k_3$} (d);
 
-    \draw[looseness=1,out=210,in=330,->] (e) edge node {1} (d);
-    \draw[looseness=8,out=60,in=120,->] (e) edge node {3} (e);
+    \draw[looseness=1,out=210,in=330,->] (e) edge node {$k_1$} (d);
+    \draw[looseness=8,out=60,in=120,->] (e) edge node {$k_3$} (e);
 
-    \draw[looseness=8,out=60,in=120,->] (f) edge node {2} (f);
-    \draw[looseness=1,out=240,in=300,->] (f) edge node {1} (d);
+    \draw[looseness=8,out=60,in=120,->] (f) edge node {$k_2$} (f);
+    \draw[looseness=1,out=240,in=300,->] (f) edge node {$k_1$} (d);
 
-    \draw[looseness=1,out=210,in=330,->] (g) edge node {3} (f);
-    \draw[looseness=1,out=270,in=270,->] (g) edge node {1} (d);
+    \draw[looseness=1,out=210,in=330,->] (g) edge node {$k_3$} (f);
+    \draw[looseness=1,out=270,in=270,->] (g) edge node {$k_1$} (d);
   \end{tikzpicture}
-  \caption{
-    Let $X$ be the vertices of the square $G = C_4$ the cyclic group which acts
-    on the $X$ by rotation, $H = \mathbb Z_2$, and $t(x) \equiv 0$.
-    Then interspersing the above sequence of $N=7$ moves with $f(x) = 1$ will
-    always result in the sequence reaching the target function, where $1, 2,$
-    and $3$ are the moves that flip one coin, two opposite coins, and
-    two adjacent coins respectively.
+  \caption[]{
+    Suppose $G = \mathbb{Z}_2$, $H = C_4$, and $\Omega$ is the rotations of the 
+    square, with $H$ acting in the ordinary way. Moreover, suppose that 
+    $k_0 = (1,1,1,1)$, $k_1 = (1,0,0,0)$, $k_2 = (1,0,1,0)$, and 
+    $k_3 = (1,1,0,0)$. Then the sequence 
+    $(k_0, k_2, k_0, k_3, k_0, k_2, k_0, k_1, k_0, k_2, k_0, k_3, k_0, k_2, k_0)$
+    satisfies the above condition.
+    % Let $X$ be the vertices of the square $G = C_4$ the cyclic group which acts
+    % on the $X$ by rotation, $H = \mathbb Z_2$, and $t(x) \equiv 0$.
+    % Then interspersing the above sequence of $N=7$ moves with $f(x) = 1$ will
+    % always result in the sequence reaching the target function, where $1, 2,$
+    % and $3$ are the moves that flip one coin, two opposite coins, and
+    % two adjacent coins respectively.
   }
 \end{figure}
 \begin{question}
-  What conditions on $G, H, X$ and $t$ guarantee such a finite sequence of maps?
+  What conditions on $G \wr_\Omega H$ guarantee such a finite sequence of
+  elements in $K$?
 \end{question}
 
 \begin{related}
-  \item Given $G, H, X$ and $t$, what is the minimum $N$?
-  \item If the sequence $\{g_i \in G\}_{i=1}^\infty$ is chosen uniformly at
-  random, what is the expected length of $\{f_i\}$ before $t$ is reached?
-  \item What if there is a set of target functions, any one of which is valid.
+  \item Given $G \wr_\Omega H$, what is $N$, the minimum length of the sequence?
+  \item If both $\alpha$ and the sequence $\{h_i \in H\}_{i=1}^N$ are chosen 
+  uniformly at random, what is the expected value of the minimal $n$ such that $
+    \alpha \cdot (k_1, h_1) \cdot (k_2, h_2) \cdot \dots \cdot (k_n, h_n) = (e, k)
+  $?
+  \item What if there is a set of elements in the base, any one of which is valid.
   (e.g. all sets satisfying the condition that the number of heads is congruent
   to $2 \pmod 3$.)
-  \item Can this be generalized to multiple dimensions (e.g. a tetrahedron)?
   \item What if something about $s_i$ is told to you after the $i$th move for each
     $i$ (and the strategy can depend on this information)?
 \end{related}
 
 \begin{note}
-  This can be generalized to an arbitrary $2^n$-gon, but no other $m$-gon.
+  This can be generalized to $H = C_{2^n}$ and $\Omega$ a $2^n$-gon, 
+  but no other $m$-gon.
   The idea is that (1) you can't solve any $m$-gon with $m$ odd, and (2) you
   can solve a $m$-gon if and only if you can solve a $d$-gon for every proper
   divisor $d \mid m$.
