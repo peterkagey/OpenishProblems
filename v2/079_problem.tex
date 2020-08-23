@@ -4,13 +4,14 @@
 
 \begin{document}
 \rating{3}{3}
-  Suppose you have two finite groups $G$ and $H$, and a $H$-set $\Omega$. 
-  Denote the base of the wreath prooduct of $G$ by $H$ as \[
+  Suppose you have two finite groups $G$ and $H$, and a $H$-set $\Omega$.
+  Denote the base of the wreath product of $G$ by $H$ as $
     K = \prod_{\omega \in \Omega} g_\omega.
-  \] 
-  We're interested in determining when it is possible to construct a finite 
-  sequence, $\{k_i \in K\}_{i=1}^N$, such that for any choice of 
-  $\alpha \in G \wr_\Omega H$ and any sequence $\{h_i \in H\}_{i=1}^N$, 
+  $
+
+  We're interested in determining when it is possible to construct a finite
+  sequence, $\{k_i \in K\}_{i=1}^N$, such that for any choice of
+  $\alpha \in G \wr_\Omega H$ and any sequence $\{h_i \in H\}_{i=1}^N$,
   there exists $n \leq N$ satisfying \[
     \alpha \cdot (k_1, h_1) \cdot (k_2, h_2) \cdots (k_n, h_n) = (e_K, h)
   \] for some $h \in H$.
@@ -104,10 +105,10 @@
     \draw[looseness=1,out=270,in=270,->] (g) edge node {$k_1$} (d);
   \end{tikzpicture}
   \caption[]{
-    Suppose $G = \mathbb{Z}_2$, $H = C_4$, and $\Omega$ is the rotations of the 
-    square, with $H$ acting in the ordinary way. Moreover, suppose that 
-    $k_0 = (1,1,1,1)$, $k_1 = (1,0,0,0)$, $k_2 = (1,0,1,0)$, and 
-    $k_3 = (1,1,0,0)$. Then the sequence 
+    Suppose $G = \mathbb{Z}_2$, $H = C_4$, and $\Omega$ is the rotations of the
+    square, with $H$ acting in the ordinary way. Moreover, suppose that
+    $k_0 = (1,1,1,1)$, $k_1 = (1,0,0,0)$, $k_2 = (1,0,1,0)$, and
+    $k_3 = (1,1,0,0)$. Then the sequence
     $(k_0, k_2, k_0, k_3, k_0, k_2, k_0, k_1, k_0, k_2, k_0, k_3, k_0, k_2, k_0)$
     satisfies the above condition.
     % Let $X$ be the vertices of the square $G = C_4$ the cyclic group which acts
@@ -125,7 +126,7 @@
 
 \begin{related}
   \item Given $G \wr_\Omega H$, what is $N$, the minimum length of the sequence?
-  \item If both $\alpha$ and the sequence $\{h_i \in H\}_{i=1}^N$ are chosen 
+  \item If both $\alpha$ and the sequence $\{h_i \in H\}_{i=1}^N$ are chosen
   uniformly at random, what is the expected value of the minimal $n$ such that $
     \alpha \cdot (k_1, h_1) \cdot (k_2, h_2) \cdot \dots \cdot (k_n, h_n) = (e, k)
   $?
@@ -135,16 +136,21 @@
   \item What if something about $s_i$ is told to you after the $i$th move for each
     $i$ (and the strategy can depend on this information)?
 \end{related}
-
 \begin{note}
-  This can be generalized to $H = C_{2^n}$ and $\Omega$ a $2^n$-gon, 
+  This problem appears in \href{Peter Winkler's book}{} under the name
+  ``Spinning Switches''.
+  The can be generalized to $H = C_{2^n}$ and $\Omega$ a $2^n$-gon,
   but no other $m$-gon.
   The idea is that (1) you can't solve any $m$-gon with $m$ odd, and (2) you
   can solve a $m$-gon if and only if you can solve a $d$-gon for every proper
   divisor $d \mid m$.
+  If you allow ``coins'' to have three states, then you can solve this on a
+  $3^n$-gon.
 \end{note}
 
 \begin{references}
   \item \url{http://mathriddles.williams.edu/?p=77}
+  \item \url{https://mathoverflow.net/q/332600/104733}
+  \item \url{https://en.wikipedia.org/wiki/Four_glasses_puzzle}
 \end{references}
 \end{document}

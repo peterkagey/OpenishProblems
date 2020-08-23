@@ -21,13 +21,12 @@ Consider all rectangles with all corners on gridpoints on an $n \times m$ grid.
 \end{figure}
 
 \begin{question}
-  How many such rectangles exist?
+  Given some shape, how many of these shapes can be constrained to the
+  $n \times m$ grid?
 \end{question}
 \begin{related}
-  \item How many squares exist? Rhombi? Parallelograms? Kites (A189417)?
-    Trapezoids? Quadrilaterals? Convex quadrilaterals? $n$-gons?
   \item What if we want to count only ``primitive'' squares, in the sense that
-    the sides of the square only intersect gridpoints at the corners?
+    the sides of the square only intersect grid points at the corners?
   \item Number of rectangles on the cylinder? Torus? M\"obius strip?
     % \\ % Cylinder
     % \begin{tikzpicture}[scale=0.5]
@@ -43,17 +42,31 @@ Consider all rectangles with all corners on gridpoints on an $n \times m$ grid.
     one can be transformed into the other by shifting and stretching?
   \item Number of ``orientation classes'' where two squares are equivalent if
     one can be transformed into the other by shifting?
-  \item How many right triangles?
   \item What if this is done on an $n \times m \times k$ grid?
   \item What if the rectangles must be diagonal?
-  \item What if this is done on a triangular lattice with equilateral triangles?
-    Primitive equilateral triangles?
-  \item How many tetrahedra are in an $n$-sided tetrahedra?
+  \item What if this is done on a triangular lattice with primitive equilateral
+  triangles?
 \end{related}
+\begin{note}
+  Equilateral triangles in triangle is \href{https://oeis.org/A000332}{A000332};
+  tetrahedra in a tetrahedron is \href{https://oeis.org/A269747}{A269747};
+  triangles in a tetrahedron is \href{https://oeis.org/A334581}{A334581};
+  tetrahedra in cube is 2*\href{https://oeis.org/A103158}{A103158};
+  equilateral triangles in cube is \href{https://oeis.org/A102698}{A102698};
+  rectangles in square is \href{https://oeis.org/A085582}{A085582};
+  rectangles in rectangle is \href{https://oeis.org/A289832}{A289832};
+  isosceles triangles in rectangle is \href{https://oeis.org/A271910}{A271910};
+  right isosceles triangles in square is \href{https://oeis.org/A187452}{A187452};
+  right triangles in square is \href{https://oeis.org/A077435}{A077435};
+  convex quadrilaterals in square \href{https://oeis.org/A189413}{A189413};
+  quadrilaterals in square \href{https://oeis.org/A189414}{A189414};
+  trapezoids in square \href{https://oeis.org/A189415}{A189415};
+  parallelograms in square is \href{https://oeis.org/A189416}{A189416};
+  kites in square \href{https://oeis.org/A189417}{A189417};
+  rhombi in square \href{https://oeis.org/A189418}{A189418}.
+\end{note}
 \begin{references}
   \item Problem 1.
-  \item \url{https://oeis.org/A000332}
-  \item \url{https://oeis.org/A085582}
   \item \url{https://arxiv.org/pdf/1605.00180.pdf}
   \item \url{http://people.missouristate.edu/lesreid/POW03_01.html}
 \end{references}
