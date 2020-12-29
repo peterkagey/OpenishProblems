@@ -16,7 +16,8 @@ few moves as possible.
       \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
     }
     \draw[ultra thick, red, dashed] (2.25, {sqrt(3)/2 * 1.5})--(3.25,{sqrt(3)/2 * -1/2});
-  \end{tikzpicture}\\~\\
+  \end{tikzpicture}
+  \hspace{1cm}
   \begin{tikzpicture}[scale = 0.8]
     % right side up
     \foreach \x/\y in {0/0, 1/0, 2/0, 1.5/-1, 1/-2} {
@@ -26,7 +27,8 @@ few moves as possible.
       \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
     }
     \draw[ultra thick, red, dashed] (2, 0)--(2.75,{sqrt(3)/2 * -3/2});
-  \end{tikzpicture}\\~\\
+  \end{tikzpicture}
+  \hspace{1cm}
   \begin{tikzpicture}[scale = 0.8]
     % right side up
     \foreach \x/\y in {0/0, 1/0, 2/0, 2.5/-1} {
@@ -36,7 +38,10 @@ few moves as possible.
       \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
     }
     \draw[ultra thick, red, dashed] ({2.5 - 1/4}, {-sqrt(3)/2 - sqrt(3)/4})--({3 + 1/4}, {sqrt(3)/4});
-  \end{tikzpicture}\\~\\
+  \end{tikzpicture}
+  \vspace{0.5cm}
+
+  \noindent
   \begin{tikzpicture}[scale = 0.8]
     % right side up
     \foreach \x/\y in {0/0, 1/0, 2/0} {
@@ -46,7 +51,8 @@ few moves as possible.
       \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
     }
     \draw[ultra thick, red, dashed] ({2 - 1/4}, {-sqrt(3)/4})--(2.75,{sqrt(3)/2 + sqrt(3)/4});
-  \end{tikzpicture}\\~\\
+  \end{tikzpicture}
+  \hspace{1cm}
   \begin{tikzpicture}[scale = 0.8]
     % right side up
     \foreach \x/\y in {0/0, 1/0} {
@@ -56,7 +62,8 @@ few moves as possible.
       \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
     }
     \draw[ultra thick, red, dashed] ({1-1/4}, {-sqrt(3)/4})--(1.75,{sqrt(3)/2 + sqrt(3)/4});
-  \end{tikzpicture}\\~\\
+  \end{tikzpicture}
+  \hspace{1cm}
   \begin{tikzpicture}[scale = 0.8]
     % right side up
     \foreach \x/\y in {0/0, 0.5/1} {
@@ -66,7 +73,8 @@ few moves as possible.
       \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
     }
     \draw[ultra thick, red, dashed] (1.25, {-sqrt(3)/4})--(0.25,{sqrt(3)/2 + sqrt(3)/4});
-  \end{tikzpicture}\\~\\
+  \end{tikzpicture}
+  \hspace{1cm}
   \begin{tikzpicture}[scale = 0.8]
     % right side up
     \foreach \x/\y in {0/0} {
@@ -76,7 +84,8 @@ few moves as possible.
       \draw (\x, {sqrt(3)/2 * \y + 0})--({\x + 0.5}, {sqrt(3)/2 * \y - sqrt(3)/2})--({\x + 1},{sqrt(3)/2 * \y + 0})--cycle;
     }
     \draw[ultra thick, red, dashed] (-1/4, {-sqrt(3)/4})--(3/4,{3/4*sqrt(3)});
-  \end{tikzpicture}\\~\\
+  \end{tikzpicture}
+  \hspace{1cm}
   \begin{tikzpicture}[scale = 0.8]
     % right side up
     \foreach \x/\y in {0/0} {
@@ -91,9 +100,24 @@ few moves as possible.
   How many folds are required to fold a strip of $n$ triangles down to one?
 \end{question}
 \begin{related}
-  \item What if you can choose the starting configuration of the triangles?
-    (e.g for $n=10$, you can start from the second example)
-  \item What if you can fold along an entire line? (Not just a single cell.)
+  \item What if other $n$-iamonds are considered? Which $n$-iamond takes the
+  greatest number of folds?
+  \item Does there exist a family of $n$-iamonds that require more than
+    $\mathcal O(\log_2(n))$ folds?
+  \item Given an $n$-iamond uniformly at random, what's the expected value of
+  the number of folds required?
+  \item What if you must fold a single cell versus across a line?
+  \item Consider the graded poset of polyiamonds given by the covering relation
+  $x \lessdot y$ if $y$ is one fold away from $x$. How many polyiamonds have
+  rank $n$?
+  \begin{itemize}
+    \item There is at least one $2^k$-iamond with rank $k$. How many
+    $2^k$-iamonds are there with rank $k$?
+    \item What's the second largest polyiamond of rank $k$?
+    \item What's the smallest polyiamond of rank $k$?
+    \item Is this poset Sperner?
+  \end{itemize}
+  \item Is there a sensible way to generalize this construction to other polyforms?
 \end{related}
 
 \end{document}
