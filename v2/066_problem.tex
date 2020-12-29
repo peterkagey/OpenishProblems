@@ -25,11 +25,10 @@ The number of ways to draw a square on a square grid is given by \[
 \noindent
 The number of ways to draw a hexagon on a hexagonal grid is given by \[
   \sum_{k=1}^{n-1} k\cdot h(n-k)
-  = n\binom {n+2}3
-  = \frac{n^2(n+1)(n+2)}{6}
-  = A002417(n-1).
+  = \left(\frac{n(n+1)}{2}\right)^2
+  = A000537(n-1).
   % = \sum_{k=1}^{n-1} k^3 = t(n-1)^2
-\] where $h(m)$ is the $m$-th hexagonal number, and \href{https://oeis.org/A002417}{A002417} is a 4-dimensional figurate number.
+\] where $h(m) = \operatorname{A003215}(m)$ is the $m$-th centered hexagonal number.
 \begin{figure}[ht!]
   \centering
   % Triangle
@@ -89,3 +88,33 @@ The number of ways to draw a hexagon on a hexagonal grid is given by \[
   \item \url{https://en.wikipedia.org/wiki/Order-4_pentagonal_tiling}
 \end{references}
 \end{document}
+
+% Triangles in triangles:
+% 4D: 0, 0, 1, 5, 15, 35, 70, 126, 210, 330, 495, 715, 1001, 1365, 1820, 2380     (A000332)
+% 3D:    0, 1, 4, 10, 20, 35, 56, 84, 120, 165, 220, 286, 364, 455, 560, 680
+% 2D:       1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, 120, 136, 153   (A000217, Triangular numbers)
+
+% Squares in squares:
+% 4D: 0, 0, 1, 6, 20, 50, 105, 196, 336, 540, 825, 1210, 1716, 2366, 3185, 4200   (A002415)
+% 3D:    0, 1, 5, 14, 30, 55, 91, 140, 204, 285, 385, 506, 650, 819, 1015, 1240
+% 2D:       1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225         (A000290: Square numbers)
+
+% Hexagon in hexagon:
+% 4D: 1, 9, 36, 100, 225, 441, 784, 1296, 2025, 3025, 4356, 6084, 8281, 11025     (A000537)
+% 3D: 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197, 2744, 3375
+% 2D: 1, 6, 15, 28, 45, 66, 91, 120, 153, 190, 231, 276, 325, 378, 435, 496, 561  (A003215, Centered hexagonal numbers)
+
+% Squares in cross-polytope ("diamond")
+% 4D: 1, 11, 46, 130, 295, 581, 1036, 1716, 2685, 4015, 5786, 8086, 11011, 14665  (A006324)
+% 3D: 1, 10, 35, 84, 165, 286, 455, 680, 969, 1330, 1771, 2300, 2925, 3654, 4495
+% 2D: 1, 9, 25, 49, 81, 121, 169, 225, 289, 361, 441, 529, 625, 729, 841, 961     (A016754, Centered octagonal numbers)
+
+% Triangles in hexagon:
+% 4D: 0, 8, 66, 258, 710, 1590, 3108, 5516, 9108, 14220, 21230, 30558, 42666      (A008893)
+% 3D:    8, 58, 192, 452, 880, 1518, 2408, 3592, 5112, 7010, 9328, 12108, 15392
+% 2D: 8, 50, 134, 260, 428, 638, 890, 1184, 1520, 1898, 2318, 2780, 3284, 3830    (21*x^2 − 21*x + 8)
+
+% Hexagon in (3n)-triangle:
+% 4D: 0, 1, 12, 51, 145, 330, 651, 1162, 1926, 3015, 4510, 6501, 9087, 12376      (A236770, see A011779)
+% 3D: 0, 1, 11, 39, 94, 185, 321, 511, 764, 1089, 1495, 1991, 2586, 3289, 4109    (A004188)
+% 2D: 0, 1, 10, 28, 55, 91, 136, 190, 253, 325, 406, 496, 595, 703, 820, 946      (A060544, Centered 9-gonal numbers)
