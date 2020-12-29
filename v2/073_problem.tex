@@ -2,7 +2,7 @@
 \include{header}
 
 \begin{document}
-\rating{2}{3}
+\rating{3}{3}
 A Heronian $2$-simplex (triangle) is a triangle with both integer sides and
 integer area. A Heronian $n$-simplex is an $n$-simplex with integer volume and
 where all sides are Heronian $(n - 1)$-simplices.
@@ -10,23 +10,24 @@ where all sides are Heronian $(n - 1)$-simplices.
   \centering
   \begin{tikzpicture}[scale = 0.48]
     \draw[dashed, gray] (-1,-14) grid (33, 6);
-    \draw[thick, fill=magenta!50] (0,0)--(0,4)--(3,0)--cycle;
+    \draw[thick, fill=red!50] (0,0)--(0,4)--(3,0)--cycle;
     \node at (0.5, -0.5) {12};
-    \draw[thick, fill=yellow!50] (4,0)--(10,0)--(7,4)--cycle;
+    \draw[thick, fill=orange!50] (4,0)--(10,0)--(7,4)--cycle;
     \node at (4.5, -0.5) {16};
-    \draw[thick, fill=blue!50] (11,0)--(19,0)--(15,3)--cycle;
+    \draw[thick, fill=yellow!50] (11,0)--(19,0)--(15,3)--cycle;
     \node at (11.5, -0.5) {18};
     \draw[thick, fill=green!50] (20,0)--(32,0)--(20,5)--cycle;
     \node at (20.5, -0.5) {30};
-    \draw[thick, fill=red!50] (0,-13)--(12,-7)--(12,-3)--cycle;
+    \draw[thick, fill=cyan!50] (0,-13)--(12,-7)--(12,-3)--cycle;
     \node at (0.5, -13.5) {32};
-    \draw[thick, fill=cyan!50] (4,-13)--(16,-13)--(22,-5)--cycle;
+    \draw[thick, fill=blue!50] (4,-13)--(16,-13)--(22,-5)--cycle;
     \node at (4.5, -13.5) {36};
-    \draw[thick, fill=cyan!50](20,-13)--(25,-1)--(30,-13)--cycle;
+    \draw[thick, fill=red!20!blue!50](20,-13)--(25,-1)--(30,-13)--cycle;
     \node at (20.5, -13.5) {36};
   \end{tikzpicture}
   \caption{
     The seven smallest primitive Heronian triangles as measured by perimeter.
+    The areas are $6$, $12$, $12$, $30$, $24$, $60$, and $36$, respectively.
   }
 \end{figure}
 \begin{question}
@@ -35,12 +36,16 @@ where all sides are Heronian $(n - 1)$-simplices.
 
 \begin{related}
   \item Do infinitely many primitive Heronian $n$-simplices exist for each $n$?
-  \item What is the smallest Heronian $n$-simplex for each $n$ as measured by
-    volume? As measured by largest side? As measured by sum of sides?
-    As measured by ``surface area'' (sum of volume of $(n-1)$-degree facets)?
-  \item Are all Heronian $n$-simplices lattice simplices?
-  \item What if the definition is relaxed so that only the volume and the
-    edges must be integers?
+  \item What is the smallest Heronian $n$-simplex
+    as measured $k$-dimensional volume of the largest $k$-face?
+    as measured by sum volume of $k$-faces? (These agree when $k=n$.)
+  \item Are all Heronian $n$-simplices lattice simplices, as is the case for
+    $n \leq 3$?
+  \item What if the definition is relaxed so that only, say, the volume and the
+    edge-lengths must be integers?
+  \item Are other ``Heronian polytopes'' lattice polytopes, where a
+    Heronian polytope is polytope where the $k$-dimensional volume of every
+    $k$-face is an integer.
 \end{related}
 \begin{references}
   \item \url{https://www.jstor.org/stable/2695390}
