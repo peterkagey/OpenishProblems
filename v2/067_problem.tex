@@ -4,38 +4,11 @@
 \begin{document}
 \rating{4}{3}
 Consider all of the ways to take a square piece of paper and make two
-``precise'' creases---that is, we can make a crease between two distinguished
-points, we can crease the paper such that any two distinguished points touch,
-and we can take an angle and bisect it.
+``precise'' creases---that is, we can make a perpendicular bisector of the line
+segment connecting two distinguished points, and we can take any two creases
+and bisect the angle between them.
 \begin{figure}[ht!]
   \centering
-  % Triangle
-  \begin{tikzpicture}
-    \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,0)--(2,2);
-    \draw[thick] (2,0)--(0,2);
-  \end{tikzpicture}
-  \begin{tikzpicture}
-    \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,0)--(2,2);
-    \draw[thick] (0,0)--(2,0.828);
-  \end{tikzpicture}
-  \begin{tikzpicture}
-    \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,0)--(2,2);
-    \draw[thick] (0.828,2)--(0,0)--(2,0.828);
-  \end{tikzpicture}
-  \begin{tikzpicture}
-    \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,0)--(2,2);
-    \draw[thick] (1,2)--(1,1)--(2,1);
-  \end{tikzpicture}
-  \begin{tikzpicture}
-    \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,0)--(2,2);
-    \draw[thick] (0,1)--(2,1);
-  \end{tikzpicture}
-  % Horizontal
   \begin{tikzpicture}
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (0,1)--(2,1);
@@ -43,15 +16,27 @@ and we can take an angle and bisect it.
   \end{tikzpicture}
   \begin{tikzpicture}
     \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,1)--(2,1);
-    \draw[thick] (0,0.5)--(2,0.5);
+    \draw[thick]
+      (0,0)--(2,2)
+      (2,0)--(0,2)
+    ;
   \end{tikzpicture}
-  \\\vspace{0.1cm}
+  \begin{tikzpicture}
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \draw[thick]
+      (0,0)--(2,2)
+      (0,0)--(2,0.828);
+  \end{tikzpicture}
+  % Horizontal
   \begin{tikzpicture}
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (0,1)--(2,1);
     \draw[thick] (0,0.5)--(2,0.5);
-    \draw[thick] (0,1.5)--(2,1.5);
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \draw[thick] (0,0)--(2,2);
+    \draw[thick] (0,1)--(2,1);
   \end{tikzpicture}
   \begin{tikzpicture}
     \draw[ultra thick] (0,0) rectangle (2,2);
@@ -61,30 +46,56 @@ and we can take an angle and bisect it.
   \begin{tikzpicture}
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (0,1)--(2,1);
+    \draw[thick] (0.25,0)--(1.25,2);
+  \end{tikzpicture}
+  \\\vspace{0.1cm}
+  \begin{tikzpicture}
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \draw[thick]
+      (0,0)--(2,2)
+      (0.828,2)--(0,0)--(2,0.828)
+    ;
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \draw[thick] (0,0)--(2,2);
+    \draw[thick] (1,2)--(1,1)--(2,1);
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \draw[thick] (0,1)--(2,1);
+    \draw[thick] (0,0.5)--(2,0.5);
+    \draw[thick] (0,1.5)--(2,1.5);
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw[ultra thick] (0,0) rectangle (2,2);
+    \draw[thick] (0,1)--(2,1);
     \draw[thick] (1,2)--(0,1)--(1,0);
   \end{tikzpicture}
   \begin{tikzpicture}
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (0,1)--(2,1);
-    \draw[thick] (0.25,0)--(1.25,2);
+    \draw[thick] (0,2)--(1,1)--(0,0);
   \end{tikzpicture}
   \begin{tikzpicture}
     \draw[ultra thick] (0,0) rectangle (2,2);
     \draw[thick] (0,1)--(2,1);
     \draw[thick] (1.25,0)--(0.75,1)--(1.25,2);
   \end{tikzpicture}
-  \begin{tikzpicture}
-    \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,1)--(2,1);
-    \draw[thick] (2,0)--(0,1)--(2,2);
-  \end{tikzpicture}
-  \begin{tikzpicture}
-    \draw[ultra thick] (0,0) rectangle (2,2);
-    \draw[thick] (0,1)--(2,1);
-    \draw[thick] (2,0)--(0,1);
-  \end{tikzpicture}
+
+  % These two are legal if you can fold along a line segment connecting two distinguished points.
+  % \begin{tikzpicture}
+  %   \draw[ultra thick] (0,0) rectangle (2,2);
+  %   \draw[thick] (0,1)--(2,1);
+  %   \draw[thick] (2,0)--(0,1)--(2,2);
+  % \end{tikzpicture}
+  % \begin{tikzpicture}
+  %   \draw[ultra thick] (0,0) rectangle (2,2);
+  %   \draw[thick] (0,1)--(2,1);
+  %   \draw[thick] (2,0)--(0,1);
+  % \end{tikzpicture}
   \caption{
-    Fourteen (all?) two-crease patterns.
+    Thirteen (all?) two-fold crease patterns.
   }
 \end{figure}
 \begin{question}
