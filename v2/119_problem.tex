@@ -1,0 +1,128 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{2}
+A relation on a group $X$ is a subset $S \subseteq X \times X$. For a given
+relation if $(x,y) \in S$, then we say that $x$ is related to $y$ and denote
+it by $xRy$.
+
+\noindent
+A relation is called ``antitransitive'' if
+$(x,y), (y,z) \in S$ implies $(x,z) \not \in S$.
+\newcommand\drawBoundary[2]{%
+  \draw[thick, rounded corners=10mm, color=#1!50!black, #2]
+    ({-3/2*0.25},{0.25*-sqrt(3)/2})--
+    ({5/2*0.25 + 1*0.75},{0.25*-sqrt(3)/2})--
+    ({1/2},{0.25*3*sqrt(3)/2+0.75*sqrt(3)/2})--
+    cycle
+  ;
+  \node[circle, fill={#1!50!black}] (1) at (0,0) {};
+  \node[circle, fill={#1!50!black}] (2) at (1,0) {};
+  \node[circle, fill={#1!50!black}] (3) at (1/2, {sqrt(3)/2}) {};
+}
+
+\begin{figure}[ht!]
+  \centering
+  \noindent
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{magenta}{thin}
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{green}{dotted}
+    \draw[-{Latex[length=3mm]}] (3) edge (2);
+  \end{tikzpicture}
+
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{cyan}{solid, thin}
+    \draw[-{Latex[length=3mm]}, thick]
+      (3) edge (1)
+      (3) edge (2)
+    ;
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{cyan}{thin}
+    \draw[-{Latex[length=3mm]}, thick]
+      (1) edge (2)
+      (2) edge (1)
+    ;
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{cyan}{thin}
+    \draw[-{Latex[length=3mm]}, thick]
+      (2) edge (3)
+      (3) edge (1)
+    ;
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{cyan}{thin}
+    \draw[-{Latex[length=3mm]}, thick]
+      (1) edge (3)
+      (2) edge (3)
+   ;
+  \end{tikzpicture}
+
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{orange}{thin}
+    \draw[-{Latex[length=3mm]}, thick]
+      (2) edge (3)
+      (3) edge (1)
+      (3) edge (2)
+    ;
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{orange}{thin}
+    \draw[-{Latex[length=3mm]}, thick]
+      (1) edge (3)
+      (2) edge (3)
+      (3) edge (2)
+    ;
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{orange}{thin}
+    \draw[-{Latex[length=3mm]}, thick]
+      (1) edge (3)
+      (2) edge (1)
+      (3) edge (2)
+    ;
+  \end{tikzpicture}
+  \begin{tikzpicture}[scale=2]
+    \drawBoundary{blue}{dotted}
+    \draw[-{Latex[length=3mm]}, thick]
+        (1) edge (3)
+        (2) edge (3)
+        (3) edge (1)
+        (3) edge (2)
+      ;
+  \end{tikzpicture}
+  \caption{
+    The ten antitransitive relations on $3$ unlabeled nodes.
+    There are
+    $1$, $1$, $4$, $3$, and $1$ relations with
+    $0$, $1$, $2$, $3$, and $4$ pairs respectively.
+  }
+\end{figure}
+\begin{question}
+  What is the asymptotic growth of the number of antitransitive relations as
+  a function of the number of (unlabeled) nodes?
+\end{question}
+
+\begin{related}
+  \item On $n$ labeled nodes?
+  \item Given some subset of conditions
+    (e.g. reflexive, asymmetric, antitransitive, connex, etc.), what is the
+    asymptotic growth?
+  \item What's the ratio of the number of, say,
+    transitive relations to antitransitive relations as $n \rightarrow \infty$.
+  \item How many relations with exactly $k$ pairs?
+  \item What's the greatest number of pairs?
+  \item With $\ell$ (strongly) connected components?
+\end{related}
+
+\begin{references}
+  \item Problem 39.
+  \item OEIS sequences
+    \href{https://oeis.org/A341471}{A341471} and
+    \href{https://oeis.org/A341473}{A341473}.
+\end{references}
+\end{document}

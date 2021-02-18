@@ -1,6 +1,5 @@
 \documentclass{article}
 \include{header}
-\usetikzlibrary{decorations.pathreplacing}
 
 \begin{document}
 
@@ -11,27 +10,27 @@ $\mathbb{Z}^2$ that are partly contained in the interior of a ball.
 \begin{figure}[ht!]
   \centering
   \begin{tikzpicture}
-    \draw[opacity=0] (-3,-3.5) grid (3,3.5);
-    \fill[cyan!40] (0,0) circle (2.95);
-    \fill[magenta!40] (0,0) circle (2.5);
-    \fill[yellow!40] (0,0) circle (2.1);
-    \fill[green!40] (0,0) circle (1.8);
-    \fill[red!40] (0,0) circle (1.2);
-    \fill[blue!40] (0,0) circle (0.5);
+    \path (-3,-3.5) rectangle (3,3.5);
+    \draw[white,thick,fill=red!0!blue!40] (0,0) circle (2.95);
+    \draw[white,thick,fill=red!20!blue!40] (0,0) circle (2.5);
+    \draw[white,thick,fill=red!40!blue!40] (0,0) circle (2.1);
+    \draw[white,thick,fill=red!60!blue!40] (0,0) circle (1.8);
+    \draw[white,thick,fill=red!80!blue!40] (0,0) circle (1.2);
+    \draw[white,thick,fill=red!100!blue!40] (0,0) circle (0.5);
     \draw[opacity=0.5] (-3,-3) grid (3,3);
   \end{tikzpicture}
   ~
   \begin{tikzpicture}
-    \fill[cyan!50!green!40] (0,0.5) circle (2.8);
-    \fill[cyan!50!blue!40] (0,0.5) circle (2.6);
-    \fill[magenta!50!red!40] (0,0.5) circle (2.4);
-    \fill[red!50!blue!40] (0,0.5) circle (2.03);
-    \fill[cyan!40] (0,0.5) circle (1.9);
-    \fill[magenta!40] (0,0.5) circle (1.6);
-    \fill[yellow!40] (0,0.5) circle (1.4);
-    \fill[green!40] (0,0.5) circle (1.05);
-    \fill[red!40] (0,0.5) circle (0.8);
-    \fill[blue!40] (0,0.5) circle (0.4);
+    \draw[white,thick,fill=orange!0!teal!40] (0,0.5) circle (2.8);
+    \draw[white,thick,fill=orange!11!teal!40] (0,0.5) circle (2.6);
+    \draw[white,thick,fill=orange!22!teal!40] (0,0.5) circle (2.4);
+    \draw[white,thick,fill=orange!33!teal!40] (0,0.5) circle (2.03);
+    \draw[white,thick,fill=orange!44!teal!40] (0,0.5) circle (1.9);
+    \draw[white,thick,fill=orange!55!teal!40] (0,0.5) circle (1.6);
+    \draw[white,thick,fill=orange!66!teal!40] (0,0.5) circle (1.4);
+    \draw[white,thick,fill=orange!77!teal!40] (0,0.5) circle (1.05);
+    \draw[white,thick,fill=orange!88!teal!40] (0,0.5) circle (0.8);
+    \draw[white,thick,fill=orange!99!teal!40] (0,0.5) circle (0.4);
     \draw[opacity=0.5] (-3,-3) grid (3,4);
   \end{tikzpicture}
   \caption{
@@ -55,5 +54,6 @@ $\mathbb{Z}^2$ that are partly contained in the interior of a ball.
 
 \begin{references}
   \item Problem 30.
+  \item \url{https://codegolf.stackexchange.com/q/217444/53884}
 \end{references}
 \end{document}
