@@ -49,22 +49,36 @@ let $A299117$ be the image of $a_3(n)$.
 \end{question}
 
 \begin{note}
-  The function $a_3$ is an injection.\\
-  $A299117$ contains every cube, because $a(n^3) = (n + 1)^3$.\\
-  $A299117$ contains the square of every prime, because $a(p) = p^2$.
+  The function $a_3$ is an injection.
+
+  $A299117$ contains every cube, because $a(n^3) = (n + 1)^3$.
 \end{note}
 
 \begin{related}
   \item Does $A299117$ contain every square?
   \item Does $A299117$ contain any squarefree number?
-  \item What about the generalization: the image of $a_\beta$ where $a_\beta(n)$
-    is the least $k > n$ such that $nk$, $nk^2, \hdots, nk^{\beta-2}$, or $nk^{\beta-1}$
-    is a $\beta$-th power? Prime $\beta$ is an injection---is this well behaved?
+  \item What about the generalization: the image of $a_m$ where $a_m(n)$
+    is the least $k > n$ such that $n^\alpha k^\beta$ is a $m$-th power,
+    with $\alpha, \beta \in \{1,2,\dots,m-1\}$.
 \end{related}
 
 \begin{references}
-  \item \url{https://oeis.org/A277781}
-  \item \url{https://oeis.org/A299117}
+  \item OEIS sequences
+    \href{https://oeis.org/A277781}{A277781},
+    \href{https://oeis.org/A299117}{A299117}, and
+    \href{https://oeis.org/A343881}{A343881}.
 \end{references}
 
 \end{document}
+
+% Drake Thomas 2021/04/01 (on Discord)
+
+% Let f(n) be a map which takes in a positive integer n and returns the unordered pair of prime tuples ((primes with a 1 mod 3 exponent in n), (primes with a 2 mod 3 exponent in n)). Let ~ be an equivalence relation where a ~ b if f(a)=f(b) (remember that this is unordered, so e.g. 3 ~ 9).
+
+% Now, convince yourself of the following facts:
+% (1) If m ~ n, either mn or mn^2 is a cube.
+% (2) If m !~ n, neither mn nor mn^2 is a cube.
+
+% From (1) and (2) we conclude that the map a_3(n) is just “take the next-highest number in the equivalence class of n”.
+
+% So the image of a_3 is just the complement of the integers which are the smallest in their equivalence class under ~. Then just observe that all squarefree numbers are minimal, and no square numbers are (because their square roots are smaller and in the same equivalence class).
