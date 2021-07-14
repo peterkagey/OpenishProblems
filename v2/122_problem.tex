@@ -1,0 +1,76 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{1}{3}
+OEIS sequence
+\href{https://oeis.org/A169950}{A169950} counts $0$-$1$ polynomials, $f(x)$, by their
+\textit{thickness}: the magnitude of the largest coefficient in the expansion of $f(x)^2$.
+\begin{quote}
+  Consider the $2^n$ monic polynomials $f(x)$ with coefficients $0$ or $1$ and degree $n$.
+  Sequence gives triangle read by rows, in which $T(n,k)$ ($n \geq 0$) is the number of such polynomials of thickness $k$ ($1 \leq k \leq n+1$).
+\end{quote}
+On
+\href{https://twitter.com/oeisTriangles/status/1384302498442215427}{April 19, 2021}
+my Twitter bot
+\href{https://twitter.com/oeisTriangles}{@OeisTriangles}
+tweeted an image in which that the parity of this triangle resembled the
+The Sierpi\'nski triangle, suggesting that there is a recursive structure in
+terms of the above rows.
+
+\begin{figure}[ht!]
+  \centering
+  \begin{tikzpicture}
+    \foreach \a/\b/\n/\c in {
+      0/7/1/black,
+      0/6/1/black, 1/6/1/black,
+      0/5/1/black, 1/5/2/white, 2/5/1/black,
+      0/4/1/black, 1/4/5/black, 2/4/1/black, 3/4/1/black,
+      0/3/1/black, 1/3/8/white, 2/3/4/white, 3/3/2/white, 4/3/1/black,
+      0/2/1/black, 1/2/13/black, 2/2/8/white, 3/2/8/white, 4/2/1/black, 5/2/1/black,
+      0/1/1/black, 1/1/20/white, 2/1/15/black, 3/1/18/white, 4/1/7/black, 5/1/2/white, 6/1/1/black,
+      0/0/1/black, 1/0/33/black, 2/0/23/black, 3/0/45/black, 4/0/13/black, 5/0/11/black, 6/0/1/black, 7/0/1/black}
+    {
+      \draw[
+        fill=green!50!\c,
+        xshift=\b*0.5774cm + \a*1.1547cm,
+        yshift=\b cm
+      ]
+        (30:0.6667)--(90:0.6667)--(150:0.6667)--(210:0.6667)--(270:0.6667)--(330:0.6667)--cycle
+      ;
+      \node[
+        circle,
+        fill={white},
+        fill opacity=0.3,
+        text opacity=1,
+        text=red!50!black,
+        xshift=\b*0.5774cm + \a*1.1547cm,
+        yshift=\b cm
+      ] at (0,0) {\Large \n};
+    }
+  \end{tikzpicture}
+  \caption{
+    First eight rows of OEIS sequence A169950, where odd-valued cells are dark
+    and even-valued cells are light.
+  }
+\end{figure}
+
+\begin{question}
+  What is a recurrence for the values in this triangle?
+\end{question}
+
+\begin{related}
+  \item What if $\{-1,0,1\}$-polynomials are considered?
+  \item What if the ``$m$-thickness'' is the largest coefficient when taken to
+    the power $m$.
+  \item What if the sum of coefficients is considered?
+  \item How many $0$-$1$ polynomials $f(x)$ have $\operatorname{thickness}(f(x)) + 1 = \operatorname{thickness}(xf(x)+1)$?
+    $\operatorname{thickness}(f(x)) + 2 = \operatorname{thickness}(xf(x)+1)$
+    What is the asymptotic density of such $0$-$1$ polynomials as a function
+    of degree?
+\end{related}
+
+\begin{references}
+  \item \href{https://math.stackexchange.com/a/4176545/121988}{David Speyer, Math Stack Exchange answer}.
+\end{references}
+\end{document}
