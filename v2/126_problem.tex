@@ -1,0 +1,43 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{2}
+Consider a spanning tree on the following graph chosen uniformly at random. If
+three ``terminal'' vertices are chosen from the tree, there exists a unique ``critical'' vertex
+such that every path between any two of the terminal vertices goes through the critical vertex.
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=5cm]{assets/126_problem/n_10_1.pdf}
+  \includegraphics[width=5cm]{assets/126_problem/n_10_2.pdf}
+  % \includegraphics[width=5cm]{assets/126_problem/n_10_3.pdf}
+  % \includegraphics[width=5cm]{assets/126_problem/n_10_4.pdf}
+  % \includegraphics[width=5cm]{assets/126_problem/n_10_5.pdf}
+  \includegraphics[width=5cm]{assets/126_problem/n_10_6.pdf}
+  \includegraphics[width=5cm]{assets/126_problem/n_50_1.pdf}
+  % \includegraphics[width=5cm]{assets/126_problem/n_50_2.pdf}
+  % \includegraphics[width=5cm]{assets/126_problem/n_50_3.pdf}
+  \includegraphics[width=5cm]{assets/126_problem/n_50_4.pdf}
+  % \includegraphics[width=5cm]{assets/126_problem/n_50_5.pdf}
+  \includegraphics[width=5cm]{assets/126_problem/n_50_6.pdf}
+  \caption{
+    First six figures are for $n=10$, next six are for $n=50$.
+  }
+\end{figure}
+
+\begin{question}
+  What is the distribution of the terminal vertices as a function of the triangle size?
+\end{question}
+
+\begin{related}
+  \item If we draw the graphs in the way shown above, scaled so that the bottom
+  is unit length, does the limit have a well-defined distribution?
+  \item What is the expected value of the total length of the blue path? The distribution?
+  \item What is the expected number of regions?
+  \item What is the expected ratio of the largest red region to smallest?
+\end{related}
+
+\begin{references}
+  \item \url{https://oeis.org/A351888}
+\end{references}
+\end{document}
