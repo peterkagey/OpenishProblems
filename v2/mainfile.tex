@@ -19,7 +19,7 @@
 
 \begin{document}
 \include{introduction}
-\foreach \x [evaluate=\x as \xpadded using {\threedigits{\x}}] in {1,...,125} {
+\foreach \x [evaluate=\x as \xpadded using {\threedigits{\x}}] in {1,...,130} {
   \IfFileExists{\xpadded_problem.tex}{
     \setcounter{figure}{0}
     \noindent\textbf{\huge Problem \x.}

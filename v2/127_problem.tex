@@ -1,0 +1,46 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{3}{2}
+Consider the two-player game on a $n$-letter string on the alphabet $\{a,b\}$
+where players take turns removing palindromic substrings of their choosing.
+\begin{figure}[ht!]
+  \begin{align*}
+    &0 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} {\color{red} 0 \hspace{5mm} 1 \hspace{5mm} 1 \hspace{5mm} 0} \hspace{5mm} 1 \\
+    &0 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} {\color{cyan} 0 \hspace{5mm} 0} \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 1 \\
+    &0 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} {\color{red} 0 \hspace{5mm} 1 \hspace{5mm} 0} \hspace{5mm} 1 \hspace{5mm} 1 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 1 \\
+    &0 \hspace{5mm} 1 \hspace{5mm} {\color{cyan} 0 \hspace{5mm} 1 \hspace{5mm} 1 \hspace{5mm} 1 \hspace{5mm} 0} \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 1 \hspace{5mm} 1 \\
+    &0 \hspace{5mm} {\color{red} 1 \hspace{5mm} 0 \hspace{5mm} 0 \hspace{5mm} 1} \hspace{5mm} 1 \\
+    &{\color{cyan} 0} \hspace{5mm} 1 \\
+    &{\color{red} 1}
+  \end{align*}
+  \caption{
+    A seven move game: Player 1 erases red strings
+    and Player 2 erases cyan strings. In this game, Player 1 won.
+  }
+\end{figure}
+
+\begin{question}
+  How many $n$-letter games does Player 1 have a winning strategy?
+\end{question}
+
+\begin{related}
+  \item What is a winning strategy?
+  \item If the game is chosen uniformly at random, what is the probability that
+    the first player has
+  \item What if players take turns according to the Thue-Morse sequence?
+  \item What if players collect points based on the number of $1$s they erase?
+  \item What if this is played on a larger alphabet?
+  \item What if instead of palindromes, players remove $AA$ subwords,
+    $ABA$ subwords, or other patterns?
+  \item In a single-player version of the game, where the goal is to finish in
+    as few moves a possible, which $n$-letter games require the most moves?
+\end{related}
+
+\begin{references}
+  \item Problem 3.
+  \item \url{https://oeis.org/A298475}
+  \item \url{https://oeis.org/A298481}
+\end{references}
+\end{document}
