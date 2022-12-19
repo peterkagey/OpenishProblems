@@ -19,6 +19,8 @@
 
 \begin{document}
 \include{introduction}
+\include{quotes}
+\setcounter{page}{1}
 \foreach \x [evaluate=\x as \xpadded using {\threedigits{\x}}] in {1,...,130} {
   \IfFileExists{\xpadded_problem.tex}{
     \setcounter{figure}{0}
