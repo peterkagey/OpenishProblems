@@ -3,24 +3,36 @@
 
 \begin{document}
 \rating{4}{3}
-Ron Graham's (A006255) sequence is the least k for which there exists a
-strictly increasing sequence \[
-  n = a_1 \leq a_2 \leq \hdots \leq a_T = k \text{ where }
-  a_1 \cdot\hdots\cdot a_T \text{ is square.}
+Ron Graham's (A006255) sequence is the least integer $k$ for which there exists
+a strictly increasing integer sequence \[
+  n = a_1 < a_2 < \cdots < a_t = k
 \]
-A006255 is bounded above by A072905, the least $k > n$ such that $k\cdot n$
-is square.
+such that $a_1 \cdot a_2 \cdots a_t$ is square.
+
+\begin{figure}[!h]
+  \center
+  \includegraphics[trim={0cm 1cm 0cm 14cm},clip,scale=0.7]{assets/018_problem_A255167}
+  \caption{The scatterplot for OEIS sequence A255167 which is defined as the
+  difference \(A255167(n) = A072905(n) - A006255(n).\)}
+\end{figure}
+
 \begin{question}
   Does there exist any $n$ for which $A006255(n) = A072905(n)$. In other words,
   is there any nonsquare $n$ for which $n \cdot A006255(n)$ is square?
 \end{question}
 
 \begin{related}
-  \item Does the gap $A072905(n) - A006255(n)$ have a nonzero lower bound?\\
-    \includegraphics[trim={0cm 0 0 14cm},clip,scale=0.7]{assets/018_problem_A255167}
+  \item Does the gap $A072905(n) - A006255(n)$ have a nonzero lower bound?
+  \item Does this idea generalize to cubes, powers of four, etc?
 \end{related}
 
 \begin{note}
+  A006255 is bounded above by A072905, the least $k > n$ such that $kn$
+  is square.
+
+  ~
+
+  \noindent
   This is equivalent to showing that for any $a < b$ with the same
   squarefree part, there is some subset of $\{ a + 1, a + 2, \hdots, b - 1 \}$
   such that the product of the elements of the subset has the same squarefree
