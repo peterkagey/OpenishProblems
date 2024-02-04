@@ -1,0 +1,53 @@
+\documentclass{article}
+\include{header}
+
+\begin{document}
+\rating{4}{3}
+Given a regular polygon with vertices $v_1, v_2, \dots, v_n$,
+consider the following process.
+Begin by plotting a random point $p_1$ inside of the triangle.
+Then given $p_i$, let $p_{i+1}$ be uniformly chosen from the centers of
+$\triangle v_1v_2p_i, \triangle v_2v_3p_i, \dots, \triangle v_nv_1p_i$.
+\begin{figure}[ht!]
+  % \noindent
+  % \includegraphics[width=8cm]{assets/129_problem/Square_X115.png}
+  % \hfill
+  % \includegraphics[width=8cm]{assets/129_problem/Square_X078.png}
+  \noindent
+  \includegraphics[width=4cm]{assets/129_problem/Square_X001.png}
+  \includegraphics[width=4cm]{assets/129_problem/Square_X202.png}
+  \includegraphics[width=4cm]{assets/129_problem/Square_X220.png}
+  \includegraphics[width=4cm]{assets/129_problem/Square_X244.png}
+
+  \noindent
+  \includegraphics[width=4cm]{assets/129_problem/Hexagon_X002.png}
+  \includegraphics[width=4cm]{assets/129_problem/Hexagon_X202.png}
+  \includegraphics[width=4cm]{assets/129_problem/Hexagon_X220.png}
+  \includegraphics[width=4cm]{assets/129_problem/Hexagon_X244.png}
+  \caption{
+    The four squares have triangle centers given by $X(1)$, $X(202)$, $X(220)$, and $X(244)$.
+    The four hexagons have triangle centers given by $X(2)$, $X(202)$, $X(220)$, and $X(244)$.
+  }
+\end{figure}
+
+\begin{question}
+  What are the fractals and their dimensions that occur when iterating this
+  process for various triangle centers?
+\end{question}
+
+\begin{related}
+  \item What if this is done where the triangles are given by
+  the current point $p$ and not necessarily adjacent vertices on the $n$-gon?
+  \item What is the probability density of where a point will be after an
+  ``infinite'' number of moves?
+  \item What if this is done in higher dimensions?
+\end{related}
+
+\begin{references}
+  \item \url{https://twitter.com/matthen2/status/1268808515574886407}
+  \item \href{https://faculty.evansville.edu/ck6/encyclopedia/etc.html}{Clark Kimberling's Encyclopedia of Triangle Centers}
+  \item \href{https://www.youtube.com/watch?v=IGlGvSXkRGI}{Chaos Game, YouTube video}
+  \item \href{https://en.wikipedia.org/wiki/Iterated_function_system}{Wikipedia: Iterated function system}
+\end{references}
+\end{document}
+

@@ -2,7 +2,7 @@
 \include{header}
 
 \begin{document}
-\rating{3}{3}
+\rating{4}{3}
 Consider polyominoes where each cell has one of $n$ colors, and
 each distinct pair of colors is adjacent (horizontally or vertically) to each other
 somewhere in the polyomino. Let an $n$-minimum polyomino be one that has the
@@ -41,6 +41,16 @@ minimum number of cells.
   \item What if this is done on a triangular or hexagonal grid?
   \item What if this is done on a three dimensional cube lattice?
 \end{related}
+
+\begin{note}
+  This is closely related to the following problem: given a finite graph $G$,
+  let $f(G) = n$ where $n$ is the largest integer such that there exists a
+  quotient $G/\sim$ that is isomorphic to the complete graph $K_n$. Is there
+  an efficient way to compute $f$?
+
+  Is the symmetric polynomial for $G$ which enumerates the labelings that
+  quotient $G$ into a complete graph known or interesting?
+\end{note}
 
 \begin{references}
   \item \url{https://oeis.org/A278299}
