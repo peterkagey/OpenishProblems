@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{shapes.geometric}
+
+\begin{document}
+  % \pgfmathsetmacro\pgfxa{#1+1}
+  \tikzstyle{scorestars}=[
+    star,
+    star points=5,
+    star point ratio=2.25,
+    draw,
+    inner sep=3pt,
+    anchor=outer point 5
+  ]
+  \begin{tikzpicture}
+    \path (0,-0.5) rectangle (0,0.2); % Workaround for whitespace at the bottom.
+    \foreach \i in {1,...,4} {
+      \pgfmathparse{(\i<=3?"yellow":"gray")}
+      \edef\starcolor{\pgfmathresult}
+      \draw (\i*4.5ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+    }
+  \end{tikzpicture}
+\end{document}

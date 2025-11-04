@@ -1,0 +1,14 @@
+\documentclass[tikz]{standalone}
+\begin{document}
+\begin{tikzpicture}[scale=0.7, baseline=1mm]%
+  \definecolor{slopegreen}{rgb}{0.0, 0.5, 0.0}%
+  \fill[slopegreen] (0.5,0.5) circle (0.5);%
+\end{tikzpicture}%
+
+\begin{tikzpicture}[scale=0.7, baseline=1mm]%
+  \definecolor{slopeblue}{rgb}{0.0, 0.44, 1.00}
+  \fill[slopeblue] (0,0) rectangle (1,1);%
+\end{tikzpicture}%
+\begin{tikzpicture}[scale=0.7, baseline=1mm]\fill (0,0.5)--(0.5, 0)--(1,0.5)--(0.5,1)--cycle; \end{tikzpicture}
+\begin{tikzpicture}[scale=0.7, baseline=1mm]\fill (0.25,0)--(0,0.5)--(0.25,1)--(0.5,0.5)--cycle; \fill (0.75,0)--(0.5,0.5)--(0.75,1)--(1,0.5)--cycle;\end{tikzpicture}
+\end{document}
